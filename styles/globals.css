@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.Navbar {
+  background: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navContent {
+  list-style: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navContent a {
+  margin: 10px;
+}
