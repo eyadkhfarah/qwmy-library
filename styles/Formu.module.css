@@ -1,0 +1,19 @@
+.header {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    font-weight: bold;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 12px 0 rgba(82, 82, 82, 0.582);
+}

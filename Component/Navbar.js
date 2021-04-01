@@ -16,7 +16,7 @@ function Navbar() {
                 <Link href="/fromu">
                     <a>Formu</a>
                 </Link>
-                <Link href="/blog">
+                <Link href="/blog/index">
                     <a>Blog</a>
                 </Link>
                 <Link href="/about">
@@ -24,7 +24,7 @@ function Navbar() {
                 </Link>
 
 
-                <Link><a>Login</a></Link>
+                <Link href="/"><a className="login">Login</a></Link>
             </div>
         </nav>
     )
