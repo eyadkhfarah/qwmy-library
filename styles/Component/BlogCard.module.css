@@ -1,0 +1,16 @@
+
+.card {
+    margin-bottom: 1rem;
+    flex-basis: 45%;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 0 rgba(82, 82, 82, 0.2);
+}

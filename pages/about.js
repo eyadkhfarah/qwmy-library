@@ -4,11 +4,12 @@ import Head from 'next/head';
 
 import styles from '../styles/About.module.css'
 
-function About() {
+
+export default function About() {
     return (
-        <>
+        <div>
             <Head>
-                <title>Student Commerce | About</title>
+                <title>Student Commerce | About Us</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -16,8 +17,6 @@ function About() {
                 <h1>About</h1>
                 <p>Hello this is stude commerce formu</p>
             </div>
-        </>
+        </div>
     )
 }
-
-export default About

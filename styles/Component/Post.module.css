@@ -1,0 +1,33 @@
+.main {
+  padding: 9rem 1rem;
+  display: grid;
+    grid-template-columns: 1fr .4fr;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+}
+
+.card {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    text-align: inherit;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.icon {
+    font-size: 1rem;
+}

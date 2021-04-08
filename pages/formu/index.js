@@ -1,6 +1,7 @@
 import React from 'react'
-import styles from '../styles/Formu.module.css'
+import styles from '../../styles/Formu.module.css'
 import Head from 'next/head'
+import Link from 'next/link';
 
 export const getStaticProps = async () => {
     const res = await fetch('http://jsonplaceholder.typicode.com/posts');
@@ -13,7 +14,7 @@ export const getStaticProps = async () => {
     }
 }
 
-function Fromu({ posts }) {
+export default function Formu({ posts }) {
     return (
         <>
             <Head>
@@ -29,16 +30,15 @@ function Fromu({ posts }) {
 
                 <div className="container">
                     {posts.map(post => (
-
-                        <div key={post.id} className="card">
-                            <h2>{post.title}</h2>
-                            <p>{post.body}</p>
-                        </div>
+                        <Link href={'/formu/' + post.id}>
+                            <div key={post.id} className="card">
+                                <h2>{post.title}</h2>
+                                <p>{post.body}</p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>
         </>
     )
 }
-
-export default Fromu
