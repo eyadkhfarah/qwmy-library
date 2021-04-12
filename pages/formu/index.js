@@ -24,7 +24,10 @@ export default function Formu({ posts }) {
                 <div className={styles.header}>
                     <h1>Formu</h1>
                     <div>
-                        <a className={styles.btn}>Create Post</a>
+                        {/* <Link herf="formu/add-post"> */}
+                        
+                            <a className={styles.btn}>Create Post</a>
+                        {/* </Link> */}
                     </div>
                 </div>
 

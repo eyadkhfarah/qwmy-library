@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { createClient } from "contentful"
 import BlogCard from "../../Component/BlogCard"
+import styles from "../../styles/Blog.module.css"
 
 export async function getStaticProps() {
 
@@ -27,11 +28,14 @@ export default function Blog({ tips }) {
             <Head>
             <title>Student Commerce | Blogs</title>
             </Head>
-            <h1>Blogs</h1>
-            <div className="grid">
+                <h1>Blogs</h1>
+            <div className={styles.container}>
+
+                <div className={styles.grid}>
                 {tips.map(tip => (
-                    <BlogCard key={tip.sys.id} tip={tip}/>
-                ))}
+                        <BlogCard key={tip.sys.id} tip={tip}/>
+                        ))}
+                </div>
             </div>
         </div>
     )

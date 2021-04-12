@@ -1,9 +1,37 @@
+:root {
+  --gray0: #f8f8f8;
+  --gray1: #dbe1e8;
+  --gray3: #b2becd;
+  --gray4: #454e56;
+  --gray5: #2a2e35;
+  --gray6: #12181b;
+  --borderBlack: #eaeaea;
+  --borderWhite: #66666675;
+  --shadow: 0 0 20px 0 rgba(82, 82, 82, 0.2);
+  --shadowCrad:  0 10px 30px 0 rgba(82, 82, 82, 0.309);
+}
+
+.light {
+  --bg: var(--gray0);
+  --text: var(--gray6);
+  --border: var(--borderBlack);
+}
+
+.dark {
+  --bg: var(--gray5);
+  --text: var(--gray0);
+  --border: var(--borderWhite);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 a {
@@ -16,7 +44,7 @@ a {
 }
 
 .main {
-  padding: 5rem 1rem;
+  padding: 9rem 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -25,44 +53,69 @@ a {
 
 .Navbar {
   position: fixed;
-  background: white;
-  color: black;
   width: 100%;
+  background: var(--bg);
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 1000;
+  transition: all .3s ease;
+  box-shadow: var(--shadow);
+}
+
+.top {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px 0 rgba(82, 82, 82, 0.309);
 }
+
+/* .active {
+  box-shadow: 0 10px 30px 0 rgba(82, 82, 82, 0.309);
+} */
 
 .navContent {
   list-style: none;
   display:flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
 }
 
 .navContent a {
+  cursor: pointer;
   font-weight: bold;
   border-radius: 33px;
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
   transition: all .3s ease;
 }
 
 .navContent a:hover {
-  box-shadow: 0 10px 30px 0 rgba(82, 82, 82, 0.309);
+  box-shadow: var(--shadowCrad);
 }
 
 .navContent .login {
-  box-shadow: 0 10px 30px 0 rgba(82, 82, 82, 0.309);
+  box-shadow: var(--shadowCrad);
   font-weight: bold;
 }
 
+.icon {
+  border-radius: 10px;
+  box-shadow: var(--shadowCrad);
+  padding: 9px;
+  cursor: pointer;
+  font-size: 40px;
+  margin-left: 25px;
+}
+
+.tiggers {
+  display: flex;
+  align-items: center;
+}
+
 .tigger {
-  color: black;
-  font-size: 25px;
+  cursor: pointer;
+  visibility: hidden;
 }
 
 .navContent .login:hover {
@@ -81,22 +134,77 @@ a {
   margin-bottom: 1rem;
   flex-basis: 45%;
   padding: 1.5rem;
+  width: 100%;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border);
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-top: 3rem;
+}
+
 .card:hover {
-  box-shadow: 0 0 20px 0 rgba(82, 82, 82, 0.2);
+  box-shadow: var(--shadowCrad);
+}
+
+.image {
+  border-radius: 20px;
+  width: 20%;
+  height: 20%;
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
+  .main {
+    padding: 6rem 1rem;
+  }
+  .Navbar h1 {
+    font-size: 20px;
+  }
+  .Navbar{
+    height: 12%;
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .Navbar.active {
+    height: 100vh;
+  }
+
   .navContent {
-    display: none;
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 0.3s ease;
+  }
+
+  .tigger {
+    visibility: visible;
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  .navContent.active {
+    visibility: visible;
+  }
+
+  .icon {
+    font-size: 20px;
+    margin-left: 20px;
   }
 }
