@@ -6,7 +6,7 @@ export const NavLinks = [
     },
     {
       title: 'Forums',
-      link: '/forums',
+      link: '/forum',
       id: 2
     },
     {

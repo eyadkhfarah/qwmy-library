@@ -23,7 +23,7 @@ export default function Home() {
             <div className={styles.card}>
               <h3>Real-time Answer</h3>
               <p>Your question will answer by an expert</p>
-              <Link href="/fromu">
+              <Link href="/formu">
                 <a>Ask Now</a>
               </Link>
             </div>  
