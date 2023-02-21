@@ -1,9 +1,10 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes , faBars, faMoon, faSun, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faBars, faMoon, faSun, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import Link from 'next/link'
+import { NavLinks } from '../lib/NavList'
 
 export default function Navbar() {
     const [dark, setDark] = useState(undefined)
@@ -31,7 +32,7 @@ export default function Navbar() {
     //         "--initial-color-mode"
     //     );
     //     console.log("init", initialColor)
-        
+
     //     setDark(initialColor == "dark")
     // }, [])
 
@@ -61,23 +62,24 @@ export default function Navbar() {
                 <div className="top">
                     <div className="logo">
                         <Link href="/">
-                        <h1>Commerce Students</h1>
+                            <h1>Commerce Students</h1>
                         </Link>
                     </div>
                     <div className="tiggers">
-                        <FontAwesomeIcon icon={faSearch} className="icon"/>
-                        <FontAwesomeIcon onClick={darkMode} icon={click ? faSun : faMoon} className="icon"/>
-                        <FontAwesomeIcon onClick={handelClick} icon={pos ? faTimes : faBars} className={pos ? 'tigger active' : 'tigger'}/>
+                        <FontAwesomeIcon icon={faSearch} className="icon" />
+                        <FontAwesomeIcon onClick={darkMode} icon={click ? faSun : faMoon} className="icon" />
+                        <FontAwesomeIcon onClick={handelClick} icon={pos ? faTimes : faBars} className={pos ? 'tigger active' : 'tigger'} />
                     </div>
-                    
+
                 </div>
 
                 <div className={pos ? 'navContent active' : 'navContent'}>
 
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-
+                    {NavLinks.map((link) => (
+                        <Link href={link.link}>
+                            <a key={link.id}>{link.title}</a>
+                        </Link>
+                    ))}
                     <Link href="/"><a className="login">Login</a></Link>
                 </div>
             </nav>
