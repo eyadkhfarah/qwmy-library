@@ -11,43 +11,6 @@ export default function Navbar() {
     const [click, setClick] = useState(false);
     const [pos, setPos] = useState(false);
 
-    // Navbar Change
-
-    // const changeNavbar = () => {
-    //     if (window.scrollY >= 80) {
-    //         setPos(true)
-    //     } else {
-    //         setPos(false)
-    //     }
-    // }
-
-    // window.addEventListener("scroll", changeNavbar);
-    // {pos ? 'tigger active' : 'tigger'}
-
-    // Dark mode
-
-    // useEffect(() => {
-    //     const root = window.document.documentElement;
-    //     const initialColor = root.style.getPropertyValue(
-    //         "--initial-color-mode"
-    //     );
-    //     console.log("init", initialColor)
-
-    //     setDark(initialColor == "dark")
-    // }, [])
-
-    // useEffect(() => {
-    //     if (dark !== undefined) {
-    //         document.documentElement.setAttribute("data-theme", "dark");
-    //         window.localStorage.setItem("theme", "dark")
-    //     } else {
-    //         document.documentElement.setAttribute("data-theme", "light");
-    //         window.localStorage.setItem("theme", "light")
-    //     }
-    //     return () => {
-    //         cleanup
-    //     }
-    // }, [dark])
 
     const handelClick = () => setPos(!pos)
     const darkMode = (event) => {

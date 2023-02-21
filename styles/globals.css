@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --gray0: #f8f8f8;
   --gray1: #dbe1e8;
@@ -49,17 +53,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.Navbar {
-  position: fixed;
-  width: 100%;
-  background: var(--bg);
-  padding-left: 20px;
-  padding-right: 20px;
-  z-index: 1000;
-  transition: all .3s ease;
-  box-shadow: var(--shadow);
 }
 
 .top {
@@ -207,4 +200,15 @@ a {
     font-size: 20px;
     margin-left: 20px;
   }
+}
+
+@layer base {
+  .Navbar {
+    @apply sticky w-full bg-white px-3 z-[1000] shadow-2xl
+  }
+
+  .Navbar.active {
+    @apply h-screen
+  }
+
 }

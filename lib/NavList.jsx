@@ -5,8 +5,8 @@ export const NavLinks = [
       id: 1
     },
     {
-      title: 'Forums',
-      link: '/forum',
+      title: 'Formus',
+      link: '/formu',
       id: 2
     },
     {
