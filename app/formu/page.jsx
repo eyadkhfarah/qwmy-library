@@ -1,9 +1,8 @@
 import React from 'react'
 import styles from '../../styles/Formu.module.css'
 import Head from 'next/head'
-import Link from 'next/link';
 
-export const getStaticProps = async () => {
+/* export const getStaticProps = async () => {
     const res = await fetch('http://jsonplaceholder.typicode.com/posts');
     const data = await res.json();
 
@@ -12,9 +11,21 @@ export const getStaticProps = async () => {
             posts: data,
         }
     }
-}
+} */
 
-export default function Formu({ posts }) {
+async function getData() {
+    const res = await fetch('http://jsonplaceholder.typicode.com/posts');
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+  
+    return res.json();
+  }
+
+export default function Formu() {
+    const posts = await getData();
+
     return (
         <>
             <Head>

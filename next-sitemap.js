@@ -2,7 +2,7 @@ const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
 module.exports = {
   siteUrl,
-  exclude: ["/404", "/profile"],
+  exclude: ["/404"],
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: 'daily',
@@ -27,10 +27,6 @@ module.exports = {
     additionalSitemaps: [
       `${siteUrl}/sitemap.xml`,
       `${siteUrl}/server-sitemap.xml`,
-      `${siteUrl}/rss.xml`,
-      `${siteUrl}/egyeco-rss.xml`,
-      `${siteUrl}/worldeco-rss.xml`,
-      `${siteUrl}/exchange-rss.xml`,
     ],
   },
 };

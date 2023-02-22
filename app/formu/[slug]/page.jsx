@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../../styles/Component/Post.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHeart, faCommentAlt, faPaperPlane} from '@fortawesome/free-regular-svg-icons'
@@ -88,8 +87,8 @@ function Post({post}) {
                         <label>
                             Comment:
                         </label>
-                        <textarea name="comment" className={styles.input} placeholder="Write a comment" />
-                        <input className={styles.btn}  type="submit" value="comment" />
+                        <textarea name="comment" className="input" placeholder="Write a comment" />
+                        <input className="btn"  type="submit" value="comment" />
                     </form>
                     {/* {comments.map(comment => (
                         <div key={post.id} className="comment">
@@ -97,7 +96,7 @@ function Post({post}) {
                             <p>{comment.body}</p>
                         </div>
                     ))} */}
-                    <div className={styles.comment}>
+                    <div className="comment">
                         {/* <Link herf="/username"> */}
                         
                             <h4>Eyad Farah</h4>
