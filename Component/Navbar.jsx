@@ -29,8 +29,8 @@ export default function Navbar() {
                         </Link>
                     </div>
                     <div className="tiggers">
-                        <FontAwesomeIcon icon={faSearch} className="icon" />
-                        <FontAwesomeIcon onClick={darkMode} icon={click ? faSun : faMoon} className="icon" />
+                        {/* <FontAwesomeIcon icon={faSearch} className="icon" />
+                        <FontAwesomeIcon onClick={darkMode} icon={click ? faSun : faMoon} className="icon" /> */}
                         <FontAwesomeIcon onClick={handelClick} icon={pos ? faTimes : faBars} className={pos ? 'tigger active' : 'tigger'} />
                     </div>
 
