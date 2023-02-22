@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
-
 
 export default function Home() {
   return (
@@ -10,7 +8,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Fixed Components */}
       <main className="main">
         <section className="banner">
           <h1>Seacrh<br/>Ask</h1>

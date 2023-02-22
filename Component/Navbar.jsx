@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faBars, faMoon, faSun, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import Link from 'next/link'
 import { NavLinks } from '../lib/NavList'
@@ -25,9 +23,9 @@ export default function Navbar() {
                         </Link>
                     </div>
                     <div className="tiggers">
-                        <FontAwesomeIcon icon={faSearch} className="icon" />
-                        {/* <FontAwesomeIcon onClick={darkMode} icon={click ? faSun : faMoon} className="icon" />  */}
-                        <FontAwesomeIcon onClick={handelClick} icon={pos ? faTimes : faBars} className={pos ? 'tigger active' : 'tigger'} />
+                        {/* <FontAwesomeIcon icon={faSearch} className="icon" />
+                        <FontAwesomeIcon onClick={darkMode} icon={click ? faSun : faMoon} className="icon" />
+                        <FontAwesomeIcon onClick={handelClick} icon={pos ? faTimes : faBars} className={pos ? 'tigger active' : 'tigger'} /> */}
                     </div>
 
                 </div>
