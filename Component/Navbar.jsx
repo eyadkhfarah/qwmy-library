@@ -13,10 +13,6 @@ export default function Navbar() {
 
 
     const handelClick = () => setPos(!pos)
-    const darkMode = (event) => {
-        setClick(!click)
-        // setDark(event)
-    }
 
 
     return (
