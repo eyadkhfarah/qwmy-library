@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "npm run partytown && next build",
+    "start": "next start",
+    "postbuild": "next-sitemap",
+    "partytown": "partytown copylib public/~partytown",
+    "lint": "next lint"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.7.3",
