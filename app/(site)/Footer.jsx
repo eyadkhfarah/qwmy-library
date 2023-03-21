@@ -1,5 +1,4 @@
- 
-function Footer() {
+ export default function Footer() {
     return (
         <footer className="footer">
             <h4>Support Us in <a>Paypal</a></h4>
@@ -7,5 +6,3 @@ function Footer() {
         </footer>
     )
 }
-
-export default Footer
