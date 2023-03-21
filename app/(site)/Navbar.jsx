@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 
 import Link from 'next/link'
-import { NavLinks } from '../lib/NavList'
+import { NavLinks } from '@/lib/NavList'
 
 export default function Navbar() {
     const [dark, setDark] = useState(undefined)
