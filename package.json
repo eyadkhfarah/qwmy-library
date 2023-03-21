@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-sitemap",
-    "lint": "next lint"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.7.3",
