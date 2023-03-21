@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react'
-
-import { NavLinks } from '@/lib/NavList'
+import { useState } from 'react'
 
 export default function Navbar() {
     const [click, setClick] = useState(false);
