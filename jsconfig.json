@@ -3,5 +3,6 @@
     "paths": {
         "@component/*" :["Components/*"],
         "@styles/*": ["styles/*"],
+        "@lib/*": ["lib/*"],
     }
 }}
