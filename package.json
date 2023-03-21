@@ -1,13 +1,12 @@
 {
-  "name": "commerce-formu-app",
+  "name": "qwmy-library",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run partytown && next build",
+    "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap",
-    "partytown": "partytown copylib public/~partytown",
     "lint": "next lint"
   },
   "dependencies": {
