@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <nav>
-            <RiMenu3Line className="navIcon"/>
+            <RiSearch2Line className="navIcon"/>
             <Link href={"/"}>
                 <h1>
                     المكتبة القومية
