@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <nav>
-            <div className="flex gap-4 items-center">
+            <div className="flex justify-between navgap-4 items-center">
                 <Link href={"/"}>
                     <h1>
                         المكتبة القومية
