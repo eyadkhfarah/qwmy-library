@@ -38,7 +38,7 @@ body {
   }
 
   .navIcon {
-    @apply text-2xl p-3 transition-all duration-300 cursor-pointer z-[15]
+    @apply text-2xl p-3 bg-gray-500 transition-all duration-300 cursor-pointer z-[15]
 
   }
 
