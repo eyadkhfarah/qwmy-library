@@ -8,7 +8,7 @@ import { useState } from "react";
 // Data
 // import { createClient } from 'contentful'
 
-import SearchNotFound from "@/Components/Cards/SearchNotFound";
+// import SearchNotFound from "@/Components/Cards/SearchNotFound";
 
 import { RiSearchLine } from "react-icons/ri";
 
