@@ -38,21 +38,18 @@ body {
   }
 
   .navIcon {
-    @apply text-2xl
+    @apply text-2xl p-3 font-black hover:bg-white hover:text-gray-500 transition-all duration-300 cursor-pointer z-[15]
+
   }
 
   .navList {
-    @apply bg-white m-0 list-none dark: bg-dprimary text-white flex flex-col justify-between overflow-y-auto h-screen md:w-2/3 w-full z-[100] fixed top-0 right-0 p-7 text-white transition-all duration-300
+    @apply bg-white m-0 list-none dark: bg-dprimary text-white flex flex-col justify-between overflow-y-auto h-screen md:w-1/3 w-full z-[100] fixed top-0 right-0 p-7 text-white transition-all duration-300
   }
 
   .navLink {
     @apply p-5 mb-3 list-none font-black cursor-pointer dark: hover:bg-dlight dark:hover:text-white hover:bg-white hover:text-primary transition-all duration-300
   }
-
-  .navBtn {
-    @apply flex justify-center items-center p-3 bg-primary dark: bg-dlight rounded-3xl gap-3 font-black text-base hover:bg-white hover:text-primary transition-all duration-300 cursor-pointer z-[15]
-  }
-
+  
   main {
     @apply p-5 h-screen
   }

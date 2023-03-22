@@ -8,7 +8,7 @@ export default function NavList({ btn, setBtn }) {
 
   return (
     <>
-      <div className={`navList text-white ${btn ? `right-0` : `right-[-10000px]`}`}>
+      <div className={`navList ${btn ? `right-0` : `right-[-10000px]`}`}>
           <div className="flex justify-between items-center">
             <RiCloseLine
               className="rounded-full text-xl p-3 w-[3em] h-[3em] mb-8 transition-all duration-300 cursor-pointer hover:bg-white hover:text-primary"
