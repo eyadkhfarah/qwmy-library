@@ -23,11 +23,15 @@ export default function Footer() {
             </Link>
 
 
-            <ul className="flex mt-4 gap-5 list-none p-0 w-full items-center">
+            <ul className="flex mt-4 gap-5 list-none p-0 w-full text-sm items-center">
                 {FooterLinks.map((link) => (
                     <li key={link.id} className="font-medium">{link.title}</li>
                 ))}
             </ul>
+
+            <div className='text-gray-400 text-sm align-center pb-11'>
+        كل الحقوق محفوظة لدي <span>المكتبة القومية</span> لسنة {new Date().getFullYear()}
+      </div>
         </footer>
     )
 }
