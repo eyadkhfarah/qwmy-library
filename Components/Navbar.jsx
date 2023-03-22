@@ -15,15 +15,13 @@ export default function Navbar() {
 
     return (
         <nav>
-            <div className="flex justify-between navgap-4 items-center">
-                <Link href={"/"}>
-                    <h1>
-                        المكتبة القومية
-                    </h1>
-                </Link>
+            <RiMenu3Line className="navIcon" />
 
-                <RiMenu3Line className="navIcon" />
-            </div>
+            <Link href={"/"}>
+                <h1>
+                    المكتبة القومية
+                </h1>
+            </Link>
 
             <RiSearch2Line className="navIcon" />
         </nav>
