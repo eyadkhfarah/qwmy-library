@@ -16,25 +16,6 @@ module.exports = {
           dprimary: "#16213E",
           dlight: '#0F3460'
         },
-        keyframes: {
-          live: {
-            '0%': { opacity: '0' },
-            '50%': { opacity: '1' },
-            '100%': { opacity: '0' },
-          },
-          marquee: {
-            '0%': {
-              transform: 'translateX(-200%)'
-            },
-            '100%': {
-              transform: 'translateX(2000%)'
-            }
-          }
-        },
-        animation: {
-          'live': 'live 1s ease-in-out infinite',
-          'marquee': 'marquee 120s linear infinite'
-        }
       },
     },
     plugins: [
