@@ -30,7 +30,7 @@ body {
   }
 
   nav {
-    @apply p-4 sticky flex justify-between items-center shadow-lg bg-white
+    @apply p-4 sticky top-0 flex justify-between items-center shadow-lg bg-white
   }
 
   footer {
@@ -42,7 +42,7 @@ body {
   }
 
   main {
-    @apply p-4 h-screen
+    @apply p-5 h-screen
   }
 
   a {
