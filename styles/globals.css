@@ -5,13 +5,31 @@
 
 html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  box-sizing: 0;
+  direction: rtl;
+  font-family: 'medium';
+  scroll-behavior: smooth;
 }
 
 @layer base {
+  @font-face {
+    font-family: 'medium';
+    src: url('/fonts/Regular.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'black';
+    src: url('/fonts/Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
   nav {
     @apply p-4 flex justify-between items-center shadow-lg bg-white
   }
