@@ -15,4 +15,9 @@ body {
   nav {
     @apply p-4 flex justify-between items-center shadow-lg bg-white
   }
+
+  .navIcon {
+    @apply text-2xl
+  }
+
 }

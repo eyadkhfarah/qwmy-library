@@ -15,13 +15,13 @@ export default function Navbar() {
 
     return (
         <nav>
-            <RiMenu3Line />
+            <RiMenu3Line className="navIcon"/>
             <Link href={"/"}>
                 <h1>
                     المكتبة القومية
                 </h1>
             </Link>
-            <RiMenu3Line />
+            <RiMenu3Line className="navIcon"/>
         </nav>
     )
 }
