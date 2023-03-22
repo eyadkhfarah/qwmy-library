@@ -1,4 +1,4 @@
-export const FooterLink = [
+export const FooterLinks = [
     {
         title: "سياسية الخصوصية",
         link: "/pravicy-policy",
