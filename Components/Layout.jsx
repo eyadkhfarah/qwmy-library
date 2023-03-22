@@ -38,27 +38,27 @@ export default function Layout({ children, market, etf }) {
                     type: 'website',
                     locale: 'ar_IE',
                     url: siteUrl + router.asPath,
-                    siteName: 'Lokoji',
+                    siteName: 'المكتبة القومية',
                 }}
 
                 twitter={{
-                    handle: '@LokojiEco',
-                    site: '@LokojiEco',
+                    handle: '@',
+                    site: '@',
                     cardType: 'summary_large_image',
                 }}
 
                 additionalMetaTags={[
                     {
                         property: "fb:admins",
-                        content: "lokoji.eco"
+                        content: ""
                     },
                     {
                         name: "fb_admins_meta_tag",
-                        content: "lokoji.eco"
+                        content: ""
                     },
                     {
                         property: "fb:app_id",
-                        content: "963733097926528"
+                        content: ""
                     },
                     {
                         property: "fb:pages",
@@ -66,7 +66,7 @@ export default function Layout({ children, market, etf }) {
                     },
                     {
                         name: "emailvertical",
-                        content: "LOKOJI"
+                        content: "المكتبة القومية"
                     },
                     {
                         name: "application-name",
@@ -142,18 +142,18 @@ export default function Layout({ children, market, etf }) {
                 additionalLinkTags={[
                     {
                         rel: 'icon',
-                        href: `${siteUrl}/favicon.png`,
+                        href: `${siteUrl}/favicon.ico`,
                     },
                     {
                         rel: 'shortcut icon',
-                        href: `${siteUrl}/favicon.png`,
-                        type: "image/png"
+                        href: `${siteUrl}/favicon.ico`,
+                        type: "image/ico"
                     },
                     {
                         rel: 'apple-touch-icon',
-                        href: `${siteUrl}/favicon.png`,
+                        href: `${siteUrl}/favicon.ico`,
                         sizes: '76x76',
-                        type: "image/png"
+                        type: "image/ico"
                     },
                     {
                         rel: "alternate",

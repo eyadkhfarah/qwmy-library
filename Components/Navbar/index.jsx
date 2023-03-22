@@ -4,6 +4,7 @@ import Image from 'next/image';
 import NavList from './NavList'
 // import SearchBox from '../Navbar/NavMenu/SearchBox';
 
+import { useTheme } from "next-themes";
 import { RiSearch2Line, RiMenu3Line } from 'react-icons/ri'
 import { useState } from 'react';
 
@@ -12,6 +13,7 @@ export default function Navbar() {
 
     const [btn, setBtn] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
+    const currentTheme = theme === "system" ? systemTheme : theme;
 
     return (
         <>
@@ -19,9 +21,13 @@ export default function Navbar() {
                 <RiMenu3Line onClick={() => setBtn(!btn)} className="navIcon" />
 
                 <Link href={"/"}>
-                    <h1>
-                        المكتبة القومية
-                    </h1>
+                    <a href={siteUrl}>
+                        {currentTheme === "dark" ?
+                            <Image src="/WhiteLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={120} height={47} />
+                            :
+                            <Image src="/DarkLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={120} height={47} />
+                        }
+                    </a>
                 </Link>
 
                 <RiSearch2Line className="navIcon" />
