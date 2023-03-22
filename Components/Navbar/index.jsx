@@ -20,7 +20,7 @@ export default function Navbar() {
     return (
         <>
             <nav>
-                <RiMenu3Line onClick={() => setBtn(!btn)} className="navIcon" />
+                <RiMenu3Line onClick={() => setBtn(!btn)} className="navIcon text-black" />
 
                 <Link href={"/"}>
                     <a href={siteUrl}>
@@ -32,7 +32,7 @@ export default function Navbar() {
                     </a>
                 </Link>
 
-                <RiSearch2Line className="navIcon" />
+                <RiSearch2Line className="navIcon text-black" />
             </nav>
 
             <NavList btn={btn} setBtn={setBtn} />
