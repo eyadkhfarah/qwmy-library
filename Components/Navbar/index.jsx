@@ -13,6 +13,8 @@ export default function Navbar() {
 
     const [btn, setBtn] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
+
+    const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     return (

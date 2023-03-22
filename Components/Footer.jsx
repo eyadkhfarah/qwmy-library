@@ -6,6 +6,8 @@ import { FooterLinks } from "@lib/FooterLink"
 
 export default function Footer() {
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+
+    const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     return (
