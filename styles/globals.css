@@ -38,4 +38,7 @@ body {
     @apply text-2xl
   }
 
+  h1 {
+    @apply font-black
+  }
 }
