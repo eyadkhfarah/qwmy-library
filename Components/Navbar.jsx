@@ -15,13 +15,16 @@ export default function Navbar() {
 
     return (
         <nav>
-            <RiSearch2Line className="navIcon"/>
-            <Link href={"/"}>
-                <h1>
-                    المكتبة القومية
-                </h1>
-            </Link>
-            <RiMenu3Line className="navIcon"/>
+            <RiMenu3Line className="navIcon" />
+
+            <div className="flex gap-4 items-center">
+                <Link href={"/"}>
+                    <h1>
+                        المكتبة القومية
+                    </h1>
+                </Link>
+                <RiSearch2Line className="navIcon" />
+            </div>
         </nav>
     )
 }
