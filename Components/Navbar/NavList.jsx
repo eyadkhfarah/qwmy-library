@@ -1,5 +1,5 @@
 import { RiCloseLine } from "react-icons/ri";
-import { NavLinks } from "lib/Menus/navMenu";
+import { NavLinks } from "@lib/NavList";
 
 import Link from "next/link";
 
