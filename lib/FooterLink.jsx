@@ -1,7 +1,7 @@
 export const FooterLinks = [
     {
         title: "سياسية الخصوصية",
-        link: "/pravicy-policy",
+        link: "/privacy-policy",
         id: 1
     },
     {

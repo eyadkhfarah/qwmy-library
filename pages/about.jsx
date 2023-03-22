@@ -25,7 +25,6 @@ export default function About() {
                         content: { desc }
                     },
                 ]}
-
             />
             <h1>احنا مين؟</h1>
             <div className="mt-4">
