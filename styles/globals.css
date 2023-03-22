@@ -20,14 +20,14 @@ body {
     font-weight: 600;
     font-display: swap;
     font-style: normal;
-  }
+  } 
 
   @font-face {
     font-family: 'black';
     src: url('/fonts/Bold.woff2') format('woff2');
     font-weight: 600;
     font-display: swap;
-    font-style: normal;
+    font-style: bold;
   }
 
   nav {
