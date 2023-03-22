@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import NavList from '../Navbar/NavList'
+import NavList from './NavList'
 // import SearchBox from '../Navbar/NavMenu/SearchBox';
 
 import { RiSearch2Line, RiMenu3Line } from 'react-icons/ri'
