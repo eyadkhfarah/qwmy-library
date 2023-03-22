@@ -15,19 +15,19 @@ export default function Navbar() {
 
     return (
         <>
-        <nav>
-            <RiMenu3Line onClick={() => setBtn(!btn)} className="navIcon" />
+            <nav>
+                <RiMenu3Line onClick={() => setBtn(!btn)} className="navIcon" />
 
-            <Link href={"/"}>
-                <h1>
-                    المكتبة القومية
-                </h1>
-            </Link>
+                <Link href={"/"}>
+                    <h1>
+                        المكتبة القومية
+                    </h1>
+                </Link>
 
-            <RiSearch2Line className="navIcon" />
-        </nav>
+                <RiSearch2Line className="navIcon" />
+            </nav>
 
-        <NavList btn={btn} setBtn={setBtn} />
+            <NavList btn={btn} setBtn={setBtn} />
         </>
     )
 }
