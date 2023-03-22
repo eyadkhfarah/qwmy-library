@@ -5,9 +5,9 @@ export default function Footer() {
         <footer>
             فورتر
 
-            <ul className="flex gap-5 items-center w-full">
+            <ul className="flex gap-5 items-center">
                 {FooterLinks.map((link) => (
-                    <li key={link.id}>{link.title}</li>
+                    <li key={link.id} className="font-medium">{link.title}</li>
                 ))}
             </ul>
         </footer>
