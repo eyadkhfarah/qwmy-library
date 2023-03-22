@@ -59,7 +59,11 @@ body {
   }
 
   h1 {
-    @apply font-black
+    @apply font-black text-3xl
+  }
+
+  h2 {
+    @apply font-black text-2xl pb-2 border-b-2 border-b-gray-500
   }
 
   ul {
