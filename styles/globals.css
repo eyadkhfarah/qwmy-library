@@ -13,6 +13,6 @@ body {
 
 @layer base {
   nav {
-    @apply p-4 flex justify-between items-center shafow-lg
+    @apply p-4 flex justify-between items-center shafow-lg 
   }
 }
