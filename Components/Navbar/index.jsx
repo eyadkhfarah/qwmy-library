@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-// import NavList from '../Navbar/NavMenu/NavList'
+import NavList from '../Navbar/NavList'
 // import SearchBox from '../Navbar/NavMenu/SearchBox';
 
 import { RiSearch2Line, RiMenu3Line } from 'react-icons/ri'
@@ -14,8 +14,9 @@ export default function Navbar() {
     const [searchOpen, setSearchOpen] = useState(false);
 
     return (
+        <>
         <nav>
-            <RiMenu3Line className="navIcon" />
+            <RiMenu3Line onClick={() => setBtn(!btn)} className="navIcon" />
 
             <Link href={"/"}>
                 <h1>
@@ -25,5 +26,8 @@ export default function Navbar() {
 
             <RiSearch2Line className="navIcon" />
         </nav>
+
+        <NavList btn={btn} setBtn={setBtn} />
+        </>
     )
 }
