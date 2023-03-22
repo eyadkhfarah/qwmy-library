@@ -36,7 +36,7 @@ export default function Footer() {
                 ))}
             </ul>
 
-            <div className='text-gray-400 text-sm align-center px-11'>
+            <div className='text-gray-400 text-sm align-center py-11'>
                 كل الحقوق محفوظة لدي <span>المكتبة القومية</span> لسنة {new Date().getFullYear()}
             </div>
         </footer>
