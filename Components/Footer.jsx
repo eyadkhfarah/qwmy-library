@@ -23,7 +23,7 @@ export default function Footer() {
             </Link>
 
 
-            <ul className="flex gap-5 items-center">
+            <ul className="flex mt-4 gap-5 list-none p-0 w-full items-center">
                 {FooterLinks.map((link) => (
                     <li key={link.id} className="font-medium">{link.title}</li>
                 ))}
