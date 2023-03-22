@@ -17,9 +17,8 @@ export default function Layout({ children, market, etf }) {
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
     const router = useRouter()
 
-    const [btn, setBtn] = useState(true);
-
-    const cancelButtonRef = useRef(null)
+    const title = "المكتبة القومية"
+    const desc = "بوابتك المعرفية الي عالم القومية"
 
     return (
         <>
@@ -27,15 +26,15 @@ export default function Layout({ children, market, etf }) {
                 canonical={siteUrl + router.asPath}
             />
             <DefaultSeo
-                title="لوكوجي :: تابع سوقك"
-                description="تابع الاقتصاد والسوق المصري والعالمي بضغطة واحدة"
+            title={title}
+            description={desc}
 
                 facebook={{
                     appId: '963733097926528',
                 }}
                 openGraph={{
-                    title: "لوكوجي :: تابع سوقك",
-                    description: "تابع الاقتصاد والسوق المصري والعالمي بضغطة واحدة",
+                    title: title,
+                    description: desc,
                     type: 'website',
                     locale: 'ar_IE',
                     url: siteUrl + router.asPath,
@@ -71,7 +70,7 @@ export default function Layout({ children, market, etf }) {
                     },
                     {
                         name: "application-name",
-                        content: "لوكوجي"
+                        content: "المكتبة القومية"
                     },
 
                     {
@@ -84,11 +83,11 @@ export default function Layout({ children, market, etf }) {
                     },
                     {
                         name: "apple-mobile-web-app-status-bar-style",
-                        content: "#4109FD"
+                        content: "#DCDCDC"
                     },
                     {
                         name: "theme-color",
-                        content: "#4109FD"
+                        content: "#DCDCDC"
                     },
                     {
                         content: 'general',
@@ -159,7 +158,7 @@ export default function Layout({ children, market, etf }) {
                     {
                         rel: "alternate",
                         href: `${siteUrl}/rss.xml`,
-                        title: "Lokoji - RSS",
+                        title: "Maktaba - RSS",
                         type: "application/rss+xml"
                     },
                 ]}
