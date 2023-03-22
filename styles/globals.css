@@ -63,7 +63,7 @@ body {
   }
 
   h2 {
-    @apply font-black text-2xl pb-2 border-b-2 border-b-gray-500
+    @apply font-black text-xl pb-2 border-b-2 border-b-gray-200
   }
 
   ul {
