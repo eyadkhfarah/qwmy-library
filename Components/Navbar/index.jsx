@@ -17,10 +17,13 @@ export default function Navbar() {
     const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
 
+    const Search = <span><RiSearch2Line /></span>;
+    const Menu = <span><RiMenu3Line /></span>;
+
     return (
         <>
             <nav>
-                <RiMenu3Line onClick={() => setBtn(!btn)} className="navIcon" />
+                <div onClick={() => setBtn(!btn)} className="navIcon">{Menu}</div>
 
                 <Link href={"/"}>
                     <a href={siteUrl}>
@@ -32,7 +35,7 @@ export default function Navbar() {
                     </a>
                 </Link>
 
-                <RiSearch2Line className="navIcon" />
+                <div className="navIcon">{Search}</div>
             </nav>
 
             <NavList btn={btn} setBtn={setBtn} />
