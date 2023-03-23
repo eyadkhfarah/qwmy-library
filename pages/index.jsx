@@ -27,7 +27,10 @@ const fake = [
   { name: 'القومية العربية', id: 7 },
   { name: 'الافروسنترك', id: 8 },
   { name: 'الجماعات الارهابية', id: 9 },
-
+  { name: 'داعش', id: 10 },
+  { name: 'الجينات المصرية', id: 11 },
+  { name: 'الجينات العربية', id: 12 },
+  { name: 'حرب ماجدو', id: 13 },
 ]
 
 export default function Home() {
@@ -107,7 +110,6 @@ export default function Home() {
 
                 return searchItems && term.startWith(searchItems) && term !== searchItems;
               })
-              .slice(0,10)
               .map((items) => (
                 <div className="border-b-1 p-4" key={items.id}>{items.name}</div>
               ))}
