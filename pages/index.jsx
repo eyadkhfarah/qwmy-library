@@ -18,19 +18,19 @@ import { RiCloseFill, RiSearchLine } from "react-icons/ri";
 // import generateRssFeed from '@/utils/generateRSSFeed'
 
 const fake = [
-  { name: 'اياد', id: 1 },
-  { name: 'قومي', id: 2 },
-  { name: 'القومية المصرية', id: 3 },
-  { name: 'وعي مصر', id: 4 },
-  { name: 'الصحوة القومية', id: 5 },
-  { name: 'القومية الامازغية', id: 6 },
-  { name: 'القومية العربية', id: 7 },
-  { name: 'الافروسنترك', id: 8 },
-  { name: 'الجماعات الارهابية', id: 9 },
-  { name: 'داعش', id: 10 },
-  { name: 'الجينات المصرية', id: 11 },
-  { name: 'الجينات العربية', id: 12 },
-  { name: 'حرب ماجدو', id: 13 },
+  { name: 'اياد', cat: "شخص القومي", id: 1 },
+  { name: 'قومي', cat:"صفحة", id: 2 },
+  { name: 'القومية المصرية', cat:"حركة قومية", id: 3 },
+  { name: 'وعي مصر', cat:"صفحة", id: 4 },
+  { name: 'الصحوة القومية', cat: "صفحة", id: 5 },
+  { name: 'القومية الامازغية', cat: "حركة قومية", id: 6 },
+  { name: 'القومية العربية', cat: "حركة قومية", id: 7 },
+  { name: 'الافروسنترك', cat: "جماعات", id: 8 },
+  { name: 'الجماعات الارهابية', cat: "جماعات", id: 9 },
+  { name: 'داعش', cat: "جماعة ارهابية", id: 10 },
+  { name: 'الجينات المصرية', cat: "جينات", id: 11 },
+  { name: 'الجينات العربية', cat: "جينات", id: 12 },
+  { name: 'حرب ماجدو', car: "حرب", id: 13 },
 ]
 
 export default function Home() {
@@ -121,7 +121,10 @@ export default function Home() {
             <div className="border text-right">
               {filteredData.slice(0,6).map((items) =>
               (
-                <div className="border p-4" key={items.id}>{items.name}</div>
+                <div className="border p-4 grid gap-3" key={items.id}>
+                  <p className="font-black">{items.name}</p>
+                  <p className="text-sm text-gary-300">{items.cat}</p>
+                </div>
               ))}
             </div>
           )}
