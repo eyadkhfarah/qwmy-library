@@ -113,11 +113,15 @@ export default function Home() {
           <h1>ابحث في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
 
-          <div className="grid gap-3 grid-cols-2 grid-rows-3">
+          <ul className="list-none grid gap-5 grid-cols-2 grid-rows-3">
             {Tabs.map((tab) => (
-              <div>{tab.name}</div>
+              <li>
+                <Link href={`/category${tab.slug}`}>
+                  <a className="fomt-black" href={`/category${tab.slug}`}>{tab.name}</a>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
 
           <div>
             <input
