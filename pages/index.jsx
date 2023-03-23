@@ -119,7 +119,7 @@ export default function Home() {
           </div>
           {filteredData.lenght != 0 && (
             <>
-              <div className={`${filteredData.lenght == 0 ? "border-none" : "border"} text-right`}>
+              <div className={`${filteredData.lenght == 0 ? "border" : "border-none"} text-right`}>
                 {filteredData.slice(0, 6).map((items) =>
                 (
                   <div className="border p-4 grid gap-2" key={items.id}>
@@ -129,7 +129,7 @@ export default function Home() {
                 ))}
 
               </div>
-              <a className={`${filteredData.lenght == 0 ? "block" : "none"} p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+              <a className={`${filteredData.lenght == 0 && "none"} p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
             </>
           )}
         </div>
