@@ -34,9 +34,9 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
 
-    const paths = CatMenu.map(content => ({
+    const paths = Tabs.map(content => ({
         params: {
-            slug: content.link.toString(),
+            slug: content.slug.toString(),
         },
     }))
 
