@@ -118,7 +118,8 @@ export default function Home() {
               placeholder="ابحث في عالم القومية" />
           </div>
           {filteredData.lenght != 0 && (
-            <div className={`${filteredData.lenght != 0 ? "border" : "border-none"} text-right`}>
+            <>
+            <div className={`${filteredData.lenght != 0 ? "border-none" : "border"} text-right`}>
               {filteredData.slice(0,6).map((items) =>
               (
                 <div className="border p-4 grid gap-2" key={items.id}>
@@ -127,8 +128,9 @@ export default function Home() {
                 </div>
               ))}
 
-              <a className="p-6" href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
             </div>
+            <a className="p-4 border" href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+            </>
           )}
         </div>
       </div>
