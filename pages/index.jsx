@@ -129,9 +129,13 @@ export default function Home() {
                 ))}
 
               </div>
-              <a className={`${filteredData.lenght === 0 ? "none" : 'block'} p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
             </>
           )}
+          
+          {filteredData.lenght === 0 ? null : (
+            <a className={`p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+          )}
+
         </div>
       </div>
     </>
