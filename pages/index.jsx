@@ -87,7 +87,7 @@ export default function Home() {
           `}} />
       </Head>
       <div className="text-center h-full grid items-center">
-        <div className="grid gap-3">
+        <div className="grid gap-3 w-full">
           <h1>ابحث في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
           <div>
@@ -99,10 +99,18 @@ export default function Home() {
               placeholder="ابحث في عالم القومية" />
           </div>
 
-          <div className="border">
-            {fake.map((items, index) => (
-              <div className="border-b-1 p-4" key={items.id}>{items.name}</div>
-            ))}
+          <div className="border text-right">
+            {fake
+              .filter(items => {
+                const searchItems = value.toLowerCase()
+                const term = items.name.toLowerCase()
+
+                return searchItems && term.endWith(searchItems) && term !== searchItems;
+              })
+              .slice(0,10)
+              .map((items, index) => (
+                <div className="border-b-1 p-4" key={items.id}>{items.name}</div>
+              ))}
           </div>
         </div>
       </div>
