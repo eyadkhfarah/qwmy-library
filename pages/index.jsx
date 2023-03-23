@@ -105,10 +105,10 @@ export default function Home() {
                 const searchItems = value.toLowerCase()
                 const term = items.name.toLowerCase()
 
-                return searchItems && term.endWith(searchItems) && term !== searchItems;
+                return searchItems && term.startWith(searchItems) && term !== searchItems;
               })
               .slice(0,10)
-              .map((items, index) => (
+              .map((items) => (
                 <div className="border-b-1 p-4" key={items.id}>{items.name}</div>
               ))}
           </div>
