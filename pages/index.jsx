@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Script from 'next/script'
 
+import { useState } from "react"
+
 import { NextSeo } from 'next-seo';
 
 // Components
@@ -15,14 +17,31 @@ import { RiArrowLeftSFill } from "react-icons/ri";
 
 // import generateRssFeed from '@/utils/generateRSSFeed'
 
-export default function Home() {
-    const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+const fake = [
+  { name: 'اياد', id: 1 },
+  { name: 'قومي', id: 2 },
+  { name: 'القومية المصرية', id: 3 },
+  { name: 'وعي مصر', id: 4 },
+  { name: 'الصحوة القومية', id: 5 },
+  { name: 'القومية الامازغية', id: 6 },
+  { name: 'القومية العربية', id: 7 },
+  { name: 'الافروسنترك', id: 8 },
+  { name: 'الجماعات الارهابية', id: 9 },
 
-    return (
-        <>
-        <Head>
+]
+
+export default function Home() {
+  const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+
+  const [value, setValue] = useState()
+
+  const onChange = (event) => {
+    setValue(event.targer.value);
+  }
+
+  return (
+    <>
+      <Head>
         <script
           type="application/ld+json"
           key="structured-data"
@@ -30,10 +49,9 @@ export default function Home() {
             __html: `{
             "@context": "https://schema.org",
             "@type": "NewsMediaOrganization",
-            "name": "لوكوجي",
-            "alternateName": "Lokoji",
+            "name": "المكتبة القومية",
             "url": "${siteUrl}",
-            "logo": "${siteUrl}/favicon.png",
+            "logo": "${siteUrl}/favicon.ico",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "",
@@ -58,24 +76,36 @@ export default function Home() {
             {
               "@context": "https://schema.org/",
               "@type": "WebSite",
-              "name": "لوكوجي",
+              "name": "المكتبة القوكية",
               "url": "${siteUrl}",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "${siteUrl}/search-results?search={search_term_string}",
+                "target": "${siteUrl}/search?search={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             }
           `}} />
-        </Head>
-            <div className="text-center h-full grid items-center">
-                <div className="grid gap-3">
-                    <h1>ابحث في المكتبة القومية</h1>
-                    <p>بوابتك المعرفية في عالم القومية</p>
+      </Head>
+      <div className="text-center h-full grid items-center">
+        <div className="grid gap-3">
+          <h1>ابحث في المكتبة القومية</h1>
+          <p>بوابتك المعرفية في عالم القومية</p>
+          <div>
+            <input
+              value={value}
+              onChange={onChange}
+              className="searchInput"
+              type="text"
+              placeholder="ابحث في عالم القومية" />
+          </div>
 
-                    <input className="searchInput" type="text" placeholder="ابحث في عالم القومية" />
-                </div>
-            </div>
-        </>
-    )
+          <div className="border">
+            {fake.map((items, index) => (
+              <div className="border-b-1 p-4" key={items.id}>{items.name}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
