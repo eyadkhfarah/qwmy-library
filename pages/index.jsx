@@ -33,7 +33,7 @@ const fake = [
 export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
-  const [value, setValue] = useState()
+  const [value, setValue] = useState("")
 
   const onChange = (event) => {
     setValue(event.targer.value);
@@ -102,8 +102,8 @@ export default function Home() {
           <div className="border text-right">
             {fake
               .filter(items => {
-                const searchItems = value
-                const term = items.name
+                const searchItems = value.toLowerCase()
+                const term = items.name.toLowerCase()
 
                 return searchItems && term.endWith(searchItems) && term !== searchItems;
               })
