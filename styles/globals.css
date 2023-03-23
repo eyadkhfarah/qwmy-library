@@ -51,7 +51,7 @@ body {
   }
   
   main {
-    @apply p-5 md:px-16
+    @apply p-5 md:px-[10em]
   }
 
   .searchInput {
