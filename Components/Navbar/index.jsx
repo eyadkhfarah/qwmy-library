@@ -43,8 +43,8 @@ export default function Navbar() {
                     <div className="navIcon">{Search}</div>
 
                     <input
-                        value={}
-                        onChange={}
+                        // value={}
+                        // onChange={}
                         className="searchInput border-none"
                         type="text"
                         placeholder="ابحث في عالم القومية" />
