@@ -154,21 +154,22 @@ export default function Home() {
         </div>
       </header>
 
-      {/* التوصيات */}
-      <section>
-        <h2>مقالات مختارة</h2>
-      </section>
+      <div className="md:grid gap-4 grid-cols-2">
+        {/* التوصيات */}
+        <section>
+          <h2>مقالات مختارة</h2>
+        </section>
 
-      {/* دراسات جينية */}
-      <section>
-        <h2>دراسات جينية</h2>
-      </section>
+        {/* دراسات جينية */}
+        <section>
+          <h2>دراسات جينية</h2>
+        </section>
 
-      {/* صور */}
-      <section>
-        <h2>ألبوم الصور</h2>
-      </section>
-
+        {/* صور */}
+        <section>
+          <h2>ألبوم الصور</h2>
+        </section>
+      </div>
     </>
   )
 }
