@@ -105,7 +105,7 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <div className="text-center h-[45em] w-full">
+      <div className="text-center h-[53em] w-full">
         <div className="grid gap-3 w-full">
           <h1>ابحث في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
@@ -127,7 +127,7 @@ export default function Home() {
                 </div>
               ))}
 
-              <a href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+              <a className="p-4" href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
             </div>
           )}
         </div>
