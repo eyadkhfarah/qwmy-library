@@ -37,9 +37,9 @@ export default function Navbar() {
                     </a>
                 </Link>
 
-                <div className="navIcon md:hiddien block">{Search}</div>
+                <div className="navIcon md:hidden block">{Search}</div>
 
-                <div className="md:flex hidden gap-5 p-3 border">
+                <div className="md:flex hidden gap-5 p-1 border">
                     <div className="navIcon">{Search}</div>
 
                     <input
@@ -51,7 +51,7 @@ export default function Navbar() {
                 </div>
 
 
-                <ul className="hidden md:flex text-sm gap-4 items-center ">
+                <ul className="hidden md:flex text-[1.2rem] gap-4 items-center ">
                     {NavLinks.map((link) => (
                         <Link href={link.link}>
                             <li
