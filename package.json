@@ -14,8 +14,6 @@
     "@contentful/rich-text-react-renderer": "^15.12.1",
     "@builder.io/partytown": "^0.7.3",
     "contentful": "^9.1.24",
-    "chart.js": "^3.7.0",
-    "react-chartjs-2": "^4.0.1",
     "next": "12.1.5",
     "next-share": "0.18.1",
     "next-seo": "^5.15.0",
