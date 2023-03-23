@@ -51,7 +51,7 @@ export default function Navbar() {
                 </div>
 
 
-                <ul className="hidden md:flex text-[1.2rem] gap-4 items-center ">
+                <ul className="hidden md:flex text-[.5rem] gap-4 items-center ">
                     {NavLinks.map((link) => (
                         <Link href={link.link}>
                             <li
