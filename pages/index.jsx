@@ -119,17 +119,17 @@ export default function Home() {
           </div>
           {filteredData.lenght != 0 && (
             <>
-              <div className={`${filteredData.lenght == 0 ? "border" : "border-none"} text-right`}>
+              <div className={`${filteredData.lenght === 0 ? "border" : "border-none"} text-right`}>
                 {filteredData.slice(0, 6).map((items) =>
                 (
                   <div className="border p-4 grid gap-2" key={items.id}>
                     <p className="font-black">{items.name}</p>
-                    <p className="text-sm text-gary-500">{items.cat}</p>
+                    <p className="text-sm text-slate-500">{items.cat}</p>
                   </div>
                 ))}
 
               </div>
-              <a className={`${filteredData.lenght == 0 && "none"} p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+              <a className={`${filteredData.lenght === 0 ? "none" : 'block'} p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
             </>
           )}
         </div>
