@@ -119,7 +119,7 @@ export default function Home() {
           </div>
           {filteredData.lenght != 0 && (
             <div className="border text-right">
-              {filteredData.slice(0,10).map((items) =>
+              {filteredData.slice(0, 10).map((items) =>
               (
                 <div className="border p-4" key={items.id}>{items.name}</div>
               ))}
