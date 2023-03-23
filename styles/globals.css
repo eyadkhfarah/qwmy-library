@@ -47,7 +47,7 @@ body {
   }
 
   .navLink {
-    @apply p-3 mb-1 list-none font-black cursor-pointer dark:hover:bg-dlight dark:hover:text-white hover:bg-white hover:text-primary transition-all duration-300
+    @apply p-3 mb-1 whitespace-nowrap list-none font-black cursor-pointer dark:hover:bg-dlight dark:hover:text-white hover:bg-white hover:text-primary transition-all duration-300
   }
   
   main {
