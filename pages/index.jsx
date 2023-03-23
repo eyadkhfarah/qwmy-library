@@ -181,7 +181,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="md:grid gap-4 grid-cols-2">
+      <div className="md:grid gap-8 grid-cols-2">
         {/* التوصيات */}
         <section>
           <h2>مقالات مختارة</h2>
