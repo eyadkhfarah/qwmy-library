@@ -108,7 +108,7 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <header className="text-center md:p-[39em] w-full">
+      <header className="text-center md:px-[9em] w-full">
         <div className="grid gap-3 w-full">
           <div className="md:grid gap-7 grid-cols-3">
 
