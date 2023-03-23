@@ -113,7 +113,7 @@ export default function Home() {
           <h1>اهلا بيك في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
 
-          <ul className="list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
+          <ul className="md:none block list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/category/${tab.slug}`}>
