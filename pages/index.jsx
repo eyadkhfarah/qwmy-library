@@ -126,7 +126,7 @@ export default function Home() {
                   <p className="text-sm text-gary-300">{items.cat}</p>
                 </div>
               ))}
-            </div>
+            </div> 
           )}
         </div>
       </div>
