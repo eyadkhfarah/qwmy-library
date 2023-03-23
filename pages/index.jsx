@@ -169,6 +169,12 @@ export default function Home() {
         <section>
           <h2>ألبوم الصور</h2>
         </section>
+
+        {/* صور */}
+        <section>
+          <h2>في هذا اليوم</h2>
+        </section>
+
       </div>
     </>
   )
