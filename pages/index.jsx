@@ -129,7 +129,7 @@ export default function Home() {
                 ))}
 
               </div>
-              <a className={`${filteredData.lenght != 0 ? "none" : "block"}p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+              <a className={`${filteredData.lenght != 0 ? "block" : "none"} p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
             </>
           )}
         </div>
