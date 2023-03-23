@@ -63,8 +63,8 @@ export default function News({ navTitle }) {
         setCurrentPage(selected + 1);
     }; */}
 
-    const title = `المكتبة القومية — قسم ${navTitle.title}`
-    const desc = `دي صفحة تابعة لقسم ${navTitle.title}`
+    const title = `المكتبة القومية — قسم ${navTitle.name}`
+    const desc = `دي صفحة تابعة لقسم ${navTitle.name}`
 
     return (
         <main>
@@ -88,7 +88,7 @@ export default function News({ navTitle }) {
                 ]}
             />
 
-            <h1 className="my-6">{navTitle.title}</h1>
+            <h1 className="my-6">{navTitle.name}</h1>
             <div className="space-y-4">
 
                {/* {blogPosts
