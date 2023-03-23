@@ -105,7 +105,7 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <div className="text-center h-[55em] w-full grid items-center">
+      <div className="text-center h-[55em] w-full">
         <div className="grid gap-3 w-full">
           <h1>ابحث في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
