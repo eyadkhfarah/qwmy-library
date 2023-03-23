@@ -40,18 +40,18 @@ export default function Navbar() {
                 <div className="navIcon md:hiddien block">{Search}</div>
 
                 <div className="md:flex hidden gap-5 p-3 border">
-                <div className="navIcon">{Search}</div>
+                    <div className="navIcon">{Search}</div>
 
-            <input
-              value={wordEntered}
-              onChange={handleFilter}
-              className="searchInput border-none"
-              type="text"
-              placeholder="ابحث في عالم القومية" />
-          </div>
+                    <input
+                        value={wordEntered}
+                        onChange={handleFilter}
+                        className="searchInput border-none"
+                        type="text"
+                        placeholder="ابحث في عالم القومية" />
+                </div>
 
 
-                <ul className="hidden md:flex text-md gap-4 items-center ">
+                <ul className="hidden md:flex text-sm gap-4 items-center ">
                     {NavLinks.map((link) => (
                         <Link href={link.link}>
                             <li
