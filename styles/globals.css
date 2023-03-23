@@ -55,7 +55,7 @@ body {
   }
 
   .searchInput {
-    @apply p-3 w-full
+    @apply p-3 w-full mt-3
   }
 
   a {
@@ -67,7 +67,7 @@ body {
   }
 
   h2 {
-    @apply font-black text-xl space-y-3 pb-2 border-b-2 border-b-gray-200
+    @apply font-black text-xl my-3 pb-2 border-b-2 border-b-gray-200
   }
 
   ul {
