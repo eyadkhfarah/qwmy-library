@@ -13,6 +13,8 @@ import { useTheme } from "next-themes";
 // Icons
 import { RiCloseFill, RiSearchLine } from "react-icons/ri";
 
+import { Tabs } from "@lib/CatPages"
+
 // import { createClient } from 'contentful'
 
 // import generateRssFeed from '@/utils/generateRSSFeed'
@@ -32,6 +34,7 @@ const fake = [
   { name: 'الجينات العربية', cat: "جينات", id: 12 },
   { name: 'حرب ماجدو', car: "حرب", id: 13 },
 ]
+
 
 export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
@@ -105,10 +108,17 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <div className="text-center h-[53em] w-full">
+      <section className="text-center h-[53em] w-full">
         <div className="grid gap-3 w-full">
           <h1>ابحث في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
+
+          <div className="grid gap-3 grid-cols-2 grid-rows-3">
+            {Tabs.map((tab) => (
+              <div>{tab.name}</div>
+            ))}
+          </div>
+
           <div>
             <input
               value={wordEntered}
@@ -117,6 +127,7 @@ export default function Home() {
               type="text"
               placeholder="ابحث في عالم القومية" />
           </div>
+
           {filteredData.lenght != 0 && (
             <>
               <div className={`${filteredData.lenght === 0 ? "border" : "border-none"} text-right`}>
@@ -131,13 +142,24 @@ export default function Home() {
               </div>
             </>
           )}
-          
+
           {filteredData.lenght === 0 ? null : (
             <a className={`p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
           )}
 
         </div>
-      </div>
+      </section>
+
+      {/* التوصيات */}
+      <section>
+
+      </section>
+
+      {/* دراسات جينية */}
+      <section>
+
+      </section>
+
     </>
   )
 }
