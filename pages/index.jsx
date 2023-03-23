@@ -102,8 +102,8 @@ export default function Home() {
           <div className="border text-right">
             {fake
               .filter(items => {
-                const searchItems = value.toLowerCase()
-                const term = items.name.toLowerCase()
+                const searchItems = value
+                const term = items.name
 
                 return searchItems && term.endWith(searchItems) && term !== searchItems;
               })
