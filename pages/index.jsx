@@ -126,7 +126,9 @@ export default function Home() {
                   <p className="text-sm text-gary-300">{items.cat}</p>
                 </div>
               ))}
-            </div> 
+
+              <a href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+            </div>
           )}
         </div>
       </div>
