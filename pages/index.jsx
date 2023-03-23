@@ -11,7 +11,7 @@ import { NextSeo } from 'next-seo';
 import { useTheme } from "next-themes";
 
 // Icons
-import { RiArrowLeftSFill } from "react-icons/ri";
+import { RiCloseFill, RiSearchLine } from "react-icons/ri";
 
 // import { createClient } from 'contentful'
 
@@ -36,11 +36,27 @@ const fake = [
 export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
-  const [value, setValue] = useState("")
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
 
-  const onChange = (event) => {
-    setValue(event.targer.value);
-  }
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = fake.filter((value) => {
+      return value.name.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    if (searchWord === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
+    }
+  };
+
+  const clearInput = () => {
+    setFilteredData([]);
+    setWordEntered("");
+  };
 
   return (
     <>
@@ -95,25 +111,20 @@ export default function Home() {
           <p>بوابتك المعرفية في عالم القومية</p>
           <div>
             <input
-              value={value}
-              onChange={onChange}
+              value={wordEntered}
+              onChange={handleFilter}
               className="searchInput"
               type="text"
               placeholder="ابحث في عالم القومية" />
           </div>
-
-          <div className="border text-right">
-            {fake
-              .filter(items => {
-                const searchItems = value.toLowerCase()
-                const term = items.name.toLowerCase()
-
-                return searchItems && term.startWith(searchItems) && term !== searchItems;
-              })
-              .map((items) => (
+          {filteredData.lenght != 0 && (
+            <div className="border text-right">
+              {filteredData.slice(0,10).map((items) =>
+               (
                 <div className="border-b-1 p-4" key={items.id}>{items.name}</div>
               ))}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </>
