@@ -105,7 +105,7 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <div className="text-center h-full w-full grid items-center">
+      <div className="text-center h-[15em] w-full grid items-center">
         <div className="grid gap-3 w-full">
           <h1>ابحث في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
@@ -119,8 +119,8 @@ export default function Home() {
           </div>
           {filteredData.lenght != 0 && (
             <div className="border text-right">
-              {filteredData.slice(0,10).map((items) =>
-               (
+              {filteredData.slice(0, 10).map((items) =>
+              (
                 <div className="border-b-1 p-4" key={items.id}>{items.name}</div>
               ))}
             </div>
