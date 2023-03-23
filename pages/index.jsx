@@ -111,34 +111,36 @@ export default function Home() {
       <header className="text-center w-full">
         <div className="grid gap-3 w-full">
           <div className="grid gap-7 grid-cols-3">
-          <ul className="md:none block list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
-            {Tabs.slice(0,2).map((tab) => (
-              <li>
-                <Link href={`/category/${tab.slug}`}>
-                  <a className="font-black whitespace-nowrap" href={`/category/${tab.slug}`}>{tab.name}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+
+            <ul className="md:block hidden list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
+              {Tabs.slice(0, 2).map((tab) => (
+                <li>
+                  <Link href={`/category/${tab.slug}`}>
+                    <a className="font-black whitespace-nowrap" href={`/category/${tab.slug}`}>{tab.name}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
             <div className="grid gap-3 w-full">
               <h1>اهلا بيك في المكتبة القومية</h1>
               <p>بوابتك المعرفية في عالم القومية</p>
             </div>
 
-            <ul className="md:none block list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
-            {Tabs.slice(3,5).map((tab) => (
-              <li>
-                <Link href={`/category/${tab.slug}`}>
-                  <a className="font-black whitespace-nowrap" href={`/category/${tab.slug}`}>{tab.name}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+            <ul className="md:block hidden list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
+              {Tabs.slice(3, 5).map((tab) => (
+                <li>
+                  <Link href={`/category/${tab.slug}`}>
+                    <a className="font-black whitespace-nowrap" href={`/category/${tab.slug}`}>{tab.name}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
           </div>
 
           {/*Mobile*/}
-          <ul className="md:none block list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
+          <ul className="md:hidden block list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/category/${tab.slug}`}>
