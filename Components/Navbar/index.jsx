@@ -39,7 +39,7 @@ export default function Navbar() {
 
                 <div className="navIcon">{Search}</div>
 
-                <ul className="px-0 hidden md:flex gap-4 items-center ">
+                <ul className="hidden md:flex text-md gap-4 items-center ">
                     {NavLinks.map((link) => (
                         <Link href={link.link}>
                             <li
