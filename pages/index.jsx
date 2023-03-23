@@ -108,7 +108,7 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <section className="text-center w-full">
+      <header className="text-center w-full">
         <div className="grid gap-3 w-full">
           <h1>اهلا بيك في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
@@ -152,7 +152,7 @@ export default function Home() {
           )}
 
         </div>
-      </section>
+      </header>
 
       {/* التوصيات */}
       <section>
@@ -161,7 +161,12 @@ export default function Home() {
 
       {/* دراسات جينية */}
       <section>
+        <h2>دراسات جينية</h2>
+      </section>
 
+      {/* صور */}
+      <section>
+        <h2>ألبوم الصور</h2>
       </section>
 
     </>
