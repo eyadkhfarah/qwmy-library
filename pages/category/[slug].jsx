@@ -1,6 +1,6 @@
 // import { createClient } from 'contentful'
 
-import { Tabs } from '@/lib/CatPages'
+import { Tabs } from "@lib/CatPages"
 import { NextSeo } from 'next-seo';
 
 import React, { useState } from 'react';
