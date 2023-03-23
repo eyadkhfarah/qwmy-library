@@ -39,7 +39,7 @@ export default function Navbar() {
 
                 <div className="navIcon md:hidden block">{Search}</div>
 
-                <div className="md:flex hidden gap-5 p-1 border">
+                <div className="md:flex hidden gap-3 p-1 border">
                     <div className="navIcon">{Search}</div>
 
                     <input
