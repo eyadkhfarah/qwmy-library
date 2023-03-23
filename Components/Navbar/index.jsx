@@ -39,7 +39,7 @@ export default function Navbar() {
 
                 <div className="navIcon md:hidden block">{Search}</div>
 
-                <div className="md:flex hidden gap-3 p-1 border">
+                <div className="md:flex hidden gap-2 p-1 border">
                     <div className="navIcon">{Search}</div>
 
                     <input
@@ -51,7 +51,7 @@ export default function Navbar() {
                 </div>
 
 
-                <ul className="hidden md:flex text-[.5rem] gap-4 items-center ">
+                <ul className="hidden md:flex text-[.7rem] gap-3 items-center ">
                     {NavLinks.map((link) => (
                         <Link href={link.link}>
                             <li
