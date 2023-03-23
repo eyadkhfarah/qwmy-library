@@ -30,7 +30,7 @@ body {
   }
 
   nav {
-    @apply p-4 sticky text-black top-0 flex justify-between items-center shadow-lg bg-white
+    @apply p-4 sticky dark:bg-dprimary text-black top-0 flex justify-between items-center shadow-lg bg-white
   }
 
   footer {
