@@ -19,6 +19,7 @@ export default function Layout({ children, market, etf }) {
 
     const title = "المكتبة القومية"
     const desc = "بوابتك المعرفية الي عالم القومية"
+    const img = "https://i.ibb.co/0scYsTR/Picsart-23-03-23-02-14-02-466.jpg"
 
     return (
         <>
@@ -35,6 +36,14 @@ export default function Layout({ children, market, etf }) {
                 openGraph={{
                     title: title,
                     description: desc,
+                    images: [
+                        {
+                          url: img,
+                          width: 800,
+                          height: 600,
+                          alt: 'صورة المكتبة القومية',
+                        },
+                    ],
                     type: 'website',
                     locale: 'ar_IE',
                     url: siteUrl + router.asPath,
