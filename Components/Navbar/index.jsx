@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import NavList from './NavList'
+import { NavLinks } from "@lib/NavList";
+
 // import SearchBox from '../Navbar/NavMenu/SearchBox';
 
 import { useTheme } from "next-themes";
@@ -23,7 +25,7 @@ export default function Navbar() {
     return (
         <>
             <nav>
-                <div onClick={() => setBtn(!btn)} className="navIcon">{Menu}</div>
+                <div onClick={() => setBtn(!btn)} className="navIcon md:hidden block">{Menu}</div>
 
                 <Link href={"/"}>
                     <a href={siteUrl}>
@@ -36,6 +38,24 @@ export default function Navbar() {
                 </Link>
 
                 <div className="navIcon">{Search}</div>
+
+                <ul className="px-0 md:block hidden flex gap-4 items-center ">
+                    {NavLinks.map((link) => (
+                        <Link href={link.link}>
+                            <li
+                                className="navLink"
+                                key={link.id}
+                                onClick={() => setBtn(!btn)}
+                            >
+                                <a href={siteUrl + link.link} aria-label={link.title}
+                                >
+                                    {link.title}
+                                </a>
+                            </li>
+                        </Link>
+                    ))}
+                </ul>
+
             </nav>
 
             <NavList btn={btn} setBtn={setBtn} />
