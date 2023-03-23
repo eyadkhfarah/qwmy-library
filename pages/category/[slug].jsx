@@ -67,7 +67,7 @@ export default function News({ navTitle }) {
     const desc = `دي صفحة تابعة لقسم ${navTitle.name}`
 
     return (
-        <main>
+        <>
             <NextSeo
                 title={title}
                 description={desc}
@@ -88,7 +88,7 @@ export default function News({ navTitle }) {
                 ]}
             />
 
-            <h1 className="my-6">{navTitle.name}</h1>
+            <h1>{navTitle.name}</h1>
             <div className="space-y-4">
 
                {/* {blogPosts
@@ -101,6 +101,6 @@ export default function News({ navTitle }) {
                         <ArticleCard key={content.sys.id} news={content} />
                     ))} */}
             </div>
-        </main>
+        </>
     )
 }
