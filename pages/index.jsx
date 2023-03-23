@@ -111,8 +111,8 @@ export default function Home() {
 
       <header className="text-center md:px-[9em] w-full my-8">
 
-        <div className="grid gap-3 w-full">
-          <div className="md:grid gap-7 grid-cols-3">
+        <div className="grid gap-3 w-full h-full">
+          <div className="md:grid gap-7 h-full grid-cols-3">
 
             <ul className="md:block hidden h-full list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
               {Tabs.slice(0, 3).map((tab) => (
