@@ -105,7 +105,7 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <div className="text-center h-[35em] w-full">
+      <div className="text-center h-[45em] w-full">
         <div className="grid gap-3 w-full">
           <h1>ابحث في المكتبة القومية</h1>
           <p>بوابتك المعرفية في عالم القومية</p>
@@ -121,7 +121,7 @@ export default function Home() {
             <div className="border text-right">
               {filteredData.slice(0,6).map((items) =>
               (
-                <div className="border p-4 grid gap-3" key={items.id}>
+                <div className="border p-4 grid gap-2" key={items.id}>
                   <p className="font-black">{items.name}</p>
                   <p className="text-sm text-gary-300">{items.cat}</p>
                 </div>
