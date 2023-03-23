@@ -19,9 +19,9 @@ import { RiCloseFill, RiSearchLine } from "react-icons/ri";
 
 const fake = [
   { name: 'اياد', cat: "شخص القومي", id: 1 },
-  { name: 'قومي', cat:"صفحة", id: 2 },
-  { name: 'القومية المصرية', cat:"حركة قومية", id: 3 },
-  { name: 'وعي مصر', cat:"صفحة", id: 4 },
+  { name: 'قومي', cat: "صفحة", id: 2 },
+  { name: 'القومية المصرية', cat: "حركة قومية", id: 3 },
+  { name: 'وعي مصر', cat: "صفحة", id: 4 },
   { name: 'الصحوة القومية', cat: "صفحة", id: 5 },
   { name: 'القومية الامازغية', cat: "حركة قومية", id: 6 },
   { name: 'القومية العربية', cat: "حركة قومية", id: 7 },
@@ -119,17 +119,17 @@ export default function Home() {
           </div>
           {filteredData.lenght != 0 && (
             <>
-            <div className={`${filteredData.lenght != 0 ? "border-none" : "border"} text-right`}>
-              {filteredData.slice(0,6).map((items) =>
-              (
-                <div className="border p-4 grid gap-2" key={items.id}>
-                  <p className="font-black">{items.name}</p>
-                  <p className="text-sm text-gary-500">{items.cat}</p>
-                </div>
-              ))}
+              <div className={`${filteredData.lenght != 0 ? "border-none" : "border"} text-right`}>
+                {filteredData.slice(0, 6).map((items) =>
+                (
+                  <div className="border p-4 grid gap-2" key={items.id}>
+                    <p className="font-black">{items.name}</p>
+                    <p className="text-sm text-gary-500">{items.cat}</p>
+                  </div>
+                ))}
 
-            </div>
-            <a className="p-4 border" href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+              </div>
+              <a className={`${filteredData.lenght != 0 ? "none" : "block"}p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
             </>
           )}
         </div>
