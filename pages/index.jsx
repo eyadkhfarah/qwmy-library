@@ -114,7 +114,7 @@ export default function Home() {
         <div className="grid gap-3 w-full h-full">
           <div className="md:grid gap-7 h-full grid-cols-3">
 
-            <ul className="md:block hidden space-y-4 h-full list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
+            <ul className="md:block hidden space-y-7 h-full list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
               {Tabs.slice(0, 3).map((tab) => (
                 <li>
                   <Link href={`/category/${tab.slug}`}>
@@ -129,7 +129,7 @@ export default function Home() {
               <p>بوابتك المعرفية في عالم القومية</p>
             </div>
 
-            <ul className="md:block hidden space-y-4 h-full list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
+            <ul className="md:block hidden space-y-7 h-full list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
               {Tabs.slice(3, 6).map((tab) => (
                 <li>
                   <Link href={`/category/${tab.slug}`}>

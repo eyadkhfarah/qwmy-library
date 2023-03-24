@@ -70,7 +70,7 @@ export default function Navbar() {
 
             </nav>
 
-            <NavList btn={btn} setBtn={setBtn} />
+            <NavList btn={btn} setBtn={setBtn} className="md:hidden"/>
         </>
     )
 }
