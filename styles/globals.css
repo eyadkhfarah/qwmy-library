@@ -58,6 +58,18 @@ body {
     @apply p-3 w-full dark:bg-dprimary
   }
 
+  table {
+    @apply mb-5 table-fixed border dark:border-dprimary
+  }
+
+  th {
+    @apply bg-gray-500 dark:bg-dprimary dark:text-white font-black pt-4
+  }
+
+  td {
+    @apply dark:text-white border dark:border-dprimary px-3
+  }
+
   a {
     @apply text-blue-500
   }
