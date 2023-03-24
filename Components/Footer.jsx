@@ -14,10 +14,10 @@ export default function Footer() {
     return (
         <footer>
             <div className="flex gap-3">
-                <ul className="flex flex-cols justify-between">
-                    <li><RiFacebookFill className="text-xl" /></li>
-                    <li><RiInstagramLine className="text-xl" /></li>
-                    <li><RiTwitterFill className="text-xl" /></li>
+                <ul className="list-none flex flex-col justify-between">
+                    <li><RiFacebookFill className="text-2xl" /></li>
+                    <li><RiInstagramLine className="text-2xl" /></li>
+                    <li><RiTwitterFill className="text-2xl" /></li>
                 </ul>
                 <div className="grid gap-4">
                     <Link href={"/"}>
