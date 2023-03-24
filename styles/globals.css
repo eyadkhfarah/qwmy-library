@@ -55,7 +55,7 @@ body {
   }
 
   .searchInput {
-    @apply p-3 w-full dark:bg-dprimary
+    @apply p-3 w-full dark:bg-dprimary dark:border-none
   }
 
   table {
