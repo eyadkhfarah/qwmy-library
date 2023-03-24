@@ -50,9 +50,9 @@ export default function SearchList({ searchOpen, setSearchOpen }) {
 
     return (
         <div className={`navList ${searchOpen ? `left-0` : `left-[-1000px]`}`}>
-            <div className="flex justify-between items-center">
+            <div className="flex text-center justify-between items-center">
                 <RiCloseLine
-                    className="dark:text-white text-xl p-3 w-[3em] h-[3em] mb-8 transition-all duration-300 cursor-pointer hover:bg-white hover:text-primary"
+                    className="dark:text-white text-xl p-3 w-[3em] h-[3em] mb-3 transition-all duration-300 cursor-pointer hover:bg-white hover:text-primary"
                     onClick={() => setSearchOpen(!searchOpen)}
                 />
             </div>
