@@ -13,7 +13,7 @@ export default function Footer() {
 
     return (
         <footer>
-            <div className="flex gap-3">
+            <div className="flex gap-2">
                 <ul className="list-none flex flex-col justify-between">
                     <li><RiFacebookFill className="text-2xl" /></li>
                     <li><RiInstagramLine className="text-2xl" /></li>
@@ -46,7 +46,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className='text-gray-400 text-sm align-center py-11'>
+            <div className='text-gray-400 text-sm text-center py-11'>
                 كل الحقوق محفوظة لدي <span>المكتبة القومية</span> لسنة {new Date().getFullYear()}
             </div>
         </footer>

@@ -10,8 +10,9 @@ import { DefaultSeo, NextSeo } from 'next-seo';
 import { useState, useRef } from "react"
 
 import { Partytown } from '@builder.io/partytown/react';
+
 // import ScrollButton from "./ScrollBtn";
-// import DarkButton from "./darkBtn";
+import DarkButton from "./darkBtn";
 
 export default function Layout({ children, market, etf }) {
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
@@ -257,8 +258,8 @@ export default function Layout({ children, market, etf }) {
                 {children}
             </main>
             <Footer />
-            {/* <ScrollButton />
-                <DarkButton /> */}
+            {/* <ScrollButton /> */}
+            <DarkButton />
         </>
     )
 }
