@@ -142,7 +142,7 @@ export default function Home() {
           </div>
 
           {/*Mobile*/}
-          <ul className="md:hidden block list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
+          <ul className="md:hidden block list-none grid gap-7 w-full grid-cols-2">
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/category/${tab.slug}`}>
@@ -177,7 +177,7 @@ export default function Home() {
           )}
 
           {filteredData.lenght === 0 ? null : (
-            <a className={`p-4 border`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
+            <a className={`p-4 border dark:border-none`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
           )}
 
         </div>
