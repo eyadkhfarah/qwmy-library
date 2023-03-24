@@ -3,8 +3,7 @@ import Image from 'next/image';
 
 import NavList from './NavList'
 import { NavLinks } from "@lib/NavList";
-
-// import SearchBox from '../Navbar/NavMenu/SearchBox';
+import SearchList from './SearchList';
 
 import { useTheme } from "next-themes";
 import { RiSearch2Line, RiMenu3Line } from 'react-icons/ri'
@@ -69,8 +68,8 @@ export default function Navbar() {
                 </ul>
 
             </nav>
-
-            <NavList btn={btn} setBtn={setBtn} className="md:hidden"/>
+            <SearchList searchOpen={searchOpen} setSearchOpen={setSearchOpen} className="md:hidden" />
+            <NavList btn={btn} setBtn={setBtn} className="md:hidden" />
         </>
     )
 }
