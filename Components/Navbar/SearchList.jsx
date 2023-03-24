@@ -2,6 +2,10 @@ import { RiSearch2Line, RiCloseLine } from 'react-icons/ri'
 import { NavLinks } from "@lib/NavList";
 
 import Link from "next/link";
+import Image from "next/image";
+
+import { useState } from "react"
+
 
 const fake = [
     { name: 'اياد', cat: "شخص القومي", id: 1 },
