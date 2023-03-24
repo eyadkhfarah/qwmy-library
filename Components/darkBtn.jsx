@@ -24,7 +24,7 @@ export default function DarkButton() {
 
   return (
     <button
-      className={`transition-all duration-300 shadow-2xl p-3 fixed dark:text-white bg-white border dark:border-none dark:bg-dprimary left-4 bottom-4 text-lg z-[98] cursor-pointer`}>
+      className={`transition-all duration-300 shadow-2xl p-3 fixed dark:text-white bg-white border dark:border-none dark:bg-dlight left-4 bottom-4 text-lg z-[98] cursor-pointer`}>
       <div className="flex items-center gap-3">
         {renderThemeChanger()}
       </div>
