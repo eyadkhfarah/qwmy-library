@@ -135,7 +135,7 @@ export default function Home() {
                   <Link href={`/category/${tab.slug}`}>
                     <a className="font-black whitespace-nowrap" href={`/category/${tab.slug}`}>{tab.name}</a>
                   </Link>
-                </li> 
+                </li>
               ))}
             </ul>
 

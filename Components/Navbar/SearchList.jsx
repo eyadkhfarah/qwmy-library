@@ -50,14 +50,21 @@ export default function SearchList({ searchOpen, setSearchOpen }) {
 
     return (
         <div className={`navList ${searchOpen ? `left-0` : `left-[-1000px]`}`}>
-        <div className="flex gap-2 border dark:border-none dark:bg-dlight">
+            <div className="flex justify-between items-center">
+                <RiCloseLine
+                    className="dark:text-white text-xl p-3 w-[3em] h-[3em] mb-8 transition-all duration-300 cursor-pointer hover:bg-white hover:text-primary"
+                    onClick={() => setSearchOpen(!searchOpen)}
+                />
+            </div>
+
+            <div className="flex gap-2 p-3 border dark:border-none dark:bg-dlight">
                 <input
                     value={wordEntered}
                     onChange={handleFilter}
-                    className="searchInput p-0"
+                    className="searchInput p-0 border-none"
                     type="text"
                     placeholder="ابحث في عالم القومية" />
-                
+
                 <div className="text-2xl dark:text-white">
                     {filteredData.length === 0 ? (
                         <RiSearch2Line />
@@ -79,7 +86,7 @@ export default function SearchList({ searchOpen, setSearchOpen }) {
                         ))}
                     </div>
 
-                    =                </>
+                </>
             )}
 
         </div>
