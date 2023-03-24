@@ -37,7 +37,7 @@ export default function Navbar() {
                     </a>
                 </Link>
 
-                <div className="navIcon md:hidden block">{Search}</div>
+                <div onClick={() => setSearchOpen(!searchOpen)} className="navIcon md:hidden block">{Search}</div>
 
                 <div className="md:flex hidden gap-2 p-1 border dark:border-none dark:bg-dlight">
                     <div className="navIcon">{Search}</div>
