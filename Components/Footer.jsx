@@ -46,7 +46,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className='text-gray-400 text-[.3rem] text-center py-14'>
+            <div className='text-gray-400 text-[.5rem] text-center py-14'>
                 كل الحقوق محفوظة لدي <span className="font-black">المكتبة القومية</span> لسنة {new Date().getFullYear()}
             </div>
         </footer>

@@ -142,7 +142,7 @@ export default function Home() {
           </div>
 
           {/*Mobile*/}
-          <ul className="md:hidden block list-none grid gap-7 w-full grid-cols-2">
+          <ul className="md:hidden block list-none space-y-5 grid gap-7 w-full grid-cols-2">
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/category/${tab.slug}`}>
