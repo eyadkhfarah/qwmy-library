@@ -34,7 +34,7 @@ body {
   }
 
   footer {
-    @apply p-6 border-t-2 border
+    @apply p-6 border-t-2 dark:border-none dark:bg-dprimary
   }
 
   .navIcon {
