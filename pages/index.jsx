@@ -163,10 +163,10 @@ export default function Home() {
 
           {filteredData.lenght != 0 && (
             <>
-              <div className={`${filteredData.lenght === 0 ? "border" : "border-none"} text-right`}>
+              <div className={`${filteredData.lenght === 0 ? "border dark:border-slate-500" : "border-none"} text-right`}>
                 {filteredData.slice(0, 6).map((items) =>
                 (
-                  <div className="border p-4 grid gap-2" key={items.id}>
+                  <div className="border dark:border-none dark:border-b-slate-500 dark:bg-dprimary p-4 grid gap-2" key={items.id}>
                     <p className="font-black">{items.name}</p>
                     <p className="text-sm text-slate-500">{items.cat}</p>
                   </div>
