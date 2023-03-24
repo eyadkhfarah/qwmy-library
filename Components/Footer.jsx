@@ -15,9 +15,9 @@ export default function Footer() {
         <footer>
             <div className="flex gap-2">
                 <ul className="list-none flex flex-col justify-between">
-                    <li><a href="https://facebook.com/" className="text-black dark:text-white"><RiFacebookFill className="text-2xl" /></a></li>
-                    <li><a href="https://instagram.com/" className="text-black dark:text-white"><RiInstagramLine className="text-2xl" /></a></li>
-                    <li><a href="https://twitter.com/" className="text-black dark:text-white"></a><RiTwitterFill className="text-2xl" /></li>
+                    <li><a href="https://facebook.com/" aria-label="صفحة المكتبة علي الفيسبوك" className="text-black dark:text-white"><RiFacebookFill className="text-2xl" /></a></li>
+                    <li><a href="https://instagram.com/" aria-label="صفحة المكتبة علي انستاجرام" className="text-black dark:text-white"><RiInstagramLine className="text-2xl" /></a></li>
+                    <li><a href="https://twitter.com/" aria-label="صفحة المكتبة علي تويتر" className="text-black dark:text-white"><RiTwitterFill className="text-2xl" /></a></li>
                 </ul>
                 <div className="grid gap-4">
                     <Link href={"/"}>
@@ -46,7 +46,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className='text-gray-400 text-[3.rem] text-center py-14'>
+            <div className='text-gray-400 text-[.3rem] text-center py-14'>
                 كل الحقوق محفوظة لدي <span className="font-black">المكتبة القومية</span> لسنة {new Date().getFullYear()}
             </div>
         </footer>
