@@ -16,8 +16,8 @@ export default function Footer() {
             <div className="flex gap-2">
                 <ul className="list-none flex flex-col justify-between">
                     <li><a href="https://facebook.com/" className="text-black dark:text-white"><RiFacebookFill className="text-2xl" /></a></li>
-                    <li><RiInstagramLine className="text-2xl" /></li>
-                    <li><RiTwitterFill className="text-2xl" /></li>
+                    <li><a href="https://instagram.com/" className="text-black dark:text-white"><RiInstagramLine className="text-2xl" /></a></li>
+                    <li><a href="https://twitter.com/" className="text-black dark:text-white"></a><RiTwitterFill className="text-2xl" /></li>
                 </ul>
                 <div className="grid gap-4">
                     <Link href={"/"}>
