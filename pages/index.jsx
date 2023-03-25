@@ -124,7 +124,7 @@ export default function Home() {
               {Tabs.slice(0, 3).map((tab) => (
                 <li className="w-full">
                   <Link href={`/category/${tab.slug}`}>
-                    <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
+                    <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                   </Link>
                 </li>
               ))}
@@ -152,7 +152,7 @@ export default function Home() {
               {Tabs.slice(3, 6).map((tab) => (
                 <li className="w-full">
                   <Link href={`/category/${tab.slug}`}>
-                    <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
+                    <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                   </Link>
                 </li>
               ))}
@@ -165,7 +165,7 @@ export default function Home() {
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/category/${tab.slug}`}>
-                <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
+                <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                 </Link>
               </li>
             ))}
