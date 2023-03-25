@@ -27,7 +27,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav>
+            <nav className={`${router.pathname === "/" ? "shadow-none" : ""}`}>
                 <div onClick={() => setBtn(!btn)} className="navIcon md:hidden block">{Menu}</div>
 
                 <div className={`${router.pathname === "/" ? "hidden" : "block"}`}>
