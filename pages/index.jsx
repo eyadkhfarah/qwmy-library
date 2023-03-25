@@ -122,7 +122,7 @@ export default function Home() {
 
             <ul className="md:block hidden space-y-7 h-full list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
               {Tabs.slice(0, 3).map((tab) => (
-                <li>
+                <li className="w-full">
                   <Link href={`/category/${tab.slug}`}>
                     <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
                   </Link>
@@ -150,7 +150,7 @@ export default function Home() {
 
             <ul className="md:block hidden space-y-7 h-full list-none grid gap-7 my-5 w-full grid-cols-2 grid-rows-3">
               {Tabs.slice(3, 6).map((tab) => (
-                <li>
+                <li className="w-full">
                   <Link href={`/category/${tab.slug}`}>
                     <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
                   </Link>
