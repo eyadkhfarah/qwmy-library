@@ -131,7 +131,7 @@ export default function Home() {
             </ul>
 
             <div className="grid gap-3 w-full">
-              <h1>اهلا بيك في</h1>
+              <h1 className="md:text-2xl">اهلا بيك في</h1>
 
               <div>
                     <Link href={"/"}>
