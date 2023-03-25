@@ -62,7 +62,7 @@ export default function Books({ books }) {
                         </div>
                         <div className="flex text-gray-500 gap-5">
                             <p>نوع الكتاب</p>
-                            <p>{book.fields.cv.fields.name}</p>
+                            <p>{book.fields.cv.name}</p>
                         </div>
                     </>)
                 )}
