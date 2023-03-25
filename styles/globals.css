@@ -74,7 +74,7 @@ body {
   }
 
   h1 {
-    @apply font-black text-3xl mb-6
+    @apply font-black text-3xl mx-5
   }
 
   h2 {
