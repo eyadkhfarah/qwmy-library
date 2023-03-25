@@ -23,7 +23,7 @@ export async function getStaticProps() {
     }
   }
 
-export default function Books() {
+export default function Books({books}) {
     const title = "المكتبة القومية — كتب عن القومية"
     const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
@@ -54,7 +54,7 @@ export default function Books() {
             <div className="gird gap-3 p-4 my-4 border-b-2">
                 <div className="flex items-center gap-4">
                     <RiArrowLeftSLine className="text-2xl" />
-                    <a href="/"><h2 className="border-none text-xl">كتاب معين</h2></a>
+                    <a href="/"><h2 className="border-none text-xl">{books.fields.title}</h2></a>
                 </div>
                 <div className="flex text-gray-500 gap-5">
                     <p>نوع الكتاب</p>
