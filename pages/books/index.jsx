@@ -4,10 +4,10 @@ export default function Books() {
     return (
         <>
             <h1>كتب عن القومية</h1>
-            <div className="gird gap-3 my-">
-                <div className="flex gap-4">
-                    <RiArrowLeftSLine className="2xl" />
-                    <h2 className="border-none">كتاب معين</h2>
+            <div className="gird gap-3 p-4 my-4 border-b-1">
+                <div className="flex items-center gap-4">
+                    <RiArrowLeftSLine className="text-2xl" />
+                    <a href="/"><h2 className="border-none">كتاب معين</h2></a>
                 </div>
                 <div className="flex gap-5">
                     <p>نوع الكتاب</p>
