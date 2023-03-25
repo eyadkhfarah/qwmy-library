@@ -28,6 +28,8 @@ export default function Books({ books }) {
     const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
+    console.log(books.fields.cv)
+
     return (
         <>
             <NextSeo
