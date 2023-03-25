@@ -30,7 +30,7 @@ export default function Navbar() {
             <nav>
                 <div onClick={() => setBtn(!btn)} className="navIcon md:hidden block">{Menu}</div>
 
-                <div className={`${ pathname === "/" ? "block" : "hidden"}`}>
+                <div className={`${router.pathname === "/" ? "block" : "hidden"}`}>
                     <Link href={"/"}>
                         <a href={siteUrl}>
                             {currentTheme === "dark" ?
