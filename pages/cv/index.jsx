@@ -13,19 +13,19 @@ export async function getStaticProps() {
         accessToken: process.env.CONTENTFUL_ACCESS_KEY,
     })
 
-    const res = await client.getEntries({ content_type: "books" })
+    const res = await client.getEntries({ content_type: "cv" })
 
     return {
         props: {
-            books: res.items,
+            cvs: res.items,
         },
         revalidate: 1
     }
 }
 
-export default function Books({ books }) {
-    const title = "المكتبة القومية — كتب عن القومية"
-    const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية."
+export default function CV({cvs}) {
+    const title = "المكتبة القومية — سيرة ذاتية"
+    const desc = "تعرف علب مجموعة كبيرة من قراء ومفكرين وشخصيات قومية عظيمة."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
     return (
@@ -50,21 +50,8 @@ export default function Books({ books }) {
                 ]}
             />
 
-            <h1>كتب عن القومية</h1>
-            <div className="gird gap-3 p-4 my-4 border-b-2">
-                {books.map((book) => (
-                    <>
-                        <div className="flex items-start gap-4">
-                            <RiArrowLeftSLine className="text-2xl" />
-                            <a href="/"><h2 className="border-none text-lg m-0">{book.fields.title}</h2></a>
-                        </div>
-                        <div className="flex text-gray-500 gap-5">
-                            <p>نوع الكتاب</p>
-                            <p>{book.fields.cv.fields}</p>
-                        </div>
-                    </>)
-                )}
-            </div>
-        </>
-    )
+            <h1>سيرة ذاتية</h1>
+    
+    </>
+  )
 }
