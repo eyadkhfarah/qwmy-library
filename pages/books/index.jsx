@@ -28,7 +28,8 @@ export default function Books({ books }) {
     const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
-    console.log(books.fields)
+    console.log(books.fields);
+
     return (
         <>
             <NextSeo
@@ -61,7 +62,7 @@ export default function Books({ books }) {
                         </div>
                         <div className="flex text-gray-500 gap-5">
                             <p>نوع الكتاب</p>
-                            <p>{book.fields.cv}</p>
+                            <p>{book.fields.cv.fields.name}</p>
                         </div>
                     </>)
                 )}
