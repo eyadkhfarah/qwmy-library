@@ -54,13 +54,13 @@ export default function Books({ books }) {
             <div className="gird gap-3 p-4 my-4 border-b-2">
                 {books.map((book) => (
                     <>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-start gap-4">
                             <RiArrowLeftSLine className="text-2xl" />
-                            <a href="/"><h2 className="border-none text-xl">{book.fields.title}</h2></a>
+                            <a href="/"><h2 className="border-none text-lg">{book.fields.title}</h2></a>
                         </div>
                         <div className="flex text-gray-500 gap-5">
                             <p>نوع الكتاب</p>
-                            <p>اسم المؤلف</p>
+                            <p>{book.fields.authors.fields.name}</p>
                         </div>
                     </>)
                 )}
