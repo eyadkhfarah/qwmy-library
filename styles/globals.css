@@ -53,6 +53,10 @@ body {
     @apply p-5
   }
 
+  .tabs {
+    @apply font-black whitespace-nowrap p-3 w-full hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-300
+  }
+
   .searchInput {
     @apply p-3 w-full dark:bg-dprimary dark:border-none
   }

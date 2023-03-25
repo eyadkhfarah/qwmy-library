@@ -117,14 +117,14 @@ export default function Home() {
 
       <header className="text-center md:px-[9em] w-full my-8">
 
-        <div className="grid gap-3 w-full h-full">
-          <div className="md:grid gap-7 h-full grid-cols-3">
+        <div className="grid gap-5 w-full h-full">
+          <div className="md:grid place-items-start gap-7 h-full grid-cols-3">
 
             <ul className="md:block hidden space-y-7 h-full list-none grid gap-7 w-full grid-cols-2 grid-rows-3">
               {Tabs.slice(0, 3).map((tab) => (
                 <li>
                   <Link href={`/category/${tab.slug}`}>
-                    <a className="font-black whitespace-nowrap mb-4" href={`/category/${tab.slug}`}>{tab.name}</a>
+                    <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
                   </Link>
                 </li>
               ))}
@@ -152,7 +152,7 @@ export default function Home() {
               {Tabs.slice(3, 6).map((tab) => (
                 <li>
                   <Link href={`/category/${tab.slug}`}>
-                    <a className="font-black whitespace-nowrap" href={`/category/${tab.slug}`}>{tab.name}</a>
+                    <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
                   </Link>
                 </li>
               ))}
@@ -165,7 +165,7 @@ export default function Home() {
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/category/${tab.slug}`}>
-                  <a className="font-black whitespace-nowrap" href={`/category/${tab.slug}`}>{tab.name}</a>
+                <a className="tabs" href={`/category/${tab.slug}`}>{tab.name}</a>
                 </Link>
               </li>
             ))}
