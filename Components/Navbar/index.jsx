@@ -5,6 +5,8 @@ import NavList from './NavList'
 import { NavLinks } from "@lib/NavList";
 import SearchList from './SearchList';
 
+import { useRouter } from "next/router";
+
 import { useTheme } from "next-themes";
 import { RiSearch2Line, RiMenu3Line } from 'react-icons/ri'
 import { useState } from 'react';
@@ -18,6 +20,8 @@ export default function Navbar() {
     const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
 
+    const router = useRouter();
+
     const Search = <span><RiSearch2Line /></span>;
     const Menu = <span><RiMenu3Line /></span>;
 
@@ -26,15 +30,17 @@ export default function Navbar() {
             <nav>
                 <div onClick={() => setBtn(!btn)} className="navIcon md:hidden block">{Menu}</div>
 
-                <Link href={"/"}>
-                    <a href={siteUrl}>
-                        {currentTheme === "dark" ?
-                            <Image src="/WhiteLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={120} height={47} />
-                            :
-                            <Image src="/DarkLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={120} height={47} />
-                        }
-                    </a>
-                </Link>
+                <div className={`${ pathname === "/" ? "block" : "hidden"}`}>
+                    <Link href={"/"}>
+                        <a href={siteUrl}>
+                            {currentTheme === "dark" ?
+                                <Image src="/WhiteLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={120} height={47} />
+                                :
+                                <Image src="/DarkLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={120} height={47} />
+                            }
+                        </a>
+                    </Link>
+                </div>
 
                 <div onClick={() => setSearchOpen(!searchOpen)} className="navIcon md:hidden block">{Search}</div>
 
