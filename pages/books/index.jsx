@@ -61,7 +61,7 @@ export default function Books({ books }) {
                             <a href="/"><h2 className="border-none text-lg m-0">{book.fields.title}</h2></a>
                         </div>
                         <div className="flex text-gray-500 gap-5">
-                            <p>نوع الكتاب</p>
+                            <p>{book.fields.type}</p>
                             <p>{book.fields.author.fields.name}</p>
                         </div>
                     </>)
