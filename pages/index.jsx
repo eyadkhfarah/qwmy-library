@@ -123,7 +123,7 @@ export default function Home() {
             <ul className="tabList">
               {Tabs.slice(0, 3).map((tab) => (
                 <li className="w-full">
-                  <Link href={`/category/${tab.slug}`}>
+                  <Link href={`/${tab.slug}`}>
                     <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                   </Link>
                 </li>
@@ -151,7 +151,7 @@ export default function Home() {
             <ul className="tabList">
               {Tabs.slice(3, 6).map((tab) => (
                 <li className="w-full">
-                  <Link href={`/category/${tab.slug}`}>
+                  <Link href={`/${tab.slug}`}>
                     <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                   </Link>
                 </li>
@@ -164,7 +164,7 @@ export default function Home() {
           <ul className="md:hidden block my-5 list-none gap-14 grid w-full grid-cols-2">
             {Tabs.map((tab) => (
               <li>
-                <Link href={`/category/${tab.slug}`}>
+                <Link href={`/${tab.slug}`}>
                 <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                 </Link>
               </li>
