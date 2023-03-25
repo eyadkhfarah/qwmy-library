@@ -58,7 +58,9 @@ export default function Books({ books }) {
                     <>
                         <div className="flex items-start gap-4">
                             <RiArrowLeftSLine className="text-2xl" />
-                            <a href="/"><h2 className="border-none text-lg m-0">{book.fields.title}</h2></a>
+                            <Link href={`/books/${book.fields.slug}`}>
+                                <a href={`/books/${book.fields.slug}`}><h2 className="border-none text-lg m-0">{book.fields.title}</h2></a>
+                            </Link>
                         </div>
                         <div className="flex text-gray-500 gap-5">
                             <p>{book.fields.type}</p>
