@@ -30,7 +30,7 @@ body {
   }
 
   nav {
-    @apply p-4 sticky dark:bg-dprimary text-black top-0 flex justify-between items-center shadow-lg bg-white z-[900]
+    @apply p-4 sticky dark:bg-dprimary text-black top-0 flex justify-between items-center shadow-lg bg-white z-[990]
   }
 
   footer {
@@ -38,7 +38,7 @@ body {
   }
 
   .navIcon {
-    @apply text-xl p-3 dark:text-white transition-all duration-300 cursor-pointer z-[990]
+    @apply text-xl p-3 dark:text-white transition-all duration-300 cursor-pointer z-[900]
   }
 
   .navList {
