@@ -9,6 +9,7 @@ import { NextSeo } from 'next-seo';
 
 // Components
 import { useTheme } from "next-themes";
+import { useRouter } from "next/router";
 
 // Icons
 import { RiCloseFill, RiSearchLine } from "react-icons/ri";
@@ -60,6 +61,11 @@ export default function Home() {
     setFilteredData([]);
     setWordEntered("");
   };
+
+  const router = useRouter();
+
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <>
@@ -125,7 +131,20 @@ export default function Home() {
             </ul>
 
             <div className="grid gap-3 w-full">
-              <h1>اهلا بيك في المكتبة القومية</h1>
+              <h1>اهلا بيك في</h1>
+
+              <div>
+                    <Link href={"/"}>
+                        <a href={siteUrl}>
+                            {currentTheme === "dark" ?
+                                <Image src="/WhiteLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
+                                :
+                                <Image src="/DarkLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
+                            }
+                        </a>
+                    </Link>
+                </div>
+
               <p>بوابتك المعرفية في عالم القومية</p>
             </div>
 
