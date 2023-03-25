@@ -56,11 +56,11 @@ export default function Books({ books }) {
                     <>
                         <div className="flex items-start gap-4">
                             <RiArrowLeftSLine className="text-2xl" />
-                            <a href="/"><h2 className="border-none text-lg">{book.fields.title}</h2></a>
+                            <a href="/"><h2 className="border-none text-lg m-0">{book.fields.title}</h2></a>
                         </div>
                         <div className="flex text-gray-500 gap-5">
                             <p>نوع الكتاب</p>
-                            <p>{book.fields.authors}</p>
+                            <p>{book.fields.cv.fields.name}</p>
                         </div>
                     </>)
                 )}
