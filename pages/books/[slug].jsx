@@ -128,7 +128,7 @@ export default function BookDetials({ books }) {
         <h1>{books.fields.title}</h1>
 
         {/*Mobile*/}
-        <div className="grid gap-4 border md:block hidden">
+        <div className="grid gap-4 border md:hidden block">
         <h2 className="pr-3">تفاصيل الكتاب</h2>
         <div className="grid gap-3 p-3">
           <p>الكاتب: {books.fields.author.fields.name}</p>
@@ -137,7 +137,7 @@ export default function BookDetials({ books }) {
 
       </div>
 
-      <div className="grid gap-4 border md:hidden block">
+      <div className="grid gap-4 border md:block hidden">
         <h2 className="pr-3">تفاصيل الكتاب</h2>
         <div className="grid gap-3 p-3">
           <p>الكاتب: {books.fields.author.fields.name}</p>
