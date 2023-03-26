@@ -89,8 +89,10 @@ const options = {
   },
 }; 
 
-export default function BookDetials() {
+export default function BookDetials({books}) {
   return (
-    <div>Book Detials</div>
+    <>
+    <h1>{books.fields.title}</h1>
+    </>
   )
 }
