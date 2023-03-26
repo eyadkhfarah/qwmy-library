@@ -3,13 +3,7 @@ import Script from 'next/script'
 import Image from "next/image";
 import Link from "next/link";
 
-import { CatMenu } from '@/lib/Menus/categoryMenu'
-
 import { NextSeo, NewsArticleJsonLd } from 'next-seo';
-
-import SideBar from '@/Components/SideBar'
-import CopyLink from "@/Components/Models/CopyLink";
-
 import { Partytown } from '@builder.io/partytown/react';
 
 import { useState, useRef } from 'react'
