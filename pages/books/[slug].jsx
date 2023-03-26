@@ -130,7 +130,7 @@ export default function BookDetials({ books }) {
 
       <div className="grid gap-4 border">
         <h2>تفاصيل الكتاب</h2>
-        <p>الكاتب: {books.fields.authors.fields.name}</p>
+        <p>الكاتب: {books.fields.author.fields.name}</p>
       </div>
     </div>
   )
