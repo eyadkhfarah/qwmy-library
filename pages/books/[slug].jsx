@@ -100,11 +100,11 @@ export default function BookDetials({ books }) {
   return (
     <div className="md:grid grid-cols-3 gap-7">
       <NextSeo
-        title={`— المكتبة القومية`}
+        title={`${books.fields.title} — المكتبة القومية`}
         description={``}
         openGraph={{
           url: `${siteUrl}/books/${books.fields.slug}`,
-          title: "",
+          title: books.fields.title,
           description: "",
           type: 'book',
           book: {
