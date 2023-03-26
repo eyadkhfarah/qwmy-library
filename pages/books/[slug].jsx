@@ -87,7 +87,7 @@ const options = {
     [BLOCKS.HYPERLINK]: (node, children) => <a className="text-primary" href={node.data.uri}>{children}</a>,
     [BLOCKS.PARAGRAPH]: (node, children) => <p className="mb-7">{children}</p>,
   },
-};
+}; 
 
 export default function BookDetials() {
   return (
