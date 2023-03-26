@@ -131,7 +131,7 @@ export default function BookDetials({ books }) {
         <div className="grid gap-4 border md:hidden block">
           <h2 className="pr-3">تفاصيل الكتاب</h2>
           <div className="grid gap-3 p-3">
-            <p>الكاتب: <span>{books.fields.author.fields.name}</span></p>
+            <p>الكاتب: <span className="font-black"><Link href={`/cv/${books.fields.author.fields.slug}`}><a href={`/cv/${books.fields.author.fields.slug}`}>{books.fields.author.fields.name}</a></Link></span></p>
           </div>
         </div>
 
