@@ -85,7 +85,7 @@ const options = {
   renderNode: {
     [BLOCKS.QUOTE]: (node, children) => <Qoute>{children}</Qoute>,
     [BLOCKS.HYPERLINK]: (node, children) => <a className="text-primary" href={node.data.uri}>{children}</a>,
-    [BLOCKS.PARAGRAPH]: (node, children) => <p className="mb-7">{children}</p>,
+    [BLOCKS.PARAGRAPH]: (node, children) => <><p className="">{children}</p><br /></>,
   },
 };
 
@@ -124,18 +124,26 @@ export default function BookDetials({ books }) {
         }
         }
       />
-      <div className="grid gap-4 col-span-2">
+      <article className="grid gap-4 col-span-2">
         <h1>{books.fields.title}</h1>
 
         {/*Mobile*/}
         <div className="grid gap-4 border md:hidden block">
-        <h2 className="pr-3">تفاصيل الكتاب</h2>
-        <div className="grid gap-3 p-3">
-          <p>الكاتب: {books.fields.author.fields.name}</p>
+          <h2 className="pr-3">تفاصيل الكتاب</h2>
+          <div className="grid gap-3 p-3">
+            <p>الكاتب: {books.fields.author.fields.name}</p>
+          </div>
         </div>
-      </div>
 
-      </div>
+        <div>
+          <p className="mt-9">
+            {documentToReactComponents(books.fields.brief, options)}
+          </p>
+        </div>
+
+        <a href={books.fields.link} download={books.fields.title} className="download"></a>
+
+      </article>
 
       <div className="grid gap-4 border md:block hidden">
         <h2 className="pr-3">تفاصيل الكتاب</h2>
