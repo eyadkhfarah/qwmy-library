@@ -87,12 +87,43 @@ const options = {
     [BLOCKS.HYPERLINK]: (node, children) => <a className="text-primary" href={node.data.uri}>{children}</a>,
     [BLOCKS.PARAGRAPH]: (node, children) => <p className="mb-7">{children}</p>,
   },
-}; 
+};
 
-export default function BookDetials({books}) {
+export default function BookDetials({ books }) {
+  const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+  const [btn, setBtn] = useState(false);
+
+  const cancelButtonRef = useRef(null)
+
+  if (!article) return <div>تحميل</div>
+
   return (
-    <>
-    <h1>{books.fields.title}</h1>
-    </>
+    <div className="md:grid grid-cols-3 gap-7">
+      <NextSeo
+        title={`— المكتبة القومية`}
+        description={``}
+        openGraph={{
+          url: `${siteUrl}/books/${books.fields.slug}`,
+          title: "",
+          description: "",
+          type: 'book',
+          book: {
+            releaseDate: '',
+            authors: [
+              ""],
+          },
+          images: [
+            {
+              url: "",
+              width: 800,
+              height: 600,
+              alt: "",
+              type: 'image/jpeg',
+            },
+          ]
+        }
+        }
+      /> <h1>{books.fields.title}</h1>
+    </div>
   )
 }
