@@ -135,13 +135,11 @@ export default function BookDetials({ books }) {
           </div>
         </div>
 
-        <div>
-          <p className="mt-9">
+        <div className="mt-9">
             {documentToReactComponents(books.fields.brief, options)}
-          </p>
         </div>
 
-        <a href={books.fields.link} download={books.fields.title} className="download"></a>
+        <a href={books.fields.link} download={books.fields.title} className="download md:hidden block">حمل الكتاب</a>
 
       </article>
 
@@ -150,6 +148,7 @@ export default function BookDetials({ books }) {
         <div className="grid gap-3 p-3">
           <p>الكاتب: {books.fields.author.fields.name}</p>
         </div>
+        <a href={books.fields.link} download={books.fields.title} className="download">حمل الكتاب</a>
       </div>
 
     </div>
