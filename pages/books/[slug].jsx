@@ -117,15 +117,21 @@ export default function BookDetials({ books }) {
               url: "",
               width: 800,
               height: 600,
-              alt: "",
+              alt: books.fields.title,
               type: 'image/jpeg',
             },
           ]
         }
         }
       />
-      
-      <h1>{books.fields.title}</h1>
+      <div className="grid gap-4">
+        <h1>{books.fields.title}</h1>
+      </div>
+
+      <div className="grid gap-4 border">
+        <h2>تفاصيل الكتاب</h2>
+        <p>الكاتب: {books.fields.authors.fields.name}</p>
+      </div>
     </div>
   )
 }
