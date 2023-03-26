@@ -148,7 +148,7 @@ export default function BookDetials({ books }) {
         <div className="grid gap-3 p-3">
           <p>الكاتب: {books.fields.author.fields.name}</p>
         </div>
-        <a href={books.fields.link} download={books.fields.title} className="download">حمل الكتاب</a>
+        <a href={books.fields.link} download={books.fields.title} className="download mt-4">حمل الكتاب</a>
       </div>
 
     </div>
