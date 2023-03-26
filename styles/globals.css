@@ -86,7 +86,7 @@ body {
   }
 
   h1 {
-    @apply font-black text-3xl my-5
+    @apply font-black text-3xl my-3
   }
 
   h2 {
