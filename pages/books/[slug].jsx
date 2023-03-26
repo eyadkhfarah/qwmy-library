@@ -95,7 +95,7 @@ export default function BookDetials({ books }) {
 
   const cancelButtonRef = useRef(null)
 
-  if (!article) return <div>تحميل</div>
+  if (!books) return <div>تحميل</div>
 
   return (
     <div className="md:grid grid-cols-3 gap-7">
@@ -123,7 +123,9 @@ export default function BookDetials({ books }) {
           ]
         }
         }
-      /> <h1>{books.fields.title}</h1>
+      />
+      
+      <h1>{books.fields.title}</h1>
     </div>
   )
 }
