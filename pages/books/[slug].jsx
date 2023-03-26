@@ -98,7 +98,7 @@ export default function BookDetials({ books }) {
   if (!books) return <div>تحميل</div>
 
   return (
-    <div className="md:grid grid-cols-3 gap-7 md:mx-5">
+    <div className="md:grid grid-cols-3 gap-7 md:mx-16">
       <NextSeo
         title={`${books.fields.title} — المكتبة القومية`}
         description={``}
