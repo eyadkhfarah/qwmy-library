@@ -5,6 +5,8 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 
 import ReactPaginate from "react-paginate";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -23,6 +25,19 @@ export async function getStaticProps() {
 }
 
 export default function Books({ books }) {
+  const [searchText, setSearchText] = useState("");
+  const [typeValue, setTypeValue] = useState(books.fields.type[0].value);
+
+  const onChange = (event) => {
+    const value = event.target.typeValue;
+    setTypeValue(value);
+  };
+
+  const router = useRouter();
+
+  const { search } = router.query;
+  const { type } = router.query;
+
   const title = "المكتبة القومية — كتب قومية";
   const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية.";
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
@@ -55,8 +70,14 @@ export default function Books({ books }) {
       <div className="grid gap-4">
         <h2 className="border-none">أبحث عن كتاب:</h2>
         <di className="w-ful">
-          <input type="text" placeholder="اكتب اسم الكتاب" />
-          <select name="type" id="type">
+          <input type="text" placeholder="اكتب اسم الكتاب" className="w-full" />
+
+          <select
+            name="type"
+            value={typeValue}
+            id="type"
+            onChange={router.push(`/books?type=` + typeValue)}
+          >
             {books.map((book) => (
               <option value={book.fields.type}>{book.fields.type}</option>
             ))}
