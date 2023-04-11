@@ -69,7 +69,7 @@ export default function Books({ books }) {
       <h1>كتب قومية</h1>
       <div className="grid gap-4">
         <h2 className="border-none">أبحث عن كتاب:</h2>
-        <di className="w-ful">
+        <di className="w-full flex">
           <input type="text" placeholder="اكتب اسم الكتاب" className="w-full" />
 
           <select
