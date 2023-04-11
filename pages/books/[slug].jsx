@@ -168,16 +168,16 @@ export default function BookDetials({ books }) {
       <div className="md:grid gap-4 border dark:bg-dptimary dark:border-none w-full h-fit hidden">
         <h2 className="pr-3">تفاصيل الكتاب</h2>
         <div className="grid gap-3 p-3 w-full">
-        <p>
-              الكاتب:{" "}
-              <span className="font-black">
-                <Link href={`/cv/${books.fields.author.fields.slug}`}>
-                  <a href={`/cv/${books.fields.author.fields.slug}`}>
-                    {books.fields.author.fields.name}
-                  </a>
-                </Link>
-              </span>
-            </p>
+          <p>
+            الكاتب:{" "}
+            <span className="font-black">
+              <Link href={`/cv/${books.fields.author.fields.slug}`}>
+                <a href={`/cv/${books.fields.author.fields.slug}`}>
+                  {books.fields.author.fields.name}
+                </a>
+              </Link>
+            </span>
+          </p>
           <a
             href={books.fields.link}
             download={books.fields.title}
