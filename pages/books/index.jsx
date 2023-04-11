@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
 export default function Books({ books }) {
   const [searchText, setSearchText] = useState("");
-  const [typeValue, setTypeValue] = useState(books.fields.type[0].value);
+  const [typeValue, setTypeValue] = useState();
 
   const onChange = (event) => {
     const value = event.target.typeValue;
