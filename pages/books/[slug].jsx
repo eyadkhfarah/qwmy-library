@@ -132,8 +132,9 @@ export default function BookDetials({ books }) {
         }}
       />
       <article className="grid gap-4 col-span-2">
-        <div className="flex gap-5">
+        <div className="md:flex grid gap-5">
           <h1>{books.fields.title}</h1>
+          <Image className="" src={'https:' + books.fields.book.fields.file.url} alt={books.fields.title} width={380} height={675} />
         </div>
         {/*Mobile*/}
         <div className="grid gap-4 border dark:bg-dptimary dark:border-none h-fit md:hidden">
