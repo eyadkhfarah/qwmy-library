@@ -53,9 +53,9 @@ export default function Books({ books }) {
             />
 
             <h1>كتب قومية</h1>
-            <div className="gird gap-3 p-4 my-4 border-b-2">
+            <div className="gird gap-3">
                 {books.map((book) => (
-                    <>
+                    <div className="p-4 my-4 border-b-2">
                         <div className="flex items-start gap-4">
                             <RiArrowLeftSLine className="text-2xl" />
                             <Link href={`/books/${book.fields.slug}`}>
@@ -66,7 +66,7 @@ export default function Books({ books }) {
                             <p>{book.fields.type}</p>
                             <p>{book.fields.author.fields.name}</p>
                         </div>
-                    </>)
+                    </div>)
                 )}
             </div>
         </>
