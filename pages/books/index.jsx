@@ -52,8 +52,13 @@ export default function Books({ books }) {
       />
 
       <h1>كتب قومية</h1>
-      <div className="flex gap-7">
+      <div className="grid gap-7">
         <h2 className="border-none">أبحث عن كتاب:</h2>
+<div>
+  <input type="text" placeholder="اكتب اسم الكتاب"/>
+  
+</div>
+
         <div className="gird gap-3">
           {books.map((book) => (
             <div className="p-4 my-4 border-b-2">
