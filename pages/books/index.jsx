@@ -52,16 +52,16 @@ export default function Books({ books }) {
       />
 
       <h1>كتب قومية</h1>
-      <div className="grid gap-7">
+      <div className="grid gap-4">
         <h2 className="border-none">أبحث عن كتاب:</h2>
-        <div>
+        <di className="w-ful">
           <input type="text" placeholder="اكتب اسم الكتاب" />
           <select name="type" id="type">
             {books.map((book) => (
               <option value={book.fields.type}>{book.fields.type}</option>
             ))}
           </select>
-        </div>
+        </di>
 
         <div className="gird gap-3">
           {books.map((book) => (
