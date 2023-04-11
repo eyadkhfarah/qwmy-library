@@ -35,8 +35,8 @@ export default function Books({ books }) {
 
   const router = useRouter();
 
-  const { search } = router.query;
-  const { type } = router.query;
+  // const { search } = router.query;
+  // const { type } = router.query;
 
   const title = "المكتبة القومية — كتب قومية";
   const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية.";
