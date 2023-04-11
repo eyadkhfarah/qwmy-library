@@ -76,7 +76,7 @@ export default function Books({ books }) {
             name="type"
             value={typeValue}
             id="type"
-            onChange={router.push(`/books?type=` + typeValue)}
+            onChange={""}
           >
             {books.map((book) => (
               <option value={book.fields.type}>{book.fields.type}</option>
