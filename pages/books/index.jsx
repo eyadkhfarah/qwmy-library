@@ -24,7 +24,7 @@ export async function getStaticProps() {
 }
 
 export default function Books({ books }) {
-    const title = "المكتبة القومية — كتب عن القومية"
+    const title = "المكتبة القومية — كتب قومية"
     const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
@@ -52,7 +52,7 @@ export default function Books({ books }) {
                 ]}
             />
 
-            <h1>كتب عن القومية</h1>
+            <h1>كتب قومية</h1>
             <div className="gird gap-3 p-4 my-4 border-b-2">
                 {books.map((book) => (
                     <>
