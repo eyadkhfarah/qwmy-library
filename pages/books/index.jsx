@@ -79,11 +79,7 @@ export default function Books({ books }) {
           <input type="text"
            placeholder="اكتب اسم الكتاب" 
            onChange={(e) => setSearchText(e.target.value)}
-           const handleKeyDown = (event) => {
-            if (event.key === 'Enter') {
-              console.log('do validate')
-            }
-          }
+           onKeyDown={handleKeyDown}
            className="w-full"
            />
 
