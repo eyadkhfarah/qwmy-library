@@ -46,7 +46,7 @@ export default function Books({ books }) {
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      router.push(`/books?search=${search}`)
+      router.push(`/books?search=${searchText}`)
     }
   }
 
