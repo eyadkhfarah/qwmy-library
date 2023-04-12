@@ -33,9 +33,9 @@ export default function Books({ books }) {
     setTypeValue(value);
   };
 
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const { search } = router.query;
+  const { search } = router.query;
   // const { type } = router.query;
 
   const title = "المكتبة القومية — كتب قومية";
@@ -43,6 +43,12 @@ export default function Books({ books }) {
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
   console.log(books.fields);
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      router.push(`/books?search=${search}`)
+    }
+  }
 
   return (
     <>
@@ -70,7 +76,16 @@ export default function Books({ books }) {
       <div className="grid gap-4">
         <h2 className="border-none">أبحث عن كتاب:</h2>
         <di className="w-full flex">
-          <input type="text" placeholder="اكتب اسم الكتاب" className="w-full" />
+          <input type="text"
+           placeholder="اكتب اسم الكتاب" 
+           onChange={(e) => setSearchText(e.target.value)}
+           const handleKeyDown = (event) => {
+            if (event.key === 'Enter') {
+              console.log('do validate')
+            }
+          }
+           className="w-full"
+           />
 
           <select
             name="type"
