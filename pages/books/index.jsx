@@ -71,49 +71,50 @@ export default function Books({ books }) {
           },
         ]}
       />
+      <div className="container mx-auto">
+        <h1>كتب قومية</h1>
+        <div className="grid gap-4">
+          <h2 className="border-none">أبحث عن كتاب:</h2>
+          <di className="w-full flex">
+            <input type="text"
+              placeholder="اكتب اسم الكتاب"
+              onChange={(e) => setSearchText(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="w-full"
+            />
 
-      <h1>كتب قومية</h1>
-      <div className="grid gap-4">
-        <h2 className="border-none">أبحث عن كتاب:</h2>
-        <di className="w-full flex">
-          <input type="text"
-           placeholder="اكتب اسم الكتاب" 
-           onChange={(e) => setSearchText(e.target.value)}
-           onKeyDown={handleKeyDown}
-           className="w-full"
-           />
+            <select
+              name="type"
+              value={typeValue}
+              id="type"
+              onChange={""}
+            >
+              {books.map((book) => (
+                <option value={book.fields.type}>{book.fields.type}</option>
+              ))}
+            </select>
+          </di>
 
-          <select
-            name="type"
-            value={typeValue}
-            id="type"
-            onChange={""}
-          >
+          <div className="gird gap-3">
             {books.map((book) => (
-              <option value={book.fields.type}>{book.fields.type}</option>
+              <div className="p-4 my-4 border-b-2">
+                <div className="flex items-start gap-4">
+                  <RiArrowLeftSLine className="text-2xl" />
+                  <Link href={`/books/${book.fields.slug}`}>
+                    <a href={`/books/${book.fields.slug}`}>
+                      <h2 className="border-none text-lg m-0">
+                        {book.fields.title}
+                      </h2>
+                    </a>
+                  </Link>
+                </div>
+                <div className="flex text-gray-500 gap-5">
+                  <p>{book.fields.type}</p>
+                  <p>{book.fields.author.fields.name}</p>
+                </div>
+              </div>
             ))}
-          </select>
-        </di>
-
-        <div className="gird gap-3">
-          {books.map((book) => (
-            <div className="p-4 my-4 border-b-2">
-              <div className="flex items-start gap-4">
-                <RiArrowLeftSLine className="text-2xl" />
-                <Link href={`/books/${book.fields.slug}`}>
-                  <a href={`/books/${book.fields.slug}`}>
-                    <h2 className="border-none text-lg m-0">
-                      {book.fields.title}
-                    </h2>
-                  </a>
-                </Link>
-              </div>
-              <div className="flex text-gray-500 gap-5">
-                <p>{book.fields.type}</p>
-                <p>{book.fields.author.fields.name}</p>
-              </div>
-            </div>
-          ))}
+          </div>
         </div>
       </div>
     </>

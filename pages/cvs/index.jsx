@@ -51,6 +51,7 @@ export default function CV({cvs}) {
             />
 
             <h1>سيرة ذاتية</h1>
+            
     
     </>
   )

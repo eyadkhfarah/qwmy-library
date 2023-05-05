@@ -109,7 +109,7 @@ export default function Navbar() {
         setSearchOpen={setSearchOpen}
         className="md:hidden"
       />
-      <NavList btn={btn} setBtn={setBtn} className="md:hidden" />
+      <NavList btn={btn} setBtn={setBtn} className="" />
     </>
   );
 }
