@@ -135,11 +135,12 @@ export default function CvDetails({ cv }) {
             <p className="text-gray-500">{cv.fields.type}</p>
           </div>
         </div>
-        <CVDeatils cv={cv} className="hidden" />
+        {/* <CVDeatils cv={cv} className="hidden" /> */}
         <div className="mt-9">
           {documentToReactComponents(cv.fields.info, options)}
         </div>
       </article>
+      <CVDeatils cv={cv} className="md:hidden grid" />
     </div>
   )
 }
