@@ -136,7 +136,7 @@ export default function CvDetails({ cv }) {
           </div>
         </div>
         {/* <CVDeatils cv={cv} className="hidden" /> */}
-        <div className="mt-9">
+        <div className="mt-4 pt-4 border-t-2">
           {documentToReactComponents(cv.fields.info, options)}
         </div>
       </article>
