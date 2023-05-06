@@ -137,21 +137,21 @@ export default function BookDetials({ books }) {
           <Image className="" src={'https:' + books.fields.book.fields.file.url} alt={books.fields.title} width={380} height={675} />
         </div>
         {/*Mobile*/}
-        <div className="grid gap-4 border dark:bg-dptimary dark:border-none h-fit md:hidden">
+        <aside className="grid gap-4 border dark:bg-dptimary dark:border-none h-fit md:hidden">
           <h2 className="pr-3">تفاصيل الكتاب</h2>
           <div className="grid gap-3 p-3">
             <p>
               الكاتب:{" "}
               <span className="font-black">
-                <Link href={`/cv/${books.fields.author.fields.slug}`}>
-                  <a href={`/cv/${books.fields.author.fields.slug}`}>
+                <Link href={`/cvs/${books.fields.author.fields.slug}`}>
+                  <a href={`/cvs/${books.fields.author.fields.slug}`}>
                     {books.fields.author.fields.name}
                   </a>
                 </Link>
               </span>
             </p>
           </div>
-        </div>
+        </aside>
 
         <div className="mt-9">
           {documentToReactComponents(books.fields.brief, options)}
@@ -166,7 +166,7 @@ export default function BookDetials({ books }) {
         </a>
       </article>
 
-      <div className="md:grid gap-4 border dark:bg-dptimary dark:border-none w-full h-fit hidden">
+      <aside className="md:grid gap-4 border dark:bg-dptimary dark:border-none w-full h-fit hidden">
         <h2 className="pr-3">تفاصيل الكتاب</h2>
         <div className="grid gap-3 p-3 w-full">
           <p>
@@ -187,7 +187,7 @@ export default function BookDetials({ books }) {
             حمل الكتاب
           </a>
         </div>
-      </div>
+      </aside>
     </div>
   );
 }

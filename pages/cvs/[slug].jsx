@@ -31,6 +31,7 @@ import {
   RiBallPenFill,
   RiLinkM,
 } from "react-icons/ri";
+import CVDeatils from "@component/CV/CVDeatils";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -39,7 +40,7 @@ const client = createClient({
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: "books",
+    content_type: "cv",
     "fields.slug": params.slug,
   });
 
@@ -98,7 +99,7 @@ const options = {
   },
 };
 
-export default function CvDetails({cv}) {
+export default function CvDetails({ cv }) {
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
   const [btn, setBtn] = useState(false);
 
@@ -107,6 +108,38 @@ export default function CvDetails({cv}) {
   if (!cv) return <div>تحميل</div>;
 
   return (
-    <div className="md:grid grid-cols-3 gap-7 md:mx-16"></div>
+    <div className="md:grid grid-cols-3 gap-7 md:mx-16">
+      <NextSeo
+        title={`${cv.fields.name} — المكتبة القومية`}
+        description={cv.fields.info.content[0].content[0].value}
+        openGraph={{
+          url: `${siteUrl}/cvs/${cv.fields.slug}`,
+          title: cv.fields.name,
+          description: cv.fields.info.content[0].content[0].value,
+          images: [
+            {
+              url: 'https:' + cv.fields.image.fields.file.url,
+              width: 800,
+              height: 600,
+              alt: cv.fields.title,
+              type: "image/jpeg",
+            },
+          ],
+        }}
+      />
+      <article className="grid gap-4 col-span-2">
+        <div className="md:flex justify-start w-full grid gap-5">
+          <Image className="rounded-xl mx-auto" src={'https:' + cv.fields.image.fields.file.url} alt={cv.fields.nameن} width={300} height={300} />
+          <div className="grid gap-3 h-fit">
+            <h1>{cv.fields.name}</h1>
+            <p className="text-gray-500">{cv.fields.type}</p>
+          </div>
+        </div>
+        <CVDeatils cv={cv} className="hidden" />
+        <div className="mt-9">
+          {documentToReactComponents(cv.fields.info, options)}
+        </div>
+      </article>
+    </div>
   )
 }
