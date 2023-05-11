@@ -59,6 +59,13 @@ export default function Books({ books }) {
           title: `${title}`,
           description: `${desc}`,
           type: "website",
+          images: [{
+            url: siteUrl + "/og/books.png",
+            width: 800,
+            height: 600,
+            alt: 'سيرة ذاتية',
+            type: 'image/png',
+        }]
         }}
         additionalMetaTags={[
           {
