@@ -21,7 +21,9 @@ export default function Navbar() {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   const router = useRouter();
+  const [searchText, setSearchText] = useState("");
 
+  const { search } = router.query;
   const Search = (
     <span>
       <RiSearch2Line />
@@ -69,11 +71,12 @@ export default function Navbar() {
           </div>
 
           <div className="md:flex hidden gap-2 p-1 border dark:border-none dark:bg-dlight">
-            <div className="navIcon">{Search}</div>
-
+            <Link href={`/search?search=` + searchText}>
+              <div className="navIcon">{Search}</div>
+            </Link>
             <input
               // value={}
-              // onChange={}
+              onChange={(e) => setSearchText(e.target.value)}
               className="searchInput border-none"
               type="text"
               placeholder="ابحث في عالم القومية"

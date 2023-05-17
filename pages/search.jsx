@@ -56,7 +56,7 @@ export default function Search() {
             placeholder="بحث ..."
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Link href={`/search-results?search=` + searchText}>
+          <Link href={`/search?search=` + searchText}>
             <RiSearchLine className="menuIcon text-3xl" />
           </Link>
         </div>

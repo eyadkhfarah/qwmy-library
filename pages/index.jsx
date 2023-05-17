@@ -89,9 +89,9 @@ export default function Home() {
               "availableLanguage": "Arabic"
             },
             "sameAs": [
-              "http://facbook.com/lokoji.eco",
+              "http://facbook.com/maktabaqawmya",
               ${siteUrl},
-              "https://twitter.com/LokojiEco"
+              "https://twitter.com/maktabaqawmya"
             ]
           }`}}
         ></script>
@@ -104,7 +104,7 @@ export default function Home() {
             {
               "@context": "https://schema.org/",
               "@type": "WebSite",
-              "name": "المكتبة القوكية",
+              "name": "المكتبة القومية",
               "url": "${siteUrl}",
               "potentialAction": {
                 "@type": "SearchAction",
@@ -122,7 +122,7 @@ export default function Home() {
 
             <ul className="tabList">
               {Tabs.slice(0, 3).map((tab) => (
-                <li className="w-full">
+                <li key={tab.id} className="w-full">
                   <Link href={`/${tab.slug}`}>
                     <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                   </Link>
@@ -161,7 +161,7 @@ export default function Home() {
           </div>
 
           {/*Mobile*/}
-          <ul className="md:hidden block my-5 list-none gap-14 grid w-full grid-cols-2">
+          <ul className="md:hidden my-5 list-none gap-14 grid w-full grid-cols-2">
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/${tab.slug}`}>

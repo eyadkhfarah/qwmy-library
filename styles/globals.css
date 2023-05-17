@@ -50,7 +50,7 @@ body {
   }
   
   main {
-    @apply p-5 md:px-36
+    @apply p-5 md:px-40
   }
 
   .tabs {
@@ -58,7 +58,7 @@ body {
   }
 
   .tabList {
-    @apply md:block hidden space-y-7 h-full list-none text-lg grid gap-7 w-full grid-cols-2 grid-rows-3
+    @apply md:block space-y-7 h-full list-none text-lg grid gap-7 w-full grid-cols-2 grid-rows-3
   }
 
   .download {
@@ -94,10 +94,10 @@ body {
   }
 
   ul {
-    @apply list-disc px-6
+    @apply list-disc px-16
   }
 
   ol {
-    @apply list-decimal px-6
+    @apply list-decimal px-16
   }
 }

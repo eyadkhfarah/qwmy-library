@@ -173,8 +173,8 @@ export default function BookDetials({ books }) {
           <p>
             الكاتب:{" "}
             <span className="font-black">
-              <Link href={`/cv/${books.fields.author.fields.slug}`}>
-                <a href={`/cv/${books.fields.author.fields.slug}`}>
+              <Link href={`/cvs/${books.fields.author.fields.slug}`}>
+                <a href={`/cvs/${books.fields.author.fields.slug}`}>
                   {books.fields.author.fields.name}
                 </a>
               </Link>
