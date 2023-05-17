@@ -31,6 +31,7 @@ import {
   RiBallPenFill,
   RiLinkM,
 } from "react-icons/ri";
+import { useRouter } from "next/router";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,

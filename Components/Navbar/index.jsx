@@ -36,9 +36,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`${
-          router.pathname === "/" ? "shadow-none dark:bg-none" : ""
-        }`}
+        className={`${router.pathname === "/" ? "shadow-none dark:bg-none" : ""
+          }`}
       >
         <div onClick={() => setBtn(!btn)} className="navIcon md:hidden block">
           {Menu}
@@ -90,17 +89,17 @@ export default function Navbar() {
 
         <ul className="hidden md:flex text-[.7rem] gap-3 items-center ">
           {NavLinks.map((link) => (
-            <Link href={link.link}>
-              <li
-                className="navLink"
-                key={link.id}
-                onClick={() => setBtn(!btn)}
-              >
+            <li
+              className="navLink"
+              key={link.id}
+              onClick={() => setBtn(!btn)}
+            >
+              <Link href={link.link}>
                 <a href={siteUrl + link.link} aria-label={link.title}>
                   {link.title}
                 </a>
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
       </nav>

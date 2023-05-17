@@ -45,7 +45,7 @@ export default function Search() {
         <div className="flex gap-4 mb-9">
           <h1 className="text-center">
             نتائج بحث:{""}
-            <span className="text-primary mr-3">{search}</span>
+            <span className="text-black mr-3">{search}</span>
           </h1>
         </div>
 

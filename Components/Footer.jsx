@@ -33,14 +33,14 @@ export default function Footer() {
 
                     <ul className="flex mt-4 gap-5 list-none p-0 w-full text-sm items-center">
                         {FooterLinks.map((link) => (
-                            <Link href={link.link}>
-                                <li key={link.id} className="font-medium">
+                            <li key={link.id} className="font-medium">
+                                <Link href={link.link}>
                                     <a href={siteUrl + link.link} aria-label={link.title}
                                     >
                                         {link.title}
                                     </a>
-                                </li>
-                            </Link>
+                                </Link>
+                            </li>
                         ))}
                     </ul>
                 </div>

@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
 export default function Books({ books }) {
   const [searchText, setSearchText] = useState("");
-  const [typeValue, setTypeValue] = useState();
+  const [typeValue, setTypeValue] = useState("");
 
   const onChange = (event) => {
     const value = event.target.typeValue;
@@ -35,18 +35,15 @@ export default function Books({ books }) {
 
   const router = useRouter();
 
-  const { search } = router.query;
-  // const { type } = router.query;
+  const { name, type } = router.query;
 
   const title = "المكتبة القومية — كتب قومية";
   const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية.";
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
-  console.log(books.fields);
-
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      router.push(`/books?search=${searchText}`)
+      router.push(`/books?name=${searchText}?type=${typeValue}`)
     }
   }
 
@@ -65,7 +62,7 @@ export default function Books({ books }) {
             height: 600,
             alt: 'سيرة ذاتية',
             type: 'image/png',
-        }]
+          }]
         }}
         additionalMetaTags={[
           {
@@ -87,43 +84,81 @@ export default function Books({ books }) {
               placeholder="اكتب اسم الكتاب"
               onChange={(e) => setSearchText(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="w-full"
+              className="w-full dark:border-none dark:bg-dlight"
             />
 
             <select
               name="type"
               value={typeValue}
               id="type"
-              onChange={""}
+              className="dark:border-none dark:bg-dlight"
+              onChange={(e) => setTypeValue(e.target.value)}
             >
               {books.map((book) => (
-                <option value={book.fields.type}>{book.fields.type}</option>
+                <option key={book.sys.id} value={book.fields.type}>{book.fields.type}</option>
               ))}
             </select>
           </di>
 
           <div className="gird gap-3">
-            {books.map((book) => (
-              <div className="p-4 my-4 border-b-2">
-                <div className="flex items-start gap-4">
-                  <RiArrowLeftSLine className="text-2xl" />
-                  <Link href={`/books/${book.fields.slug}`}>
-                    <a href={`/books/${book.fields.slug}`}>
-                      <h2 className="border-none text-lg m-0">
-                        {book.fields.title}
-                      </h2>
-                    </a>
-                  </Link>
+            {name && type ? (
+              books
+                .filter((val) => {
+                  if (name && type == "") {
+                    return val;
+                  } else if (val.fields.title.includes(name)) {
+                    return val;
+                  }
+                  else if (val.fields.type.includes(type)) {
+                    return val;
+                  }
+                }).map((book) => (
+                  <div key={book.sys.id} className="p-4 my-4 border-b-2">
+                    <div className="flex items-start gap-4">
+                      <RiArrowLeftSLine className="text-2xl" />
+                      <Link href={`/books/${book.fields.slug}`}>
+                        <a href={`/books/${book.fields.slug}`}>
+                          <h2 className="border-none text-lg m-0">
+                            {book.fields.title}
+                          </h2>
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="flex text-gray-500 gap-5">
+                      <p>{book.fields.type}</p>
+                      <p>{book.fields.author.fields.name}</p>
+                    </div>
+                  </div>
+                )))
+              :
+              books.map((book) => (
+                <div key={book.sys.id} className="p-4 my-4 border-b-2 dark:border-gray-800">
+                  <div className="flex items-start gap-4">
+                    <RiArrowLeftSLine className="text-2xl" />
+                    <Link href={`/books/${book.fields.slug}`}>
+                      <a href={`/books/${book.fields.slug}`}>
+                        <h2 className="border-none text-lg m-0">
+                          {book.fields.title}
+                        </h2>
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="flex text-gray-500 gap-5">
+                    <p>{book.fields.type}</p>
+                    <p>{book.fields.author.fields.name}</p>
+                  </div>
                 </div>
-                <div className="flex text-gray-500 gap-5">
-                  <p>{book.fields.type}</p>
-                  <p>{book.fields.author.fields.name}</p>
-                </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
     </>
   );
 }
+
+function NotFound() {
+  return (
+    <h1>حاول البحث</h1>
+  )
+}
+

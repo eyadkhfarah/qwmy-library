@@ -7,6 +7,6 @@ export const FooterLinks = [
     {
         title: "الشروط والاحكام",
         link: "/terms",
-        id: 1
+        id: 2
     },
 ]
