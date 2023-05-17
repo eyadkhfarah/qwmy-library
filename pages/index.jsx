@@ -120,7 +120,7 @@ export default function Home() {
         <div className="grid gap-5 w-full h-full">
           <div className="md:grid place-items-start gap-7 h-full grid-cols-3">
 
-            <ul className="tabList">
+            <ul className="tabList p-0">
               {Tabs.slice(0, 3).map((tab) => (
                 <li key={tab.id} className="w-full">
                   <Link href={`/${tab.slug}`}>
@@ -148,9 +148,9 @@ export default function Home() {
               <p>بوابتك المعرفية في عالم القومية</p>
             </div>
 
-            <ul className="tabList">
+            <ul className="tabList p-0">
               {Tabs.slice(3, 6).map((tab) => (
-                <li className="w-full">
+                <li className="w-full p-0">
                   <Link href={`/${tab.slug}`}>
                     <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                   </Link>
