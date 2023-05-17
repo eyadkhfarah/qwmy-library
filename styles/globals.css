@@ -58,7 +58,7 @@ body {
   }
 
   .tabList {
-    @apply md:block space-y-7 h-full list-none text-lg grid gap-7 w-full grid-cols-2 grid-rows-3
+    @apply md:block hidden space-y-7 h-full list-none text-lg grid gap-7 w-full grid-cols-2 grid-rows-3
   }
 
   .download {
