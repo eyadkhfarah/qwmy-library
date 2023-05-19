@@ -16,7 +16,7 @@ export default function NavList({ btn, setBtn }) {
           />
         </div>
 
-        <ul className="px-0">
+        <ul className="px-0 list-none">
           {NavLinks.map((link) => (
 
             <li
@@ -25,7 +25,7 @@ export default function NavList({ btn, setBtn }) {
               onClick={() => setBtn(!btn)}
             >
               <Link href={link.link}>
-                <a href={siteUrl + link.link} aria-label={link.title}
+                <a href={link.link} aria-label={link.title}
                 >
                   {link.title}
                 </a>

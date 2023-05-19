@@ -37,6 +37,10 @@ export default function Navbar() {
 
   return (
     <>
+    <div className="md:px-36 p-3 md:text-base text-sm font-medium flex justify-between items-center gap-6">
+      <span>الموقع قيد التطوير، يهمنا أراكم واقتراحاتكم ودعمكم لنا يمكنك كتابة كل ما تريده من اقتراحات وشكاوي.</span>
+      <a href="https://forms.gle/NBTUQcovdLXAJXYn7" aria-label="اقتراحات المكتبة القومية" className="download text-sm h-fit md:w-44 w-fit whitespace-nowrap">اقرح هنا</a>
+    </div>
       <nav
         className={`${router.pathname === "/" ? "shadow-none dark:bg-none" : ""
           }`}
