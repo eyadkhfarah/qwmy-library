@@ -129,11 +129,13 @@ export default function ImageDetials({ images }) {
                     },
                 ]}
             />
-
-            {/*
             <article className="grid md:grid-cols-2 grid-cols-1 gap-6">
                 <div className="">
                     <h1>{images.fields.title}</h1>
+                    <div className="my-7 grid gap-3 w-full h-fit md:hidden">
+                        <Image priority={true} src={'https:' + images.fields.image.fields.file.url} alt={images.fields.alt} width={images.fields.image.fields.file.details.image.width} height={images.fields.image.fields.file.details.image.height} className="h-fit w-full lg:hidden block" />
+                        <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
+                    </div>
                     <div className="mt-9">
                         {documentToReactComponents(images.fields.details, options)}
                     </div>
@@ -177,7 +179,7 @@ export default function ImageDetials({ images }) {
                         </div>
                     </div>
                 </div>
-                <div className="grid gap-3 w-full h-fit">
+                <div className="gap-3 w-full h-fit hidden md:grid">
                     <Image priority={true} src={'https:' + images.fields.image.fields.file.url} alt={images.fields.alt} width={images.fields.image.fields.file.details.image.width} height={images.fields.image.fields.file.details.image.height} className="h-fit w-full" />
                     <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
                 </div>
@@ -185,7 +187,7 @@ export default function ImageDetials({ images }) {
 
             <div>
                 <h3>صور متعلقة</h3>
-            </div> */}
+            </div>
         </>
     )
 }
