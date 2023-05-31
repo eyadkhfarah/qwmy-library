@@ -115,10 +115,10 @@ export default function Home() {
           `}} />
       </Head>
 
-      <header className="text-center md:px-[9em] w-full my-8">
+      <header className="text-center lg:px-36 px-0 w-full my-8">
 
         <div className="grid gap-5 w-full h-full">
-          <div className="md:grid place-items-start gap-7 h-full grid-cols-3">
+          <div className="gap-7 w-full h-full lg:flex flex-row justify-center items-baseline">
 
             <ul className="tabList p-0">
               {Tabs.slice(0, 3).map((tab) => (
@@ -134,16 +134,16 @@ export default function Home() {
               <h1 className="md:text-2xl">اهلا بيك في</h1>
 
               <div>
-                    <Link href={"/"}>
-                        <a href={siteUrl}>
-                            {currentTheme === "dark" ?
-                                <Image src="/WhiteLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
-                                :
-                                <Image src="/DarkLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
-                            }
-                        </a>
-                    </Link>
-                </div>
+                <Link href={"/"}>
+                  <a href={siteUrl}>
+                    {currentTheme === "dark" ?
+                      <Image src="/WhiteLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
+                      :
+                      <Image src="/DarkLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
+                    }
+                  </a>
+                </Link>
+              </div>
 
               <p>بوابتك المعرفية في عالم القومية</p>
             </div>
@@ -161,11 +161,11 @@ export default function Home() {
           </div>
 
           {/*Mobile*/}
-          <ul className="md:hidden my-5 list-none gap-14 grid w-full grid-cols-2">
+          <ul className="lg:hidden my-5 p-0 list-none gap-14 grid w-full grid-cols-2">
             {Tabs.map((tab) => (
               <li>
                 <Link href={`/${tab.slug}`}>
-                <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
+                  <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
                 </Link>
               </li>
             ))}

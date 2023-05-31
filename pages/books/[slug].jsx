@@ -21,8 +21,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types";
 
 import {
-  RiUser3Fill,
-  RiCalendar2Line,
   RiFacebookCircleFill,
   RiTwitterFill,
   RiTelegramFill,
@@ -31,6 +29,7 @@ import {
   RiBallPenFill,
   RiLinkM,
 } from "react-icons/ri";
+
 import { useRouter } from "next/router";
 
 const client = createClient({

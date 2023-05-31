@@ -24,7 +24,7 @@ export default function Genatic() {
                     description: `${desc}`,
                     type: "website",
                     images: [{
-                        url: siteUrl + "/og/books.png",
+                        url: siteUrl + "/og/genatic.png",
                         width: 800,
                         height: 600,
                         alt: 'دراسة جينية',
