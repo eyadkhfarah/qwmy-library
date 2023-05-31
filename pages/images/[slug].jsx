@@ -95,15 +95,15 @@ const options = {
 
 
 export default function ImageDetials({ images }) {
-    const title = images.fields.title + " — المكتبة القومية"
-    const desc = images.fields.details.content[0].content[0].value;
-    const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+    // const title = images.fields.title + " — المكتبة القومية"
+    // const desc = images.fields.details.content[0].content[0].value;
+    // const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
     if (!images) return <div>تحميل</div>;
 
     return (
         <>
-            <NextSeo
+            {/* <NextSeo
                 title={title}
                 description={desc}
                 openGraph={{
@@ -183,7 +183,7 @@ export default function ImageDetials({ images }) {
 
             <div>
                 <h3>صور متعلقة</h3>
-            </div>
+            </div> */}
         </>
     )
 }
