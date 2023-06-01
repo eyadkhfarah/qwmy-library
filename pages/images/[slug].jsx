@@ -95,7 +95,7 @@ const options = {
 
 
 export default function ImageDetials({ images }) {
-    const title = images.fields.title + " — المكتبة القومية"
+    // const title = images.fields.title + " — المكتبة القومية"
     // const desc = images.fields.details.content[0].content[0].value;
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
@@ -132,8 +132,8 @@ export default function ImageDetials({ images }) {
 
             <article className="grid md:grid-cols-2 grid-cols-1 gap-6">
                 <div className="">
-                    {/*       <h1>{images.fields.title}</h1>
-                    <div className="my-7 grid gap-3 w-full h-fit md:hidden">
+                    <h1>{images.fields.title}</h1>
+                    {/* <div className="my-7 grid gap-3 w-full h-fit md:hidden">
                         <Image priority={true} src={'https:' + images.fields.image.fields.file.url} alt={images.fields.alt} width={images.fields.image.fields.file.details.image.width} height={images.fields.image.fields.file.details.image.height} className="h-fit w-full lg:hidden block" />
                         <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
                     </div>
