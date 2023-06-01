@@ -95,15 +95,15 @@ const options = {
 
 
 export default function ImageDetials({ images }) {
-    const title = images.fields.title + " — المكتبة القومية"
-    const desc = images.fields.details.content[0].content[0].value;
-    const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+    // const title = images.fields.title + " — المكتبة القومية"
+    // const desc = images.fields.details.content[0].content[0].value;
+    // const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
     if (!images) return <div>تحميل</div>;
 
     return (
         <>
-            <NextSeo
+            {/* <NextSeo
                 title={title}
                 description={desc}
                 openGraph={{
@@ -129,7 +129,7 @@ export default function ImageDetials({ images }) {
                     },
                 ]}
             />
-            
+
             <article className="grid md:grid-cols-2 grid-cols-1 gap-6">
                 <div className="">
                     <h1>{images.fields.title}</h1>
@@ -184,7 +184,7 @@ export default function ImageDetials({ images }) {
                     <Image priority={true} src={'https:' + images.fields.image.fields.file.url} alt={images.fields.alt} width={images.fields.image.fields.file.details.image.width} height={images.fields.image.fields.file.details.image.height} className="h-fit w-full" />
                     <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
                 </div>
-            </article>
+            </article> */}
 
             <div>
                 <h3>صور متعلقة</h3>
