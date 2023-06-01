@@ -180,28 +180,27 @@ export default function Layout({ children, market, etf }) {
                 <Script
                     type="text/partytown"
                     strategy="afterInteractive"
-
                     dangerouslySetInnerHTML={{
                         __html: `
             
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '963733097926528',
-      xfbml      : true,
-      version    : 'v15.0'
-    });
-    FB.AppEvents.logPageView();
-  };
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));`
+                            window.fbAsyncInit = function() {
+                                FB.init({
+                                appId      : '963733097926528',
+                                xfbml      : true,
+                                version    : 'v15.0'
+                                });
+                                FB.AppEvents.logPageView();
+                            };
+                            (function(d, s, id){
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) {return;}
+                                js = d.createElement(s); js.id = id;
+                                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));`
                     }} />
 
-                <Script
+                {/* <Script
                     type="text/partytown"
                     strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
@@ -213,12 +212,13 @@ export default function Layout({ children, market, etf }) {
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;
                     f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NXCKRCJ');
-                `}} />
+                `}} /> */}
 
                 <Script
                     type="text/partytown"
                     strategy="afterInteractive"
-                    src="https://www.googletagmanager.com/gtag/js?id=G-L2L744B91L" />
+                    src="https://www.googletagmanager.com/gtag/js?id=G-VYJXE6KHL5" 
+                    />
                 <Script
                     id='google-analytics'
                     strategy="afterInteractive"
@@ -228,28 +228,10 @@ export default function Layout({ children, market, etf }) {
                     function gtag(){dataLayer.push(arguments);}
                     
                     gtag('js', new Date());
-                    gtag('config', 'G-L2L744B91L', {
+                    gtag('config', 'G-VYJXE6KHL5', {
                         page_path: window.location.pathname,
                     });`
                     }}
-                    type="text/partytown"
-                />
-                <Script
-                    id="Adsense-id"
-                    data-ad-client="ca-pub-4450640148291415"
-                    async="true"
-                    crossorigin="anonymous"
-                    strategy="beforeInteractive"
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                    type="text/partytown"
-                />
-                <Script
-                    id="Adsense-id" async
-                    data-ad-client="ca-pub-4450640148291415"
-                    onError={(e) => { console.error("Script failed to load", e); }}
-                    strategy="afterInteractive"
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                    crossorigin="anonymous"
                     type="text/partytown"
                 />
             </Head>
