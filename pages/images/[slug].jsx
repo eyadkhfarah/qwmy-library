@@ -95,8 +95,8 @@ const options = {
 
 
 export default function ImageDetials({ images }) {
-    // const title = images.fields.title + " — المكتبة القومية"
-    // const desc = images.fields.details.content[0].content[0].value;
+    const title = images.fields.title + " — المكتبة القومية"
+    const desc = images.fields.details.content[0].content[0].value;
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
     if (!images) return <div>تحميل</div>;
@@ -104,28 +104,28 @@ export default function ImageDetials({ images }) {
     return (
         <>
             <NextSeo
-                // title={title}
-                // description={desc}
+                title={title}
+                description={desc}
                 openGraph={{
-                    // title: `${title}`,
-                    // description: `${desc}`,
+                    title: `${title}`,
+                    description: `${desc}`,
                     type: "website",
                     images: [{
-                        // url: 'https:' + images.fields.image.fields.file.url,
+                        url: 'https:' + images.fields.image.fields.file.url,
                         width: 800,
                         height: 600,
-                        // alt: images.fields.alt,
+                        alt: images.fields.alt,
                         type: 'image/png',
                     }]
                 }}
                 additionalMetaTags={[
                     {
                         itemProp: "name",
-                        // content: { title },
+                        content: { title },
                     },
                     {
                         itemProp: "description",
-                        // content: { desc },
+                        content: { desc },
                     },
                 ]}
             />
