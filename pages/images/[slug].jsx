@@ -129,6 +129,7 @@ export default function ImageDetials({ images }) {
                     },
                 ]}
             />
+            
             <article className="grid md:grid-cols-2 grid-cols-1 gap-6">
                 <div className="">
                     <h1>{images.fields.title}</h1>
