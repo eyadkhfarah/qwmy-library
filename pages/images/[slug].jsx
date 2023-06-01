@@ -95,7 +95,7 @@ const options = {
 
 
 export default function ImageDetials({ images }) {
-    // const title = images.fields.title + " — المكتبة القومية"
+    const title = images.fields.title + " — المكتبة القومية"
     // const desc = images.fields.details.content[0].content[0].value;
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
