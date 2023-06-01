@@ -95,8 +95,6 @@ const options = {
 
 
 export default function ImageDetials({ images }) {
-    const title = images.fields.title + " — المكتبة القومية"
-    const desc = images.fields.details.content[0].content[0].value;
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
     if (!images) return <div>تحميل</div>;
@@ -104,11 +102,11 @@ export default function ImageDetials({ images }) {
     return (
         <>
             <NextSeo
-                title={title}
-                description={desc}
+                title={images.fields.title + " — المكتبة القومية"}
+                description={images.fields.details.content[0].content[0].value}
                 openGraph={{
-                    title: `${title}`,
-                    description: `${desc}`,
+                    title: images.fields.title + " — المكتبة القومية",
+                    description: images.fields.details.content[0].content[0].value,
                     type: "website",
                     images: [{
                         url: 'https:' + images.fields.image.fields.file.url,
