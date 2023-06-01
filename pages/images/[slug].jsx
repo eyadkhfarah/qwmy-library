@@ -119,11 +119,11 @@ export default function ImageDetials({ images }) {
                 additionalMetaTags={[
                     {
                         itemProp: "name",
-                        content: { title },
+                        content: images.fields.title,
                     },
                     {
                         itemProp: "description",
-                        content: { desc },
+                        content: images.fields.details.content[0].content[0].value,
                     },
                 ]}
             />
