@@ -104,4 +104,20 @@ body {
   ol {
     @apply list-decimal px-16
   }
+
+  .pagination {
+    @apply list-none p-3 border dark:border-dprimary dark:bg-dprimary flex justify-between items-center
+  }
+
+  .pageSwitch {
+    @apply font-black text-black p-4 dark:text-white hover:bg-slate-100 dark:hover:bg-dlight transition-all duration-300 ease-in-out
+  }
+
+  .pageNum {
+    @apply border p-4 text-black hover:bg-slate-100 dark:hover:bg-dlight transition-all duration-300 ease-in-out
+  }
+
+  .pageNumAct {
+    @apply bg-slate-100 font-black
+  }
 }
