@@ -28,8 +28,8 @@ export default function Layout({ children, market, etf }) {
                 canonical={siteUrl + router.asPath}
             />
             <DefaultSeo
-            title={title}
-            description={desc}
+                title={title}
+                description={desc}
 
                 facebook={{
                     appId: '963733097926528',
@@ -39,10 +39,10 @@ export default function Layout({ children, market, etf }) {
                     description: desc,
                     images: [
                         {
-                          url: img,
-                          width: 800,
-                          height: 600,
-                          alt: 'صورة المكتبة القومية',
+                            url: img,
+                            width: 800,
+                            height: 600,
+                            alt: 'صورة المكتبة القومية',
                         },
                     ],
                     type: 'website',
@@ -217,20 +217,21 @@ export default function Layout({ children, market, etf }) {
                 <Script
                     type="text/partytown"
                     strategy="afterInteractive"
-                    src="https://www.googletagmanager.com/gtag/js?id=G-VYJXE6KHL5" 
-                    />
+                    src="https://www.googletagmanager.com/gtag/js?id=G-VYJXE6KHL5"
+                />
+
                 <Script
                     id='google-analytics'
                     strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    
-                    gtag('js', new Date());
-                    gtag('config', 'G-VYJXE6KHL5', {
-                        page_path: window.location.pathname,
-                    });`
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            
+                            gtag('js', new Date());
+                            gtag('config', 'G-VYJXE6KHL5', {
+                                page_path: window.location.pathname,
+                            });`
                     }}
                     type="text/partytown"
                 />
