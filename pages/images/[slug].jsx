@@ -95,7 +95,7 @@ const options = {
 
 
 export default function ImageDetials({ images }) {
-    const title = images.fields.title + " — المكتبة القومية"
+    // const title = images.fields.title + " — المكتبة القومية"
     // const desc = images.fields.details.content[0].content[0].value;
     // const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
@@ -103,34 +103,34 @@ export default function ImageDetials({ images }) {
 
     return (
         <>
-            {/* <NextSeo
-                title={title}
-                description={desc}
+            <NextSeo
+                // title={title}
+                // description={desc}
                 openGraph={{
-                    title: `${title}`,
-                    description: `${desc}`,
+                    // title: `${title}`,
+                    // description: `${desc}`,
                     type: "website",
                     images: [{
-                        url: 'https:' + images.fields.image.fields.file.url,
+                        // url: 'https:' + images.fields.image.fields.file.url,
                         width: 800,
                         height: 600,
-                        alt: images.fields.alt,
+                        // alt: images.fields.alt,
                         type: 'image/png',
                     }]
                 }}
                 additionalMetaTags={[
                     {
                         itemProp: "name",
-                        content: { title },
+                        // content: { title },
                     },
                     {
                         itemProp: "description",
-                        content: { desc },
+                        // content: { desc },
                     },
                 ]}
             />
 
-            <article className="grid md:grid-cols-2 grid-cols-1 gap-6">
+            {/* <article className="grid md:grid-cols-2 grid-cols-1 gap-6">
                 <div className="">
                     <h1>{images.fields.title}</h1>
                     <div className="my-7 grid gap-3 w-full h-fit md:hidden">
