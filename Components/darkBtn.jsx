@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { RiMoonClearLine, RiSunLine } from 'react-icons/ri';
 import { useTheme } from "next-themes";
 
