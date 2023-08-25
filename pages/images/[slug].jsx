@@ -34,7 +34,7 @@ const client = createClient({
 
 export const getStaticProps = async ({ params }) => {
     const { items } = await client.getEntries({
-        content_type: "images",
+        content_type: "imagesQwmy",
         "fields.slug": params.slug,
     });
 
@@ -47,7 +47,7 @@ export const getStaticProps = async ({ params }) => {
         };
     }
 
-    const res = await client.getEntries({ content_type: "images" });
+    const res = await client.getEntries({ content_type: "imagesQwmy" });
 
     return {
         props: { images: items[0] },
@@ -57,7 +57,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
     const res = await client.getEntries({
-        content_type: "images",
+        content_type: "imagesQwmy",
     });
 
     const paths = res.items.map((item) => {
@@ -109,7 +109,7 @@ export default function ImageDetials({ images }) {
                     description: images.fields.details.content[0].content[0].value,
                     type: "website",
                     images: [{
-                        url: 'https:' + images.fields.image.fields.file.url,
+                        url: 'https:' + images.fields.image[0].fields.file.url,
                         width: 800,
                         height: 600,
                         alt: images.fields.alt,
@@ -132,7 +132,10 @@ export default function ImageDetials({ images }) {
                 <div className="">
                     <h1>{images.fields.title}</h1>
                     <div className="my-7 grid gap-3 w-full h-fit md:hidden">
-                        <Image priority={true} src={'https:' + images.fields.image.fields.file.url} alt={images.fields.alt} width={images.fields.image.fields.file.details.image.width} height={images.fields.image.fields.file.details.image.height} className="h-fit w-full lg:hidden block" />
+                        {images.fields.image.map((one) =>
+                            <Image priority={true} src={'https:' + one.fields.file.url} alt={images.fields.alt} width={one.fields.file.details.image.width} height={one.fields.file.details.image.height} className="h-fit w-full lg:hidden block" />
+
+                        )}
                         <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
                     </div>
                     <div className="mt-9">
@@ -179,7 +182,9 @@ export default function ImageDetials({ images }) {
                     </div>
                 </div>
                 <div className="gap-3 w-full h-fit hidden md:grid">
-                    <Image priority={true} src={'https:' + images.fields.image.fields.file.url} alt={images.fields.alt} width={images.fields.image.fields.file.details.image.width} height={images.fields.image.fields.file.details.image.height} className="h-fit w-full" />
+                    {images.fields.image.map((one) =>
+                        <Image priority={true} src={'https:' + one.fields.file.url} alt={images.fields.alt} width={one.fields.file.details.image.width} height={one.fields.file.details.image.height} className="h-fit w-full" />
+                    )}
                     <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
                 </div>
             </article>

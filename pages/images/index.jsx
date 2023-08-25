@@ -15,7 +15,7 @@ export async function getStaticProps() {
         accessToken: process.env.CONTENTFUL_ACCESS_KEY,
     });
 
-    const res = await client.getEntries({ content_type: "images" });
+    const res = await client.getEntries({ content_type: "imagesQwmy" });
 
     return {
         props: {
@@ -82,7 +82,7 @@ export default function Images({ images }) {
                             <Link href={"/images/" + image.fields.slug} key={image.sys.id}>
                                 <div className="group relative h-fit">
                                     <a href={"/images/" + image.fields.slug}>
-                                        <Image layout="responsive" objectFit="cover" src={'https:' + image.fields.image.fields.file.url} alt={image.fields.alt} width={image.fields.image.fields.file.details.image.width} height={image.fields.image.fields.file.details.image.height} className="block h-full w-full object-cover object-center group-hover:opacity-50 transition-all ease-in-out duration-300" />
+                                        <Image layout="responsive" objectFit="cover" src={'https:' + image.fields.image[0].fields.file.url} alt={image.fields.alt} width={image.fields.image[0].fields.file.details.image.width} height={image.fields.image[0].fields.file.details.image.height} className="block h-full w-full object-cover object-center group-hover:opacity-50 transition-all ease-in-out duration-300" />
                                         <span className="absolute bottom-3 right-3 transition-opacity opacity-0 group-hover:opacity-100 text-black text-xl font-black dark:text-white">{image.fields.title}</span>
                                     </a>
                                 </div>

@@ -105,6 +105,10 @@ body {
     @apply list-decimal px-16
   }
 
+  q {
+    @apply text-xl font-black italic
+  }
+
   .pagination {
     @apply list-none p-3 border dark:border-dprimary dark:bg-dprimary flex justify-between items-center
   }
