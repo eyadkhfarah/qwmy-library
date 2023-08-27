@@ -19,7 +19,7 @@ export default function Layout({ children, market, etf }) {
     const router = useRouter()
 
     const title = "المكتبة القومية"
-    const desc = "بوابتك المعرفية الي عالم القومية"
+    const desc = "بوابتك المعرفية الي عالم القومية المصرية"
     const img = "https://i.ibb.co/0scYsTR/Picsart-23-03-23-02-14-02-466.jpg"
 
     return (
