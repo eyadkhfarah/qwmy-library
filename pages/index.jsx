@@ -20,23 +20,6 @@ import { Tabs } from "@lib/CatPages"
 
 // import generateRssFeed from '@/utils/generateRSSFeed'
 
-const fake = [
-  { name: 'اياد', cat: "شخص القومي", id: 1 },
-  { name: 'قومي', cat: "صفحة", id: 2 },
-  { name: 'القومية المصرية', cat: "حركة قومية", id: 3 },
-  { name: 'وعي مصر', cat: "صفحة", id: 4 },
-  { name: 'الصحوة القومية', cat: "صفحة", id: 5 },
-  { name: 'القومية الامازغية', cat: "حركة قومية", id: 6 },
-  { name: 'القومية العربية', cat: "حركة قومية", id: 7 },
-  { name: 'الافروسنترك', cat: "جماعات", id: 8 },
-  { name: 'الجماعات الارهابية', cat: "جماعات", id: 9 },
-  { name: 'داعش', cat: "جماعة ارهابية", id: 10 },
-  { name: 'الجينات المصرية', cat: "جينات", id: 11 },
-  { name: 'الجينات العربية', cat: "جينات", id: 12 },
-  { name: 'حرب ماجدو', car: "حرب", id: 13 },
-]
-
-
 export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
@@ -118,7 +101,7 @@ export default function Home() {
       <header className="text-center lg:px-36 px-0 w-full my-8">
 
         <div className="grid gap-5 w-full h-full">
-          <div className="gap-7 w-full h-full lg:flex flex-row justify-center items-baseline">
+          <div className="gap-7 w-full h-full lg:flex justify-center items-baseline">
 
             <ul className="tabList p-0">
               {Tabs.slice(0, 3).map((tab) => (
@@ -170,35 +153,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-
-          <div>
-            <input
-              value={wordEntered}
-              onChange={handleFilter}
-              className="searchInput"
-              type="text"
-              placeholder="ابحث في عالم القومية" />
-          </div>
-
-          {filteredData.lenght != 0 && (
-            <>
-              <div className={`${filteredData.lenght === 0 ? "border dark:border-slate-500" : "border-none"} text-right`}>
-                {filteredData.slice(0, 6).map((items) =>
-                (
-                  <div className="border dark:border-none dark:border-b-slate-500 dark:bg-dprimary p-4 grid gap-2" key={items.id}>
-                    <p className="font-black">{items.name}</p>
-                    <p className="text-sm text-slate-500">{items.cat}</p>
-                  </div>
-                ))}
-
-              </div>
-            </>
-          )}
-
-          {filteredData.lenght === 0 ? null : (
-            <a className={`p-4 border dark:border-none`} href={`/search?search=${wordEntered}`}>ابحث اكتر</a>
-          )}
-
         </div>
       </header>
 
