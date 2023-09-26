@@ -36,6 +36,12 @@ export default function Search() {
 
   const { search } = router.query;
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      router.push(`/search?search=${searchText}`)
+    }
+  }
+
   return (
     <>
       <Head>
@@ -51,13 +57,14 @@ export default function Search() {
 
         <div className="flex justfiy-center items-center gap-6">
           <input
-            className="input"
+            className="input w-full"
             type="text"
             placeholder="بحث ..."
+            onKeyDown={handleKeyDown}
             onChange={(e) => setSearchText(e.target.value)}
           />
           <Link href={`/search?search=` + searchText}>
-            <RiSearchLine className="menuIcon text-3xl" />
+            <RiSearchLine className="cursor-pointer text-3xl" />
           </Link>
         </div>
 

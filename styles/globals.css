@@ -66,7 +66,7 @@ body {
   }
 
   .searchInput {
-    @apply p-3 w-full dark:bg-dprimary dark:border-none
+    @apply p-3 w-full dark:bg-dprimary dark:border-none ring-0
   }
 
   table {

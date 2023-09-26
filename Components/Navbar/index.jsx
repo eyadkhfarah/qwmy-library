@@ -35,6 +35,12 @@ export default function Navbar() {
     </span>
   );
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      router.push(`/search?search=${searchText}`)
+    }
+  }
+
   return (
     <>
     <div className="md:px-36 p-3 md:text-base text-sm font-medium flex justify-between items-center gap-6">
@@ -80,6 +86,7 @@ export default function Navbar() {
             </Link>
             <input
               // value={}
+              onKeyDown={handleKeyDown}
               onChange={(e) => setSearchText(e.target.value)}
               className="searchInput border-none"
               type="text"

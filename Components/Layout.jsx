@@ -14,7 +14,7 @@ import { Partytown } from '@builder.io/partytown/react';
 // import ScrollButton from "./ScrollBtn";
 import DarkButton from "./darkBtn";
 
-export default function Layout({ children, market, etf }) {
+export default function Layout({ children }) {
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
     const router = useRouter()
 
