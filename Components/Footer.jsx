@@ -15,9 +15,9 @@ export default function Footer() {
         <footer>
             <div className="flex gap-2">
                 <ul className="list-none flex flex-col justify-between px-5">
-                    <li><a href="https://www.facebook.com/maktabaqawmya" aria-label="صفحة المكتبة علي الفيسبوك" className="text-black dark:text-white"><RiFacebookFill className="text-2xl" /></a></li>
-                    {/* <li><a href="https://instagram.com/" aria-label="صفحة المكتبة علي انستاجرام" className="text-black dark:text-white"><RiInstagramLine className="text-2xl" /></a></li>
-                    <li><a href="https://twitter.com/" aria-label="صفحة المكتبة علي تويتر" className="text-black dark:text-white"><RiTwitterFill className="text-2xl" /></a></li> */}
+                    <li><a href="https://www.facebook.com/maktabaqawmya" target='_blank' aria-label="صفحة المكتبة علي الفيسبوك" className="text-black dark:text-white"><RiFacebookFill className="text-2xl" /></a></li>
+                    {/* <li><a href="https://instagram.com/" target='_blank' aria-label="صفحة المكتبة علي انستاجرام" className="text-black dark:text-white"><RiInstagramLine className="text-2xl" /></a></li>
+                    <li><a href="https://twitter.com/" target='_blank' aria-label="صفحة المكتبة علي تويتر" className="text-black dark:text-white"><RiTwitterFill className="text-2xl" /></a></li> */}
                 </ul>
                 <div className="grid gap-4">
                     <Link href={"/"}>
