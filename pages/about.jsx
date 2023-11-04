@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import Link from "next/link";
 
 export default function About() {
-    const title = "احنا مين؟ — المكتبة القومية"
+    const title = "احنا مين — المكتبة القومية"
     const desc = "في الصفحة دي هتعرف احنا مبن وايه هدفنا ومصادرنا"
 
     return (

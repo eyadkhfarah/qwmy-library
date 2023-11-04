@@ -27,7 +27,7 @@ export async function getStaticProps() {
 
 export default function Images({ images }) {
 
-    const title = "المكتبة القومية — ألبوم الصور";
+    const title = "ألبوم الصور — المكتبة القومية";
     const desc = "شاهد اهم واجمل الصور هنا.";
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 

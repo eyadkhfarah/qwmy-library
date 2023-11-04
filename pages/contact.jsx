@@ -4,7 +4,7 @@ export default function About() {
     return (
         <>
             <Head>
-                <title>المكتبة القومية — كلمنا</title>
+                <title>كلمنا — المكتبة القومية</title>
                 <meta name="description" content="لو عندك اي استفسار أو سؤال في بالك متترددش وكلمنا أو ابعت لنا عن طريق انك تملي الفورم." />
             </Head>
             <div className="md:grid px-3 grid-cols-2 gap-5">

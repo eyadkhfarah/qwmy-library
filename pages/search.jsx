@@ -45,7 +45,7 @@ export default function Search() {
   return (
     <>
       <Head>
-        <title>المكتبة القومية — بحث — {search}</title>
+        <title>{search} — المكتبة القومية — بحث</title>
       </Head>
       <main>
         <div className="flex gap-4 mb-9">

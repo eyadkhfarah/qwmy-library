@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import Link from "next/link";
 
 export default function Privacy() {
-    const title = "المكتبة القومية — سياسة الخصوصية"
+    const title = "سياسة الخصوصية — المكتبة القومية"
     const desc = "اقرا عن سياسة الخصوصية الخاصة بموقع المكتبة القومية علشان تطمن علي بياناتك."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 

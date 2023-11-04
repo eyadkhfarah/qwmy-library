@@ -37,7 +37,7 @@ export default function Books({ books }) {
 
   const { name, type } = router.query;
 
-  const title = "المكتبة القومية — كتب قومية";
+  const title = "كتب قومية — المكتبة القومية";
   const desc = "اكتشف مجموعة كبيرة من الكتب التي تتحدث عن القومية.";
   const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 

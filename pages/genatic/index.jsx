@@ -10,7 +10,7 @@ import { useState } from "react";
 
 export default function Genatic() {
 
-    const title = "المكتبة القومية — دراسة جينية";
+    const title = "دراسة جينية — المكتبة القومية";
     const desc = "تعرف علي احدث ما توصل إليه علم الجينات وخصوصا الجينات المصرية.";
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 

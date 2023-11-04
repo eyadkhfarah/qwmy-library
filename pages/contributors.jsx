@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import Link from "next/link";
 
 export default function Contrib() {
-    const title = "المكتبة القومية — المساهمين"
+    const title = "المساهمين — المكتبة القومية"
     const desc = "قائمة المساهمين في الموقع بشكل مادي، كن انت من المساهمين."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 

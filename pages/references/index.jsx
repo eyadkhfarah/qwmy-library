@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Refer() {
-    const title = "المكتبة القومية — مراجع تاريخية";
+    const title = "مراجع تاريخية — المكتبة القومية";
     const desc = "أقرا اهم المراجع والمصادر التاريخية الموثوقة.";
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 

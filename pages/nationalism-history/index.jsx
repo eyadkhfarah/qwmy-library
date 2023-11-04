@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function History() {
-    const title = "المكتبة القومية — تاريخ التيار القومي";
+    const title = "تاريخ التيار القومي — المكتبة القومية";
     const desc = "تعرف علي تاريخ حركة القومية المصرية.";
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 

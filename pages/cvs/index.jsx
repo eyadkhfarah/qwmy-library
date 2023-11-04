@@ -25,7 +25,7 @@ export async function getStaticProps() {
 }
 
 export default function CV({ cvs }) {
-    const title = "المكتبة القومية — سيرة ذاتية"
+    const title = "سيرة ذاتية — المكتبة القومية"
     const desc = "تعرف علب مجموعة كبيرة من قراء ومفكرين وشخصيات قومية عظيمة."
     const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
