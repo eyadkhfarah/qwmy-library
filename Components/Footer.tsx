@@ -91,15 +91,14 @@ const Footer = (): JSX.Element => {
 
   const renderBuildBy = () => (
     <div className="text-gray-400 text-[.7rem] text-center mt-8">
-      <span className="text-white text-sm">
+      <span className="">
         تم بناء هذا الموقع بواسطة{" "}
         <Link
           href="https://designs-by-eyad.vercel.app/"
-          className="underline text-blue-500"
+          className="font-black underline text-blue-500"
         >
           Designs By Eyad
         </Link>
-        .
       </span>
     </div>
   );
