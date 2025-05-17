@@ -1,4 +1,20 @@
-import type { IConfig } from 'next-sitemap';
+interface IConfig {
+  siteUrl: string;
+  exclude?: string[];
+  generateRobotsTxt?: boolean;
+  sitemapSize?: number;
+  changefreq?: string;
+  priority?: number;
+  transform?: (config: any, path: string) => Promise<any>;
+  robotsTxtOptions?: {
+    policies?: Array<{
+      userAgent: string;
+      disallow?: string[];
+      allow?: string[];
+    }>;
+    additionalSitemaps?: string[];
+  };
+}
 
 const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL || '';
 
@@ -23,7 +39,7 @@ const config: IConfig = {
         userAgent: "*",
         disallow: ["/404", "/profile"],
       },
-      { userAgent: "*", allow: "/" },
+      { userAgent: "*", allow: ["/"] },
     ],
     additionalSitemaps: [
       `${siteUrl}/sitemap.xml`,
