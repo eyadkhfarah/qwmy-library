@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "npm run partytown && next build",
     "start": "next start",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap.config",
     "partytown": "partytown copylib public/~partytown",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
