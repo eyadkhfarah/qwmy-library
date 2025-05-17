@@ -1,127 +1,270 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
-  direction: rtl;
-  scroll-behavior: smooth;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-medium: medium;
+  --font-black: black;
+
+  --color-primary: #2563eb;
+  --color-light: #09d8fd;
+  --color-dprimary: #1e293b;
+  --color-dlight: #334155;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer utilities {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
 }
 
 @layer base {
   @font-face {
-    font-family: 'medium';
-    src: url('/fonts/Regular.woff2') format('woff2');
+    font-family: "medium";
+    src: url("/fonts/Regular.woff2") format("woff2");
     font-weight: 600;
     font-display: swap;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'black';
-    src: url('/fonts/Bold.woff2') format('woff2');
+    font-family: "black";
+    src: url("/fonts/Bold.woff2") format("woff2");
     font-weight: 600;
     font-display: swap;
     font-style: normal;
   }
 
   nav {
-    @apply p-4 sticky dark:bg-dprimary text-black top-0 flex justify-between items-center shadow-lg bg-white z-[90]
+    @apply sticky top-0 z-90 w-full px-4 py-3 bg-white/80 dark:bg-dprimary/80 backdrop-blur-xs ;
   }
 
   footer {
-    @apply p-6 border-t-2 md:flex justify-between items-end dark:border-none bg-zinc-100 dark:bg-dprimary
+    @apply bg-zinc-100 dark:bg-dprimary w-full
+    border-t-2 dark:border-none;
+  }
+
+  main {
+    @apply w-full py-10 px-6 
+    sm:py-10 sm:px-6 
+    lg:px-8;
   }
 
   .navIcon {
-    @apply text-xl p-3 dark:text-white transition-all duration-300 cursor-pointer z-[15]
+    @apply text-xl p-3 cursor-pointer z-15
+    text-black dark:text-white
+    hover:text-primary dark:hover:text-primary
+    transition-all duration-300;
   }
 
   .navList {
-    @apply bg-white m-0 list-none dark:bg-dprimary md:hidden flex gap-2 flex-col overflow-y-auto h-screen md:w-1/3 w-full z-[100] fixed top-0 p-7 text-black transition-all duration-700 ease-in-out
+    @apply fixed top-0 -right-full h-screen w-full md:w-80 p-6 z-100
+    bg-white dark:bg-dprimary
+    shadow-2xl
+    transition-all duration-300 ease-in-out;
+  }
+
+  .navList.active {
+    @apply right-0;
+  }
+
+  .searchList {
+    @apply fixed top-0 -right-full h-screen w-full md:w-80 p-6 z-100
+    bg-white dark:bg-dprimary
+    shadow-2xl
+    transition-all duration-300 ease-in-out;
+  }
+
+  .searchList.active {
+    @apply right-0;
   }
 
   .navLink {
-    @apply p-3 mb-1 whitespace-nowrap list-none font-black cursor-pointer dark:hover:bg-dlight dark:hover:text-white hover:bg-white hover:text-primary transition-all duration-300
-  }
-  
-  main {
-    @apply max-w-2xl mx-auto py-10 px-6 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8
-  }
-
-  .tabs {
-    @apply font-black whitespace-nowrap p-3 w-full hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-300
+    @apply p-3 mb-2 rounded-lg w-full
+    flex items-center
+    list-none whitespace-nowrap
+    font-medium cursor-pointer
+    text-black dark:text-white
+    hover:bg-gray-100 dark:hover:bg-dlight hover:text-primary
+    transition-all duration-200;
   }
 
-  .tabList {
-    @apply lg:grid hidden space-y-7 h-full list-none text-lg gap-7 w-full
-  }
-
-  .download {
-    @apply p-3 border-2 border-blue-500 hover:text-white hover:bg-blue-500 transition-all duration-300 ease-in-out text-center w-full font-black text-xl
-  }
-
-  .searchInput {
-    @apply p-3 w-full dark:bg-dprimary dark:border-none ring-0
-  }
-
-  table {
-    @apply mb-5 table-fixed border dark:border-dprimary
-  }
-
-  th {
-    @apply bg-gray-500 dark:bg-dprimary dark:text-white font-black pt-4
-  }
-
-  td {
-    @apply dark:text-white border dark:border-dprimary px-3
-  }
-
-  a {
-    @apply text-blue-500
+  .navLink.active {
+    @apply bg-gray-100 dark:bg-dlight text-primary;
   }
 
   h1 {
-    @apply font-black text-3xl my-3
+    @apply font-black text-3xl my-3 w-full;
   }
 
   h2 {
-    @apply font-black text-2xl my-3 py-2 border-b-2 border-b-gray-200 dark:border-b-dprimary
+    @apply font-black text-2xl my-3 py-2 w-full
+    border-b-2 border-b-gray-200 dark:border-b-dprimary;
   }
 
   h3 {
-    @apply font-black text-2xl my-3
+    @apply font-black text-2xl my-3 w-full;
   }
 
-  ul {
-    @apply list-disc px-16
+  section {
+    @apply max-w-7xl mx-auto;
   }
 
-  ol {
-    @apply list-decimal px-16
+  article {
+    @apply max-w-7xl mx-auto prose prose-lg dark:prose-invert
+    prose-headings:font-black
+    prose-p:text-gray-600 dark:prose-p:text-gray-300
+    prose-a:text-blue-500 prose-a:hover:text-blue-600
+    prose-strong:font-black
+    prose-code:text-primary
+    prose-pre:bg-gray-100 dark:prose-pre:bg-dprimary;
+  }
+
+  header {
+    @apply max-w-7xl mx-auto;
+  }
+
+  a {
+    @apply text-blue-500;
   }
 
   q {
-    @apply text-xl font-black italic
-  } 
+    @apply text-xl font-black italic;
+  }
+
+  ul {
+    @apply list-disc px-16 w-full;
+  }
+
+  ol {
+    @apply list-decimal px-16 w-full;
+  }
+
+  table {
+    @apply mb-5 table-fixed w-full
+    border dark:border-dprimary;
+  }
+
+  th {
+    @apply pt-4 font-black w-full
+    bg-gray-500 dark:bg-dprimary
+    text-black dark:text-white;
+  }
+
+  td {
+    @apply px-3 w-full
+    text-black dark:text-white
+    border dark:border-dprimary;
+  }
+
+  .tabs {
+    @apply font-black whitespace-nowrap p-3 w-full
+    hover:bg-blue-500 hover:text-white
+    transition-all duration-300 ease-in-out;
+  }
+
+  .tabList {
+    @apply h-full w-full
+    list-none text-lg
+    space-y-7 gap-7
+    lg:grid hidden;
+  }
+
+  .download {
+    @apply p-3 w-full rounded-lg
+    font-black text-xl text-center
+    border-2 border-blue-500
+    hover:text-white hover:bg-blue-500
+    transition-all duration-300 ease-in-out;
+  }
+
+  .searchInput {
+    @apply p-3 w-full rounded-lg
+    bg-white dark:bg-dprimary
+    border-none dark:border-none
+    ring-0 focus:ring-2 focus:ring-primary;
+  }
 
   .pagination {
-    @apply list-none p-3 border dark:border-dprimary dark:bg-dprimary flex justify-between items-center
+    @apply p-3 rounded-lg w-full
+    list-none
+    flex justify-between items-center
+    border dark:border-dprimary
+    bg-white dark:bg-dprimary;
   }
 
   .pageSwitch {
-    @apply font-black text-black p-4 dark:text-white hover:bg-slate-100 dark:hover:bg-dlight transition-all duration-300 ease-in-out
+    @apply p-4 rounded-lg w-full
+    font-black
+    text-black dark:text-white
+    hover:bg-slate-100 dark:hover:bg-dlight
+    transition-all duration-300 ease-in-out;
   }
 
   .pageNum {
-    @apply border p-4 text-black hover:bg-slate-100 dark:hover:bg-dlight transition-all duration-300 ease-in-out
+    @apply p-4 rounded-lg w-full
+    border
+    text-black
+    hover:bg-slate-100 dark:hover:bg-dlight
+    transition-all duration-300 ease-in-out;
   }
 
   .pageNumAct {
-    @apply bg-slate-100 font-black
+    @apply bg-slate-100 font-black;
+  }
+
+  /* Form Styles */
+  .form-input {
+    @apply w-full rounded-lg
+      bg-white dark:bg-dprimary
+      border border-gray-200 dark:border-dprimary
+      text-black dark:text-white
+      placeholder:text-gray-500 dark:placeholder:text-gray-400
+      focus:ring-2 focus:ring-primary focus:border-transparent
+      transition-all duration-300 ease-in-out;
+  }
+
+  .form-label {
+    @apply text-sm font-medium
+      text-black dark:text-white
+      mb-1;
+  }
+
+  .form-error {
+    @apply text-red-500 text-sm mt-1;
+  }
+
+  .form-button {
+    @apply p-3 w-full rounded-lg
+      font-black text-xl text-blue-500 text-center
+      border-2 border-blue-500
+      hover:text-white hover:bg-blue-500
+      transition-all duration-300 ease-in-out;
   }
 }
