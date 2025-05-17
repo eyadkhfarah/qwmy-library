@@ -43,10 +43,10 @@ export default function Navbar() {
 
   return (
     <>
-    <div className="md:px-36 p-3 md:text-base text-sm font-medium flex justify-between items-center gap-6">
-      <span>الموقع قيد التطوير، يهمنا أراكم واقتراحاتكم ودعمكم لنا بكتابة كل ما تريده من اقتراحات وشكاوي.</span>
-      <a href="https://forms.gle/NBTUQcovdLXAJXYn7" aria-label="اقتراحات المكتبة القومية" className="download text-sm h-fit md:w-44 w-fit whitespace-nowrap">اقترح هنا</a>
-    </div>
+      <div className="md:px-36 p-3 md:text-base text-sm font-medium flex justify-between items-center gap-6">
+        <span>الموقع قيد التطوير، يهمنا أراكم واقتراحاتكم ودعمكم لنا بكتابة كل ما تريده من اقتراحات وشكاوي.</span>
+        <a href="https://forms.gle/NBTUQcovdLXAJXYn7" aria-label="اقتراحات المكتبة القومية" className="download text-sm h-fit md:w-44 w-fit whitespace-nowrap">اقترح هنا</a>
+      </div>
       <nav
         className={`${router.pathname === "/" ? "shadow-none dark:bg-none" : ""
           }`}
@@ -58,30 +58,36 @@ export default function Navbar() {
         <div className="flex gap-5">
           <div className={`${router.pathname === "/" ? "hidden" : "block"}`}>
             <Link href={"/"}>
-              <a href={siteUrl}>
-                {currentTheme === "dark" ? (
-                  <Image
-                    src="/WhiteLogo.svg"
-                    alt="لوجو المكتبة القومية"
-                    aria-label="لوجو المكتبة القومية"
-                    width={120}
-                    height={47}
-                  />
-                ) : (
-                  <Image
-                    src="/DarkLogo.svg"
-                    alt="لوجو المكتبة القومية"
-                    aria-label="لوجو المكتبة القومية"
-                    width={120}
-                    height={47}
-                  />
-                )}
-              </a>
+
+              {currentTheme === "dark" ? (
+                <Image
+                  src="/WhiteLogo.svg"
+                  alt="لوجو المكتبة القومية"
+                  aria-label="لوجو المكتبة القومية"
+                  width={120}
+                  height={47}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
+              ) : (
+                <Image
+                  src="/DarkLogo.svg"
+                  alt="لوجو المكتبة القومية"
+                  aria-label="لوجو المكتبة القومية"
+                  width={120}
+                  height={47}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
+              )}
+
             </Link>
           </div>
 
           <div className="md:flex hidden gap-2 p-1 border dark:border-none dark:bg-dlight">
-            <Link href={`/search?search=` + searchText}>
+            <Link href={`/search?search=` + searchText} legacyBehavior>
               <div className="navIcon">{Search}</div>
             </Link>
             <input
@@ -108,10 +114,10 @@ export default function Navbar() {
               key={link.id}
               onClick={() => setBtn(!btn)}
             >
-              <Link href={link.link}>
-                <a href={siteUrl + link.link} aria-label={link.title}>
-                  {link.title}
-                </a>
+              <Link href={link.link} aria-label={link.title}>
+
+                {link.title}
+
               </Link>
             </li>
           ))}

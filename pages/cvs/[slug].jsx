@@ -129,7 +129,16 @@ export default function CvDetails({ cv }) {
       />
       <article className="grid gap-4 col-span-2">
         <div className="md:flex justify-start w-full grid gap-5">
-          <Image className="rounded-xl mx-auto" src={'https:' + cv.fields.image.fields.file.url} alt={cv.fields.nameن} width={300} height={300} />
+          <Image
+            className="rounded-xl mx-auto"
+            src={'https:' + cv.fields.image.fields.file.url}
+            alt={cv.fields.nameن}
+            width={300}
+            height={300}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <div className="grid gap-3 h-fit">
             <h1>{cv.fields.name}</h1>
             <p className="text-gray-500">{cv.fields.type}</p>
@@ -142,5 +151,5 @@ export default function CvDetails({ cv }) {
       </article>
       <CVDeatils cv={cv} className="md:hidden grid" />
     </div>
-  )
+  );
 }

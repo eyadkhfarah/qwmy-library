@@ -134,7 +134,16 @@ export default function BookDetials({ books }) {
       <article className="grid gap-4 col-span-2">
         <div className="md:flex md:flex-row-reverse grid gap-5">
           <h1>{books.fields.title}</h1>
-          <Image className="" src={'https:' + books.fields.book.fields.file.url} alt={books.fields.title} width={380} height={675} />
+          <Image
+            className=""
+            src={'https:' + books.fields.book.fields.file.url}
+            alt={books.fields.title}
+            width={380}
+            height={675}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         {/*Mobile*/}
         <aside className="grid gap-4 border dark:bg-dptimary dark:border-none h-fit md:hidden">
@@ -144,9 +153,9 @@ export default function BookDetials({ books }) {
               الكاتب:{" "}
               <span className="font-black">
                 <Link href={`/cvs/${books.fields.author.fields.slug}`}>
-                  <a href={`/cvs/${books.fields.author.fields.slug}`}>
-                    {books.fields.author.fields.name}
-                  </a>
+
+                  {books.fields.author.fields.name}
+
                 </Link>
               </span>
             </p>
@@ -165,7 +174,6 @@ export default function BookDetials({ books }) {
           حمل الكتاب
         </a>
       </article>
-
       <aside className="md:grid gap-4 border dark:bg-dptimary dark:border-none w-full h-fit hidden">
         <h2 className="pr-3">تفاصيل الكتاب</h2>
         <div className="grid gap-3 p-3 w-full">
@@ -173,9 +181,9 @@ export default function BookDetials({ books }) {
             الكاتب:{" "}
             <span className="font-black">
               <Link href={`/cvs/${books.fields.author.fields.slug}`}>
-                <a href={`/cvs/${books.fields.author.fields.slug}`}>
-                  {books.fields.author.fields.name}
-                </a>
+
+                {books.fields.author.fields.name}
+
               </Link>
             </span>
           </p>

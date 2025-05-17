@@ -63,7 +63,7 @@ export default function Search() {
             onKeyDown={handleKeyDown}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Link href={`/search?search=` + searchText}>
+          <Link href={`/search?search=` + searchText} legacyBehavior>
             <RiSearchLine className="cursor-pointer text-3xl" />
           </Link>
         </div>

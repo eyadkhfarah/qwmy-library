@@ -72,17 +72,26 @@ export default function Images({ images }) {
                     },
                 ]}
             />
-
-
             <h1>ألبوم صور</h1>
             {imagesPost ? 
                 <>
                     <div className="w-full max-w-full py-5 mx-auto mb-10 gap-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
                         {images.map((image) => (
-                            <Link href={"/images/" + image.fields.slug} key={image.sys.id}>
+                            <Link href={"/images/" + image.fields.slug} key={image.sys.id} legacyBehavior>
                                 <div className="group relative h-fit">
                                     <a href={"/images/" + image.fields.slug}>
-                                        <Image layout="responsive" objectFit="cover" src={'https:' + image.fields.image[0].fields.file.url} alt={image.fields.alt} width={image.fields.image[0].fields.file.details.image.width} height={image.fields.image[0].fields.file.details.image.height} className="block h-full w-full object-cover object-center group-hover:opacity-50 transition-all ease-in-out duration-300" />
+                                        <Image
+                                            src={'https:' + image.fields.image[0].fields.file.url}
+                                            alt={image.fields.alt}
+                                            width={image.fields.image[0].fields.file.details.image.width}
+                                            height={image.fields.image[0].fields.file.details.image.height}
+                                            className="block h-full w-full object-cover object-center group-hover:opacity-50 transition-all ease-in-out duration-300"
+                                            sizes="100vw"
+                                            style={{
+                                                width: "100%",
+                                                height: "auto",
+                                                objectFit: "cover"
+                                            }} />
                                         <span className="absolute bottom-3 right-3 transition-opacity opacity-0 group-hover:opacity-100 text-black text-xl font-black dark:text-white">{image.fields.title}</span>
                                     </a>
                                 </div>
@@ -113,5 +122,5 @@ export default function Images({ images }) {
                 </> : <div>جاري التحميل</div>
             }
         </>
-    )
+    );
 }

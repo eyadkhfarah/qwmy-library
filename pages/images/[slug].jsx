@@ -127,13 +127,22 @@ export default function ImageDetials({ images }) {
                     },
                 ]}
             />
-
             <article className="grid md:grid-cols-2 grid-cols-1 gap-6">
                 <div className="">
                     <h1>{images.fields.title}</h1>
                     <div className="my-7 grid gap-3 w-full h-fit md:hidden">
                         {images.fields.image.map((one) =>
-                            <Image priority={true} src={'https:' + one.fields.file.url} alt={images.fields.alt} width={one.fields.file.details.image.width} height={one.fields.file.details.image.height} className="h-fit w-full lg:hidden block" />
+                            <Image
+                                priority={true}
+                                src={'https:' + one.fields.file.url}
+                                alt={images.fields.alt}
+                                width={one.fields.file.details.image.width}
+                                height={one.fields.file.details.image.height}
+                                className="h-fit w-full lg:hidden block"
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
 
                         )}
                         <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
@@ -183,15 +192,24 @@ export default function ImageDetials({ images }) {
                 </div>
                 <div className="gap-3 w-full h-fit hidden md:grid">
                     {images.fields.image.map((one) =>
-                        <Image priority={true} src={'https:' + one.fields.file.url} alt={images.fields.alt} width={one.fields.file.details.image.width} height={one.fields.file.details.image.height} className="h-fit w-full" />
+                        <Image
+                            priority={true}
+                            src={'https:' + one.fields.file.url}
+                            alt={images.fields.alt}
+                            width={one.fields.file.details.image.width}
+                            height={one.fields.file.details.image.height}
+                            className="h-fit w-full"
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     )}
                     <span className="font-medium text-gray-500 text-xs">{images.fields.alt}</span>
                 </div>
             </article>
-
             <div>
                 <h3>صور متعلقة</h3>
             </div>
         </>
-    )
+    );
 }

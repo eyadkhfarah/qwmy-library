@@ -97,7 +97,6 @@ export default function Home() {
             }
           `}} />
       </Head>
-
       <header className="text-center lg:px-36 px-0 w-full my-8">
 
         <div className="grid gap-5 w-full h-full">
@@ -106,8 +105,8 @@ export default function Home() {
             <ul className="tabList p-0">
               {Tabs.slice(0, 3).map((tab) => (
                 <li key={tab.id} className="w-full">
-                  <Link href={`/${tab.slug}`}>
-                    <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
+                  <Link href={`/${tab.slug}`} className="tabs">
+                    {tab.name}
                   </Link>
                 </li>
               ))}
@@ -118,13 +117,31 @@ export default function Home() {
 
               <div>
                 <Link href={"/"}>
-                  <a href={siteUrl}>
-                    {currentTheme === "dark" ?
-                      <Image src="/WhiteLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
-                      :
-                      <Image src="/DarkLogo.svg" alt="لوجو المكتبة القومية" aria-label="لوجو المكتبة القومية" width={1200} height={470} />
-                    }
-                  </a>
+
+                  {currentTheme === "dark" ?
+                    <Image
+                      src="/WhiteLogo.svg"
+                      alt="لوجو المكتبة القومية"
+                      aria-label="لوجو المكتبة القومية"
+                      width={1200}
+                      height={470}
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }} />
+                    :
+                    <Image
+                      src="/DarkLogo.svg"
+                      alt="لوجو المكتبة القومية"
+                      aria-label="لوجو المكتبة القومية"
+                      width={1200}
+                      height={470}
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }} />
+                  }
+
                 </Link>
               </div>
 
@@ -134,8 +151,8 @@ export default function Home() {
             <ul className="tabList p-0">
               {Tabs.slice(3, 6).map((tab) => (
                 <li className="w-full p-0">
-                  <Link href={`/${tab.slug}`}>
-                    <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
+                  <Link href={`/${tab.slug}`} className="tabs">
+                    {tab.name}
                   </Link>
                 </li>
               ))}
@@ -147,15 +164,14 @@ export default function Home() {
           <ul className="lg:hidden my-5 p-0 list-none gap-14 grid w-full grid-cols-2">
             {Tabs.map((tab) => (
               <li>
-                <Link href={`/${tab.slug}`}>
-                  <a className="tabs" href={`/${tab.slug}`}>{tab.name}</a>
+                <Link href={`/${tab.slug}`} className="tabs">
+                  {tab.name}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
       </header>
-
       <div className="md:grid gap-8 grid-cols-2">
         {/* التوصيات */}
         <section>
@@ -179,5 +195,5 @@ export default function Home() {
 
       </div>
     </>
-  )
+  );
 }

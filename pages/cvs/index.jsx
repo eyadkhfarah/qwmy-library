@@ -64,15 +64,24 @@ export default function CV({ cvs }) {
                         <div className="p-4 my-4 border-b-2">
                             <div className="flex items-center gap-4">
                                 <RiArrowLeftSLine className="text-2xl" />
-                                <Image className="rounded-xl mx-auto" src={'https:' + cv.fields.image.fields.file.url} alt={cv.fields.name} width={70} height={70} />
+                                <Image
+                                    className="rounded-xl mx-auto"
+                                    src={'https:' + cv.fields.image.fields.file.url}
+                                    alt={cv.fields.name}
+                                    width={70}
+                                    height={70}
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
                                 <div className="flex gap-3">
                                     <div className="grid h-fit">
                                         <Link href={`/cvs/${cv.fields.slug}`}>
-                                            <a href={`/cvs/${cv.fields.slug}`}>
-                                                <h2 className="border-none text-lg m-0">
-                                                    {cv.fields.name}
-                                                </h2>
-                                            </a>
+
+                                            <h2 className="border-none text-lg m-0">
+                                                {cv.fields.name}
+                                            </h2>
+
                                         </Link>
                                         <p className="text-gray-500">{cv.fields.type}</p>
                                     </div>
@@ -83,5 +92,5 @@ export default function CV({ cvs }) {
                 </div>
             </div>
         </>
-    )
+    );
 }

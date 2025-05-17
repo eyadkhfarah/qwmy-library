@@ -24,11 +24,10 @@ export default function NavList({ btn, setBtn }) {
               key={link.id}
               onClick={() => setBtn(!btn)}
             >
-              <Link href={link.link}>
-                <a href={link.link} aria-label={link.title}
-                >
-                  {link.title}
-                </a>
+              <Link href={link.link} aria-label={link.title}>
+
+                {link.title}
+
               </Link>
             </li>
           ))}

@@ -117,11 +117,11 @@ export default function Books({ books }) {
                     <div className="flex items-start gap-4">
                       <RiArrowLeftSLine className="text-2xl" />
                       <Link href={`/books/${book.fields.slug}`}>
-                        <a href={`/books/${book.fields.slug}`}>
-                          <h2 className="border-none text-lg m-0">
-                            {book.fields.title}
-                          </h2>
-                        </a>
+
+                        <h2 className="border-none text-lg m-0">
+                          {book.fields.title}
+                        </h2>
+
                       </Link>
                     </div>
                     <div className="flex text-gray-500 gap-5">
@@ -136,11 +136,11 @@ export default function Books({ books }) {
                   <div className="flex items-start gap-4">
                     <RiArrowLeftSLine className="text-2xl" />
                     <Link href={`/books/${book.fields.slug}`}>
-                      <a href={`/books/${book.fields.slug}`}>
-                        <h2 className="border-none text-lg m-0">
-                          {book.fields.title}
-                        </h2>
-                      </a>
+
+                      <h2 className="border-none text-lg m-0">
+                        {book.fields.title}
+                      </h2>
+
                     </Link>
                   </div>
                   <div className="flex text-gray-500 gap-5">
