@@ -2,10 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { FooterLinks } from "@lib/FooterLink";
-import {
-  RiFacebookFill,
-  RiTwitterXFill,
-} from "react-icons/ri";
+import { RiFacebookFill, RiTwitterXFill } from "react-icons/ri";
 
 type SocialLink = {
   href: string;
@@ -87,9 +84,23 @@ const Footer = (): JSX.Element => {
 
   const renderCopyright = () => (
     <div className="text-gray-400 text-[.7rem] text-center mt-8">
-      كل الحقوق محفوظة لدي{" "}
-      <span className="font-black">المكتبة القومية</span> لسنة{" "}
-      {new Date().getFullYear()}
+      كل الحقوق محفوظة لدي <span className="font-black">المكتبة القومية</span>{" "}
+      لسنة {new Date().getFullYear()}
+    </div>
+  );
+
+  const renderBuildBy = () => (
+    <div className="text-gray-400 text-[.7rem] text-center mt-8">
+      <span className="text-white text-sm">
+        تم بناء هذا الموقع بواسطة{" "}
+        <Link
+          href="https://designs-by-eyad.vercel.app/"
+          className="underline text-blue-500"
+        >
+          Designs By Eyad
+        </Link>
+        .
+      </span>
     </div>
   );
 
@@ -100,6 +111,7 @@ const Footer = (): JSX.Element => {
           {renderSocialLinks()}
           {renderLogoAndNav()}
         </div>
+        {renderBuildBy()}
         {renderCopyright()}
       </div>
     </footer>
