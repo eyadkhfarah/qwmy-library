@@ -97,74 +97,57 @@ export default function Home() {
             }
           `}} />
       </Head>
-      <header className="text-center lg:px-36 px-0 w-full my-8">
-
-        <div className="grid gap-5 w-full h-full">
+      <header className="text-center max-w-[1920px] mx-auto px-4 lg:px-8 w-full my-8">
+        <div className="grid gap-5 w-full h-full max-w-7xl mx-auto">
           <div className="gap-7 w-full h-full lg:flex justify-center items-baseline">
-
             <ul className="tabList p-0">
               {Tabs.slice(0, 3).map((tab) => (
                 <li key={tab.id} className="w-full">
-                  <Link href={`/${tab.slug}`} className="tabs">
+                  <Link href={`/${tab.slug}`} className="tabs hover:opacity-80 transition-opacity">
                     {tab.name}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <div className="grid gap-3 w-full">
+            <div className="grid gap-3 w-full max-w-3xl mx-auto">
               <h1 className="md:text-2xl">اهلا بيك في</h1>
 
-              <div>
+              <div className="max-w-[800px] mx-auto">
                 <Link href={"/"}>
-
-                  {currentTheme === "dark" ?
-                    <Image
-                      src="/WhiteLogo.svg"
-                      alt="لوجو المكتبة القومية"
-                      aria-label="لوجو المكتبة القومية"
-                      width={1200}
-                      height={470}
-                      style={{
-                        maxWidth: "100%",
-                        height: "auto"
-                      }} />
-                    :
-                    <Image
-                      src="/DarkLogo.svg"
-                      alt="لوجو المكتبة القومية"
-                      aria-label="لوجو المكتبة القومية"
-                      width={1200}
-                      height={470}
-                      style={{
-                        maxWidth: "100%",
-                        height: "auto"
-                      }} />
-                  }
-
+                  <Image
+                    src="/DarkLogo.svg"
+                    alt="لوجو المكتبة القومية"
+                    aria-label="لوجو المكتبة القومية"
+                    width={1200}
+                    height={470}
+                    className="dark:invert transition-all duration-200"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
               </div>
 
-              <p>بوابتك المعرفية في عالم القومية</p>
+              <p className="text-lg md:text-xl">بوابتك المعرفية في عالم القومية</p>
             </div>
 
             <ul className="tabList p-0">
               {Tabs.slice(3, 6).map((tab) => (
-                <li className="w-full p-0">
-                  <Link href={`/${tab.slug}`} className="tabs">
+                <li key={tab.id} className="w-full p-0">
+                  <Link href={`/${tab.slug}`} className="tabs hover:opacity-80 transition-opacity">
                     {tab.name}
                   </Link>
                 </li>
               ))}
             </ul>
-
           </div>
 
           {/*Mobile*/}
           <ul className="lg:hidden my-5 p-0 list-none gap-14 grid w-full grid-cols-2">
             {Tabs.map((tab) => (
-              <li>
-                <Link href={`/${tab.slug}`} className="tabs">
+              <li key={tab.id}>
+                <Link href={`/${tab.slug}`} className="tabs hover:opacity-80 transition-opacity">
                   {tab.name}
                 </Link>
               </li>
@@ -172,27 +155,28 @@ export default function Home() {
           </ul>
         </div>
       </header>
-      <div className="md:grid gap-8 grid-cols-2">
-        {/* التوصيات */}
-        <section>
-          <h2>مقالات مختارة</h2>
-        </section>
+      <div className="max-w-[1920px] mx-auto px-4 lg:px-8">
+        <div className="md:grid gap-8 grid-cols-2 max-w-7xl mx-auto">
+          {/* التوصيات */}
+          <section className="mb-8 md:mb-0">
+            <h2 className="text-xl md:text-2xl mb-4">مقالات مختارة</h2>
+          </section>
 
-        {/* دراسات جينية */}
-        <section>
-          <h2>دراسات جينية</h2>
-        </section>
+          {/* دراسات جينية */}
+          <section className="mb-8 md:mb-0">
+            <h2 className="text-xl md:text-2xl mb-4">دراسات جينية</h2>
+          </section>
 
-        {/* صور */}
-        <section>
-          <h2>ألبوم الصور</h2>
-        </section>
+          {/* صور */}
+          <section className="mb-8 md:mb-0">
+            <h2 className="text-xl md:text-2xl mb-4">ألبوم الصور</h2>
+          </section>
 
-        {/* صور */}
-        <section>
-          <h2>في هذا اليوم</h2>
-        </section>
-
+          {/* صور */}
+          <section className="mb-8 md:mb-0">
+            <h2 className="text-xl md:text-2xl mb-4">في هذا اليوم</h2>
+          </section>
+        </div>
       </div>
     </>
   );

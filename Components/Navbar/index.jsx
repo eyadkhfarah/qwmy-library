@@ -48,8 +48,7 @@ export default function Navbar() {
         <a href="https://forms.gle/NBTUQcovdLXAJXYn7" aria-label="اقتراحات المكتبة القومية" className="download text-sm h-fit md:w-44 w-fit whitespace-nowrap">اقترح هنا</a>
       </div>
       <nav
-        className={`${router.pathname === "/" ? "shadow-none dark:bg-none" : ""
-          }`}
+        className={`${router.pathname === "/" ? "shadow-none dark:bg-none" : ""} max-w-[1920px] mx-auto`}
       >
         <div onClick={() => setBtn(!btn)} className="navIcon md:hidden block">
           {Menu}
@@ -58,35 +57,21 @@ export default function Navbar() {
         <div className="flex gap-5">
           <div className={`${router.pathname === "/" ? "hidden" : "block"}`}>
             <Link href={"/"}>
-
-              {currentTheme === "dark" ? (
-                <Image
-                  src="/WhiteLogo.svg"
-                  alt="لوجو المكتبة القومية"
-                  aria-label="لوجو المكتبة القومية"
-                  width={120}
-                  height={47}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-              ) : (
-                <Image
-                  src="/DarkLogo.svg"
-                  alt="لوجو المكتبة القومية"
-                  aria-label="لوجو المكتبة القومية"
-                  width={120}
-                  height={47}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-              )}
-
+              <Image
+                src="/DarkLogo.svg"
+                alt="لوجو المكتبة القومية"
+                aria-label="لوجو المكتبة القومية"
+                width={120}
+                height={47}
+                className="dark:invert transition-all duration-200"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </Link>
           </div>
 
-          <div className="md:flex hidden gap-2 p-1 border dark:border-none dark:bg-dlight">
+          <div className="md:flex hidden gap-2 p-1 border dark:border-gray-700 dark:bg-dlight rounded-lg">
             <Link href={`/search?search=` + searchText} legacyBehavior>
               <div className="navIcon">{Search}</div>
             </Link>

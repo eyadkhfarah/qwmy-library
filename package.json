@@ -21,6 +21,7 @@
     "next-themes": "^0.2.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-icon": "^1.0.0",
     "react-icons": "^4.3.1",
     "react-paginate": "^8.1.4",
     "rss": "^1.2.2"
